@@ -1,0 +1,70 @@
+# Python bytecode and environment
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Python package metadata
+*.egg-info/
+.eggs/
+
+# Virtual environment and IDE config
+.vscode/
+.idea/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS and editor artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Secrets and local env files
+.env
+.env.*
+!.env.example
+
+# Jupyter / notebooks checkpoints
+.ipynb_checkpoints/
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Model and output artifacts (optional)
+models/
+outputs/
+reports/
+
+# Data folders if you prefer not to track generated files
+# datasets/
+# Data/
+
+# Large binary archives and geospatial data
+*.zip
+*.tar
+*.gz
+*.rar
+*.pbf
+Data/pakistan-latest.osm.pbf
+
+# Compiled build output
+build/
+dist/
+*.spec
+
+# Coverage/test outputs
+htmlcov/
+.coverage
+.coverage.*
+
+# Local run artifacts
+*.sqlite3
+*.db

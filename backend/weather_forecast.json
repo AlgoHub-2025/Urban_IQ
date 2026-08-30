@@ -1,0 +1,179 @@
+{
+  "source": "weather_forecast_model",
+  "stage": "future_forecast",
+  "location": "Lahore, Pakistan",
+  "generated_from_last_date": "2024-12-31",
+  "forecast_horizon_days": 7,
+  "model_metrics": {
+    "avg_temp_c": {
+      "best_model": "linear_regression",
+      "test_mae": 0.7566,
+      "test_rmse": 1.007,
+      "test_r2": 0.9762,
+      "all_candidates": {
+        "linear_regression": {
+          "mae": 0.7566,
+          "rmse": 1.007,
+          "r2": 0.9762
+        },
+        "random_forest": {
+          "mae": 0.8129,
+          "rmse": 1.0132,
+          "r2": 0.9759
+        },
+        "gradient_boosting": {
+          "mae": 0.8051,
+          "rmse": 1.0513,
+          "r2": 0.974
+        },
+        "xgboost": {
+          "mae": 0.8003,
+          "rmse": 1.0182,
+          "r2": 0.9757
+        }
+      }
+    },
+    "avg_humidity_percent": {
+      "best_model": "random_forest",
+      "test_mae": 3.6998,
+      "test_rmse": 5.0259,
+      "test_r2": 0.9294,
+      "all_candidates": {
+        "linear_regression": {
+          "mae": 3.7539,
+          "rmse": 4.9449,
+          "r2": 0.9317
+        },
+        "random_forest": {
+          "mae": 3.6998,
+          "rmse": 5.0259,
+          "r2": 0.9294
+        },
+        "gradient_boosting": {
+          "mae": 3.8752,
+          "rmse": 5.1348,
+          "r2": 0.9264
+        },
+        "xgboost": {
+          "mae": 3.8549,
+          "rmse": 5.1067,
+          "r2": 0.9272
+        }
+      }
+    },
+    "total_rain_mm": {
+      "best_model": "linear_regression",
+      "test_mae": 2.7878,
+      "test_rmse": 6.8299,
+      "test_r2": 0.1546,
+      "all_candidates": {
+        "linear_regression": {
+          "mae": 2.7878,
+          "rmse": 6.8299,
+          "r2": 0.1546
+        },
+        "random_forest": {
+          "mae": 3.2185,
+          "rmse": 7.2177,
+          "r2": 0.0559
+        },
+        "gradient_boosting": {
+          "mae": 3.1136,
+          "rmse": 7.0508,
+          "r2": 0.099
+        },
+        "xgboost": {
+          "mae": 3.2316,
+          "rmse": 7.2415,
+          "r2": 0.0496
+        }
+      }
+    },
+    "max_wind_kmh": {
+      "best_model": "linear_regression",
+      "test_mae": 3.6108,
+      "test_rmse": 4.6455,
+      "test_r2": 0.4066,
+      "all_candidates": {
+        "linear_regression": {
+          "mae": 3.6108,
+          "rmse": 4.6455,
+          "r2": 0.4066
+        },
+        "random_forest": {
+          "mae": 3.9749,
+          "rmse": 4.9655,
+          "r2": 0.322
+        },
+        "gradient_boosting": {
+          "mae": 3.9457,
+          "rmse": 5.0062,
+          "r2": 0.3108
+        },
+        "xgboost": {
+          "mae": 4.0899,
+          "rmse": 5.1258,
+          "r2": 0.2775
+        }
+      }
+    }
+  },
+  "forecast": [
+    {
+      "date": "2025-01-01",
+      "avg_temp_c": 10.9,
+      "avg_humidity_percent": 86.1,
+      "total_rain_mm": 0.1,
+      "max_wind_kmh": 9.36,
+      "flood_risk": "Low"
+    },
+    {
+      "date": "2025-01-02",
+      "avg_temp_c": 11.25,
+      "avg_humidity_percent": 83.33,
+      "total_rain_mm": 0.45,
+      "max_wind_kmh": 9.54,
+      "flood_risk": "Low"
+    },
+    {
+      "date": "2025-01-03",
+      "avg_temp_c": 11.48,
+      "avg_humidity_percent": 82.73,
+      "total_rain_mm": 0.57,
+      "max_wind_kmh": 9.67,
+      "flood_risk": "Low"
+    },
+    {
+      "date": "2025-01-04",
+      "avg_temp_c": 11.78,
+      "avg_humidity_percent": 84.2,
+      "total_rain_mm": 0.58,
+      "max_wind_kmh": 9.89,
+      "flood_risk": "Low"
+    },
+    {
+      "date": "2025-01-05",
+      "avg_temp_c": 12.02,
+      "avg_humidity_percent": 85.38,
+      "total_rain_mm": 0.95,
+      "max_wind_kmh": 10.62,
+      "flood_risk": "Low"
+    },
+    {
+      "date": "2025-01-06",
+      "avg_temp_c": 12.05,
+      "avg_humidity_percent": 85.51,
+      "total_rain_mm": 1.41,
+      "max_wind_kmh": 10.99,
+      "flood_risk": "Low"
+    },
+    {
+      "date": "2025-01-07",
+      "avg_temp_c": 12.08,
+      "avg_humidity_percent": 85.7,
+      "total_rain_mm": 1.85,
+      "max_wind_kmh": 10.88,
+      "flood_risk": "Low"
+    }
+  ]
+}

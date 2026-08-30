@@ -1,0 +1,116 @@
+{
+  "source": "air_quality_forecast_model",
+  "stage": "future_forecast",
+  "location": "Lahore, Pakistan",
+  "generated_from_last_date": "2026-08-29",
+  "forecast_horizon_days": 7,
+  "model_metrics": {
+    "pm25": {
+      "best_model": "linear_regression",
+      "test_mae": 5.261,
+      "test_rmse": 6.3913,
+      "test_r2": 0.4634,
+      "all_candidates": {
+        "linear_regression": {
+          "mae": 5.261,
+          "rmse": 6.3913,
+          "r2": 0.4634
+        },
+        "random_forest": {
+          "mae": 9.3633,
+          "rmse": 14.1744,
+          "r2": -1.6392
+        },
+        "gradient_boosting": {
+          "mae": 10.8743,
+          "rmse": 15.1254,
+          "r2": -2.0052
+        },
+        "xgboost": {
+          "mae": 7.8292,
+          "rmse": 11.7421,
+          "r2": -0.8111
+        }
+      }
+    },
+    "pm10": {
+      "best_model": "linear_regression",
+      "test_mae": 5.2676,
+      "test_rmse": 6.3927,
+      "test_r2": 0.4632,
+      "all_candidates": {
+        "linear_regression": {
+          "mae": 5.2676,
+          "rmse": 6.3927,
+          "r2": 0.4632
+        },
+        "random_forest": {
+          "mae": 11.4022,
+          "rmse": 16.7714,
+          "r2": -2.6949
+        },
+        "gradient_boosting": {
+          "mae": 12.8173,
+          "rmse": 17.8536,
+          "r2": -3.1871
+        },
+        "xgboost": {
+          "mae": 9.0563,
+          "rmse": 13.4485,
+          "r2": -1.3758
+        }
+      }
+    }
+  },
+  "forecast": [
+    {
+      "date": "2026-08-30",
+      "pm25": 124.55,
+      "pm10": 171.44,
+      "aqi_category": "Unhealthy",
+      "health_advisory": "Everyone may begin to experience health effects; sensitive groups should avoid outdoor exertion."
+    },
+    {
+      "date": "2026-08-31",
+      "pm25": 118.46,
+      "pm10": 165.29,
+      "aqi_category": "Unhealthy",
+      "health_advisory": "Everyone may begin to experience health effects; sensitive groups should avoid outdoor exertion."
+    },
+    {
+      "date": "2026-09-01",
+      "pm25": 102.49,
+      "pm10": 149.28,
+      "aqi_category": "Unhealthy",
+      "health_advisory": "Everyone may begin to experience health effects; sensitive groups should avoid outdoor exertion."
+    },
+    {
+      "date": "2026-09-02",
+      "pm25": 102.12,
+      "pm10": 148.83,
+      "aqi_category": "Unhealthy",
+      "health_advisory": "Everyone may begin to experience health effects; sensitive groups should avoid outdoor exertion."
+    },
+    {
+      "date": "2026-09-03",
+      "pm25": 113.82,
+      "pm10": 160.45,
+      "aqi_category": "Unhealthy",
+      "health_advisory": "Everyone may begin to experience health effects; sensitive groups should avoid outdoor exertion."
+    },
+    {
+      "date": "2026-09-04",
+      "pm25": 116.39,
+      "pm10": 162.98,
+      "aqi_category": "Unhealthy",
+      "health_advisory": "Everyone may begin to experience health effects; sensitive groups should avoid outdoor exertion."
+    },
+    {
+      "date": "2026-09-05",
+      "pm25": 110.11,
+      "pm10": 156.68,
+      "aqi_category": "Unhealthy",
+      "health_advisory": "Everyone may begin to experience health effects; sensitive groups should avoid outdoor exertion."
+    }
+  ]
+}

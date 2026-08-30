@@ -1,0 +1,2015 @@
+{
+  "source": "school_classifier",
+  "stage": "full_dataset_predictions",
+  "num_facilities": 220,
+  "model_metrics": {
+    "best_model": "random_forest",
+    "test_accuracy": 0.8182,
+    "test_f1_weighted": 0.8214,
+    "all_candidates": {
+      "logistic_regression": {
+        "accuracy": 0.5,
+        "f1_weighted": 0.5318
+      },
+      "random_forest": {
+        "accuracy": 0.8182,
+        "f1_weighted": 0.8214
+      },
+      "gradient_boosting": {
+        "accuracy": 0.7727,
+        "f1_weighted": 0.7798
+      },
+      "xgboost": {
+        "accuracy": 0.7955,
+        "f1_weighted": 0.7987
+      }
+    },
+    "class_distribution": {
+      "school": 145,
+      "college": 42,
+      "university": 33
+    }
+  },
+  "predictions": [
+    {
+      "id": 271065685,
+      "name": "Pak Railway Academy",
+      "lat": 31.4875144,
+      "lon": 74.3593391,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9498
+    },
+    {
+      "id": 271096995,
+      "name": "DPS Girls",
+      "lat": 31.4739484,
+      "lon": 74.4007125,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9093
+    },
+    {
+      "id": 271107138,
+      "name": "DPS Sec Z Ph 3",
+      "lat": 31.4711759,
+      "lon": 74.3835941,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9089
+    },
+    {
+      "id": 271110942,
+      "name": "Unknown",
+      "lat": 31.4671696,
+      "lon": 74.3707576,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8573
+    },
+    {
+      "id": 271138954,
+      "name": "The Lhr ALMA",
+      "lat": 31.4814649,
+      "lon": 74.38662,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9627
+    },
+    {
+      "id": 271140455,
+      "name": "Lhr Grammer",
+      "lat": 31.4809232,
+      "lon": 74.3909459,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9645
+    },
+    {
+      "id": 271166561,
+      "name": "Boys College",
+      "lat": 31.4911305,
+      "lon": 74.384834,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9597
+    },
+    {
+      "id": 271696527,
+      "name": "Girls Collage",
+      "lat": 31.4629183,
+      "lon": 74.3900677,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8693
+    },
+    {
+      "id": 272275806,
+      "name": "Unknown",
+      "lat": 31.4631247,
+      "lon": 74.3748012,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8745
+    },
+    {
+      "id": 272338687,
+      "name": "Unknown",
+      "lat": 31.5040876,
+      "lon": 74.3820277,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.97
+    },
+    {
+      "id": 272381690,
+      "name": "Aitchison College",
+      "lat": 31.5502455,
+      "lon": 74.3456212,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6269
+    },
+    {
+      "id": 272388931,
+      "name": "Unknown",
+      "lat": 31.5693044,
+      "lon": 74.3740884,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9886
+    },
+    {
+      "id": 303276466,
+      "name": "Beconhouse",
+      "lat": 31.4793039,
+      "lon": 74.3602632,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9205
+    },
+    {
+      "id": 303945094,
+      "name": "Shofait Intl",
+      "lat": 31.4743722,
+      "lon": 74.2791638,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7737
+    },
+    {
+      "id": 304566343,
+      "name": "Allama Iqbal Medical College",
+      "lat": 31.4877802,
+      "lon": 74.2977375,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.5384
+    },
+    {
+      "id": 304949502,
+      "name": "VC Ground",
+      "lat": 31.4996513,
+      "lon": 74.3018808,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.4561
+    },
+    {
+      "id": 305600989,
+      "name": "DHA Boy's",
+      "lat": 31.4659118,
+      "lon": 74.3954689,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.5518
+    },
+    {
+      "id": 526681860,
+      "name": "Department of Geography",
+      "lat": 31.5019595,
+      "lon": 74.3085489,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.4991
+    },
+    {
+      "id": 533746953,
+      "name": "Unknown",
+      "lat": 31.476576,
+      "lon": 74.3762553,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9677
+    },
+    {
+      "id": 533746958,
+      "name": "Unknown",
+      "lat": 31.4759682,
+      "lon": 74.374927,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9564
+    },
+    {
+      "id": 540757181,
+      "name": "Junior Cadet School",
+      "lat": 31.4295345,
+      "lon": 74.2950525,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8089
+    },
+    {
+      "id": 914219800,
+      "name": "Unknown",
+      "lat": 31.5129129,
+      "lon": 74.3373642,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7676
+    },
+    {
+      "id": 935843937,
+      "name": "Unknown",
+      "lat": 31.5032098,
+      "lon": 74.2597746,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9189
+    },
+    {
+      "id": 1146993017,
+      "name": "Lacas",
+      "lat": 31.4713939,
+      "lon": 74.2814124,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7579
+    },
+    {
+      "id": 1269536211,
+      "name": "Unknown",
+      "lat": 31.4480732,
+      "lon": 74.2160241,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9332
+    },
+    {
+      "id": 1357561219,
+      "name": "Lahore Grammar School Johar Town",
+      "lat": 31.4707565,
+      "lon": 74.2908592,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.5452
+    },
+    {
+      "id": 1715929574,
+      "name": "Blessing Field School",
+      "lat": 31.4684546,
+      "lon": 74.3181592,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6358
+    },
+    {
+      "id": 1749454353,
+      "name": "ESNA FOUNDATION",
+      "lat": 31.5228645,
+      "lon": 74.3377463,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6286
+    },
+    {
+      "id": 2296900505,
+      "name": "Khalid Secondary School",
+      "lat": 31.4880368,
+      "lon": 74.3547964,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8882
+    },
+    {
+      "id": 2401670691,
+      "name": "Broom Hostel",
+      "lat": 31.5668546,
+      "lon": 74.31915,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6351
+    },
+    {
+      "id": 3206662921,
+      "name": "Govt.Comprehensive Higher Secondary School",
+      "lat": 31.5845184,
+      "lon": 74.3549294,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9471
+    },
+    {
+      "id": 3228646370,
+      "name": "Fauji Foundation School",
+      "lat": 31.4989184,
+      "lon": 74.3957538,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.97
+    },
+    {
+      "id": 3230608353,
+      "name": "Punjab University Cricket Ground",
+      "lat": 31.5605657,
+      "lon": 74.3067639,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.5299
+    },
+    {
+      "id": 3230619155,
+      "name": "Fatima Jinnah Medical University",
+      "lat": 31.5551319,
+      "lon": 74.3195576,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6628
+    },
+    {
+      "id": 3237663887,
+      "name": "Divisional Public School (DPS)",
+      "lat": 31.4808306,
+      "lon": 74.3275402,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6687
+    },
+    {
+      "id": 3254549271,
+      "name": "Forman Christian College University",
+      "lat": 31.5224076,
+      "lon": 74.3323166,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.6168
+    },
+    {
+      "id": 3260928489,
+      "name": "Saint Francis High School",
+      "lat": 31.5719221,
+      "lon": 74.3103828,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5086
+    },
+    {
+      "id": 3582187617,
+      "name": "Government High School for Girls",
+      "lat": 31.5075429,
+      "lon": 74.298518,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7521
+    },
+    {
+      "id": 3582187618,
+      "name": "Government Junior Model School",
+      "lat": 31.5084256,
+      "lon": 74.2997572,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.74
+    },
+    {
+      "id": 3842374907,
+      "name": "\u06cc\u0648 \u0627\u06cc\u0645 \u0679\u06cc \u06af\u0631\u06cc\u0646\u0632",
+      "lat": 31.4510511,
+      "lon": 74.2929458,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6455
+    },
+    {
+      "id": 4170047792,
+      "name": "Society Public School",
+      "lat": 31.5633279,
+      "lon": 74.38288,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9903
+    },
+    {
+      "id": 4170047793,
+      "name": "Unknown",
+      "lat": 31.5632377,
+      "lon": 74.3829279,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9903
+    },
+    {
+      "id": 4246311796,
+      "name": "Scope Centre",
+      "lat": 31.479516,
+      "lon": 74.3076859,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.661
+    },
+    {
+      "id": 4249836089,
+      "name": "The University of lahore, Raiwand Road Campus",
+      "lat": 31.4621409,
+      "lon": 74.2438081,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8392
+    },
+    {
+      "id": 4262475390,
+      "name": "Punjab University Centre for undergraduate studies",
+      "lat": 31.5021539,
+      "lon": 74.3058343,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.541
+    },
+    {
+      "id": 4262478889,
+      "name": "CMH Lahore Medical College",
+      "lat": 31.5386517,
+      "lon": 74.3707606,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9564
+    },
+    {
+      "id": 4281904200,
+      "name": "Beaconhouse school",
+      "lat": 31.4765502,
+      "lon": 74.3765298,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9677
+    },
+    {
+      "id": 4281904891,
+      "name": "Bridge accademy ",
+      "lat": 31.5135099,
+      "lon": 74.3450323,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9163
+    },
+    {
+      "id": 4295714815,
+      "name": "Ali Public School",
+      "lat": 31.5233495,
+      "lon": 74.3175103,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.4768
+    },
+    {
+      "id": 4295714816,
+      "name": "Allied School - ZN Campus",
+      "lat": 31.523967,
+      "lon": 74.3181677,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.4514
+    },
+    {
+      "id": 4305867294,
+      "name": "LGS Paragon Campus",
+      "lat": 31.5334452,
+      "lon": 74.4525847,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.789
+    },
+    {
+      "id": 4316884094,
+      "name": "Kips College 30-A",
+      "lat": 31.4701234,
+      "lon": 74.3029275,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7381
+    },
+    {
+      "id": 4316934289,
+      "name": "Kips College 11-A",
+      "lat": 31.4675615,
+      "lon": 74.3064167,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.762
+    },
+    {
+      "id": 4317932789,
+      "name": "CFE Group of Colleges",
+      "lat": 31.5017299,
+      "lon": 74.3239573,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.8287
+    },
+    {
+      "id": 4327632889,
+      "name": "Al Qalam",
+      "lat": 31.5630855,
+      "lon": 74.3810512,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9914
+    },
+    {
+      "id": 4327632989,
+      "name": "Unknown",
+      "lat": 31.5649301,
+      "lon": 74.3879428,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9903
+    },
+    {
+      "id": 4338127891,
+      "name": "Punjab University Examination Halls",
+      "lat": 31.5049439,
+      "lon": 74.2939537,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7586
+    },
+    {
+      "id": 4339373791,
+      "name": "Islamia College Civil Lines LHR",
+      "lat": 31.5734228,
+      "lon": 74.3036652,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6906
+    },
+    {
+      "id": 4365511490,
+      "name": "Unknown",
+      "lat": 31.4969776,
+      "lon": 74.3036782,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6441
+    },
+    {
+      "id": 4406335589,
+      "name": "Pak public foundation school",
+      "lat": 31.5598235,
+      "lon": 74.2842001,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7133
+    },
+    {
+      "id": 4414399889,
+      "name": "Unknown",
+      "lat": 31.4530627,
+      "lon": 74.3151885,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6233
+    },
+    {
+      "id": 4416074794,
+      "name": "Unknown",
+      "lat": 31.5700991,
+      "lon": 74.3010008,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6553
+    },
+    {
+      "id": 4451240489,
+      "name": "Institute of Railways, Griffin Ground, Mughalpura Lahore, Pakistan",
+      "lat": 31.5631672,
+      "lon": 74.3742618,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9769
+    },
+    {
+      "id": 4471094389,
+      "name": "Riphah International University",
+      "lat": 31.4485959,
+      "lon": 74.3155643,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7417
+    },
+    {
+      "id": 4547273141,
+      "name": "Unknown",
+      "lat": 31.5047481,
+      "lon": 74.3536925,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.5373
+    },
+    {
+      "id": 4547389489,
+      "name": "ISSAC",
+      "lat": 31.4883183,
+      "lon": 74.4217227,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.977
+    },
+    {
+      "id": 4551901789,
+      "name": "City District Government Girls High School (Managed by Lahore South East Rotary Club)",
+      "lat": 31.4357946,
+      "lon": 74.3030527,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7817
+    },
+    {
+      "id": 4584255090,
+      "name": "St.Anthony's High School",
+      "lat": 31.5591194,
+      "lon": 74.3200421,
+      "actual_type": "school",
+      "predicted_type": "college",
+      "confidence": 0.4278
+    },
+    {
+      "id": 4584255190,
+      "name": "Apwa School",
+      "lat": 31.5489199,
+      "lon": 74.3209863,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5256
+    },
+    {
+      "id": 4655947392,
+      "name": "Green Hall academy",
+      "lat": 31.5491597,
+      "lon": 74.3977969,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9817
+    },
+    {
+      "id": 4660717556,
+      "name": "\u067e\u0646\u062c\u0627\u0628 \u06cc\u0648\u0646\u06cc\u0648\u0631\u0633\u0679\u06cc \u0634\u0639\u0628\u06c1 \u0642\u0627\u0646\u0648\u0646",
+      "lat": 31.5278254,
+      "lon": 74.3179555,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.501
+    },
+    {
+      "id": 4699069324,
+      "name": "Government Central Model High School Samanabad Lahore",
+      "lat": 31.533414,
+      "lon": 74.302075,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7875
+    },
+    {
+      "id": 4706323990,
+      "name": "\u062d\u0627\u0631\u062b \u06a9\u0627 \u06af\u06be\u0631",
+      "lat": 31.436243,
+      "lon": 74.2672016,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7585
+    },
+    {
+      "id": 4713553791,
+      "name": "Unknown",
+      "lat": 31.4545772,
+      "lon": 74.3993247,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8545
+    },
+    {
+      "id": 4743178921,
+      "name": "Corvit Lahore",
+      "lat": 31.514075,
+      "lon": 74.346275,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9351
+    },
+    {
+      "id": 4746664924,
+      "name": "Corvit Class Rooms",
+      "lat": 31.5148404,
+      "lon": 74.3473953,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9476
+    },
+    {
+      "id": 4772160621,
+      "name": "Punjab University College of Information Technology (PUCIT)",
+      "lat": 31.4785966,
+      "lon": 74.2651695,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9077
+    },
+    {
+      "id": 4778176640,
+      "name": "University of Sourh Asia , Raiwind Campus",
+      "lat": 31.4250952,
+      "lon": 74.2311281,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7224
+    },
+    {
+      "id": 4794984423,
+      "name": "Fazaia Intermediate College",
+      "lat": 31.5184828,
+      "lon": 74.3936913,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9605
+    },
+    {
+      "id": 4840099423,
+      "name": "Hajvery University Euro Campus",
+      "lat": 31.5042582,
+      "lon": 74.3582433,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9249
+    },
+    {
+      "id": 4893314021,
+      "name": "Unknown",
+      "lat": 31.5614789,
+      "lon": 74.3399888,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8508
+    },
+    {
+      "id": 4896578421,
+      "name": "Govt. High School for boys",
+      "lat": 31.5044955,
+      "lon": 74.275196,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8429
+    },
+    {
+      "id": 4896578521,
+      "name": "Govt. High School for girls",
+      "lat": 31.5116845,
+      "lon": 74.2845567,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8086
+    },
+    {
+      "id": 4907505323,
+      "name": "Worker Welfare School (Boys) Rana Town",
+      "lat": 31.680213,
+      "lon": 74.2768261,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6959
+    },
+    {
+      "id": 4907505335,
+      "name": "Concordia College",
+      "lat": 31.6677358,
+      "lon": 74.2806789,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.555
+    },
+    {
+      "id": 4907505345,
+      "name": "Government Boys High School",
+      "lat": 31.6471249,
+      "lon": 74.2838968,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7003
+    },
+    {
+      "id": 4907505349,
+      "name": "Hashmat School System",
+      "lat": 31.6465583,
+      "lon": 74.2828184,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7028
+    },
+    {
+      "id": 4909385122,
+      "name": "Govt. High School for boys",
+      "lat": 31.5044956,
+      "lon": 74.2751302,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8429
+    },
+    {
+      "id": 4909417022,
+      "name": "RPS. Muhafiz Town",
+      "lat": 31.4516111,
+      "lon": 74.2219253,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.95
+    },
+    {
+      "id": 4909438421,
+      "name": "Iqra Public School",
+      "lat": 31.452908,
+      "lon": 74.2176263,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9504
+    },
+    {
+      "id": 4910219495,
+      "name": "AL-NOOR COLLEGE",
+      "lat": 31.6275697,
+      "lon": 74.2873356,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.7968
+    },
+    {
+      "id": 4910219499,
+      "name": "CDG Boys High School, Factory Area Shahdara",
+      "lat": 31.626028,
+      "lon": 74.2889795,
+      "actual_type": "school",
+      "predicted_type": "college",
+      "confidence": 0.4786
+    },
+    {
+      "id": 4910219621,
+      "name": "Stars Group Of Colleges, Shahdara",
+      "lat": 31.6211975,
+      "lon": 74.2888043,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6981
+    },
+    {
+      "id": 4910219622,
+      "name": "Global Law College",
+      "lat": 31.6211523,
+      "lon": 74.2885601,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.7227
+    },
+    {
+      "id": 4910219639,
+      "name": "Shine Institute of Management Studies",
+      "lat": 31.6148323,
+      "lon": 74.29045,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.4043
+    },
+    {
+      "id": 4910219652,
+      "name": "Superior College",
+      "lat": 31.6114264,
+      "lon": 74.2938476,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.7521
+    },
+    {
+      "id": 4910219653,
+      "name": "Dar E Arqam Girls College",
+      "lat": 31.611538,
+      "lon": 74.2940069,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.7469
+    },
+    {
+      "id": 4910585749,
+      "name": "\u06af\u0648\u0631\u0646\u0645\u0646\u0679 \u06c1\u0627\u0626\u06cc \u0627\u0633\u06a9\u0648\u0644 \u0634\u0627\u06c1\u062f\u0631\u06c1",
+      "lat": 31.6226065,
+      "lon": 74.2925072,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.571
+    },
+    {
+      "id": 4910585754,
+      "name": "Muslim Ideal School",
+      "lat": 31.6260406,
+      "lon": 74.3047632,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7444
+    },
+    {
+      "id": 4910585763,
+      "name": "Government College For Women Vadala Dyal Shah",
+      "lat": 31.6317651,
+      "lon": 74.2693108,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6751
+    },
+    {
+      "id": 4910585791,
+      "name": "Bait-ur-Raffah Maktab Girls High School",
+      "lat": 31.6134028,
+      "lon": 74.2688567,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7095
+    },
+    {
+      "id": 4910585804,
+      "name": "The Oriel School",
+      "lat": 31.6174028,
+      "lon": 74.2807047,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5973
+    },
+    {
+      "id": 4912291863,
+      "name": "EFA School Naseem Campus",
+      "lat": 31.5896009,
+      "lon": 74.3040613,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6417
+    },
+    {
+      "id": 4912291867,
+      "name": "Farooqi Grammar School",
+      "lat": 31.5875828,
+      "lon": 74.3049209,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6467
+    },
+    {
+      "id": 4912291877,
+      "name": "De Montmorency College of Dentistry",
+      "lat": 31.5870524,
+      "lon": 74.3080801,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.5014
+    },
+    {
+      "id": 4912439080,
+      "name": "Government Muslim Model School",
+      "lat": 31.5742747,
+      "lon": 74.3025874,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6996
+    },
+    {
+      "id": 4912439081,
+      "name": "Central Model School",
+      "lat": 31.5750055,
+      "lon": 74.3030428,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6267
+    },
+    {
+      "id": 4912439083,
+      "name": "Govt. Saleem Model High School",
+      "lat": 31.5754558,
+      "lon": 74.3069578,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5914
+    },
+    {
+      "id": 4912439084,
+      "name": "University Of Education",
+      "lat": 31.5763386,
+      "lon": 74.3039617,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.5461
+    },
+    {
+      "id": 4912575642,
+      "name": "Al Karam High School",
+      "lat": 31.5989929,
+      "lon": 74.3170424,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6901
+    },
+    {
+      "id": 4912575649,
+      "name": "Govt Girls High School",
+      "lat": 31.5966157,
+      "lon": 74.3083603,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.696
+    },
+    {
+      "id": 4912575658,
+      "name": "Allied School Ravi Road Campus",
+      "lat": 31.5961837,
+      "lon": 74.3065875,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7052
+    },
+    {
+      "id": 4912575663,
+      "name": "Unknown",
+      "lat": 31.5931485,
+      "lon": 74.3074869,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6954
+    },
+    {
+      "id": 4914789572,
+      "name": "KIPS College",
+      "lat": 31.5724491,
+      "lon": 74.287577,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6526
+    },
+    {
+      "id": 4916250319,
+      "name": "DPS Boys Wing",
+      "lat": 31.4809896,
+      "lon": 74.3283693,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6531
+    },
+    {
+      "id": 4916250624,
+      "name": "DPS Girls Wing",
+      "lat": 31.4802919,
+      "lon": 74.3249929,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6546
+    },
+    {
+      "id": 4916250625,
+      "name": "Government College for Women",
+      "lat": 31.4843815,
+      "lon": 74.3214337,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.4986
+    },
+    {
+      "id": 4916250626,
+      "name": "Unknown",
+      "lat": 31.4886387,
+      "lon": 74.3227834,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5899
+    },
+    {
+      "id": 4916640089,
+      "name": "Beaconhouse School System Garden Town Campus",
+      "lat": 31.5056302,
+      "lon": 74.3293947,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7048
+    },
+    {
+      "id": 4916640091,
+      "name": "Allied School",
+      "lat": 31.50455,
+      "lon": 74.329154,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6846
+    },
+    {
+      "id": 4916640092,
+      "name": "The City School",
+      "lat": 31.5038408,
+      "lon": 74.3290726,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6136
+    },
+    {
+      "id": 4916640094,
+      "name": "Lahore Leads University",
+      "lat": 31.5030825,
+      "lon": 74.3290337,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.5517
+    },
+    {
+      "id": 4916640095,
+      "name": "National Law College",
+      "lat": 31.5035451,
+      "lon": 74.326128,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.7613
+    },
+    {
+      "id": 4916640096,
+      "name": "RISE Group of Colleges",
+      "lat": 31.503527,
+      "lon": 74.3256856,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.7806
+    },
+    {
+      "id": 4916641132,
+      "name": "CFE Group of Colleges",
+      "lat": 31.4994857,
+      "lon": 74.3167765,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.7605
+    },
+    {
+      "id": 4916641133,
+      "name": "RISE Group of Colleges",
+      "lat": 31.4984906,
+      "lon": 74.3166246,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6905
+    },
+    {
+      "id": 4916641137,
+      "name": "Unique High School",
+      "lat": 31.4917138,
+      "lon": 74.3096416,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6507
+    },
+    {
+      "id": 4916641138,
+      "name": "American Lycetuff School",
+      "lat": 31.4874567,
+      "lon": 74.3056721,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5413
+    },
+    {
+      "id": 4916641142,
+      "name": "The City School Model Town Junior",
+      "lat": 31.4880421,
+      "lon": 74.3060452,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5683
+    },
+    {
+      "id": 4916641144,
+      "name": "The Educators",
+      "lat": 31.4859451,
+      "lon": 74.3047677,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.4696
+    },
+    {
+      "id": 4916641146,
+      "name": "Eastern College",
+      "lat": 31.4860362,
+      "lon": 74.3055095,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.4612
+    },
+    {
+      "id": 4916641150,
+      "name": "Leads School System",
+      "lat": 31.4836013,
+      "lon": 74.2991286,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5725
+    },
+    {
+      "id": 4916785714,
+      "name": "Virtual University Campus",
+      "lat": 31.4735448,
+      "lon": 74.3026454,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.4676
+    },
+    {
+      "id": 4916785719,
+      "name": "American Lycetuff School",
+      "lat": 31.4723262,
+      "lon": 74.3021375,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6684
+    },
+    {
+      "id": 4916786449,
+      "name": "American Lyceum School System",
+      "lat": 31.4652153,
+      "lon": 74.3125044,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7207
+    },
+    {
+      "id": 4916786458,
+      "name": "The City School (Township Junior)",
+      "lat": 31.4626812,
+      "lon": 74.3202922,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5792
+    },
+    {
+      "id": 4916786459,
+      "name": "Jinnah Islamia College of Commerce",
+      "lat": 31.4620603,
+      "lon": 74.3205236,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.5732
+    },
+    {
+      "id": 4916786465,
+      "name": "Beaconhouse School System",
+      "lat": 31.4603428,
+      "lon": 74.3248968,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.532
+    },
+    {
+      "id": 4916786470,
+      "name": "Fatima Jinnah College for Women",
+      "lat": 31.4575549,
+      "lon": 74.3288402,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6318
+    },
+    {
+      "id": 4916899714,
+      "name": "Pakistan College of Law",
+      "lat": 31.5027048,
+      "lon": 74.3313924,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.5795
+    },
+    {
+      "id": 4916899716,
+      "name": "The Right School",
+      "lat": 31.5035769,
+      "lon": 74.3322366,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6131
+    },
+    {
+      "id": 4916899719,
+      "name": "Superior College of Technology",
+      "lat": 31.5015016,
+      "lon": 74.332101,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.7586
+    },
+    {
+      "id": 4916900823,
+      "name": "Concordia College",
+      "lat": 31.4988977,
+      "lon": 74.3341643,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6783
+    },
+    {
+      "id": 4916900824,
+      "name": "Next Step College",
+      "lat": 31.4983801,
+      "lon": 74.3343978,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6591
+    },
+    {
+      "id": 4916900826,
+      "name": "Central Institute Of Management & Science",
+      "lat": 31.4979898,
+      "lon": 74.3355139,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.4722
+    },
+    {
+      "id": 4916900828,
+      "name": "London School of Management & Technology",
+      "lat": 31.495529,
+      "lon": 74.3356027,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6569
+    },
+    {
+      "id": 4916900829,
+      "name": "Dawn Model School",
+      "lat": 31.4959312,
+      "lon": 74.3354299,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6331
+    },
+    {
+      "id": 4918998542,
+      "name": "Allama Iqbal Medical College",
+      "lat": 31.4863829,
+      "lon": 74.3004581,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.5541
+    },
+    {
+      "id": 4920146650,
+      "name": "Information Technology University (ITU)",
+      "lat": 31.4760299,
+      "lon": 74.3427526,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.5337
+    },
+    {
+      "id": 4920146656,
+      "name": "The Educators",
+      "lat": 31.4694252,
+      "lon": 74.3451168,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8254
+    },
+    {
+      "id": 4958901223,
+      "name": "skans abu bakar",
+      "lat": 31.5122971,
+      "lon": 74.3237318,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5971
+    },
+    {
+      "id": 4970685237,
+      "name": "Deen Schooling System",
+      "lat": 31.5164559,
+      "lon": 74.3482593,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9503
+    },
+    {
+      "id": 4974663322,
+      "name": "Unknown",
+      "lat": 31.5200864,
+      "lon": 74.2866889,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8458
+    },
+    {
+      "id": 4974663323,
+      "name": "American Lycetuff",
+      "lat": 31.5188148,
+      "lon": 74.2964914,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7486
+    },
+    {
+      "id": 4974663721,
+      "name": "American Lycetuff",
+      "lat": 31.5178888,
+      "lon": 74.2981463,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7098
+    },
+    {
+      "id": 4974663921,
+      "name": "Stars Academy",
+      "lat": 31.5177549,
+      "lon": 74.2904752,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7228
+    },
+    {
+      "id": 5010999141,
+      "name": "university of Education",
+      "lat": 31.4477802,
+      "lon": 74.2981625,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6665
+    },
+    {
+      "id": 5011004043,
+      "name": "University of Education",
+      "lat": 31.4505335,
+      "lon": 74.2995547,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6324
+    },
+    {
+      "id": 5066142624,
+      "name": "Punjab law college",
+      "lat": 31.5133816,
+      "lon": 74.31918,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.5001
+    },
+    {
+      "id": 5102292821,
+      "name": "Knowledge School",
+      "lat": 31.5205347,
+      "lon": 74.3146664,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.533
+    },
+    {
+      "id": 5188793426,
+      "name": "Government College University-GCU",
+      "lat": 31.5715056,
+      "lon": 74.3086975,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.5695
+    },
+    {
+      "id": 5188813721,
+      "name": "Cathedral School",
+      "lat": 31.5639872,
+      "lon": 74.3169242,
+      "actual_type": "school",
+      "predicted_type": "college",
+      "confidence": 0.5174
+    },
+    {
+      "id": 5188814121,
+      "name": "National Collage of Arts (NCA) Lahore",
+      "lat": 31.5685689,
+      "lon": 74.3095966,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6482
+    },
+    {
+      "id": 5251896816,
+      "name": "Meridian's School System & Academy",
+      "lat": 31.4848083,
+      "lon": 74.4180534,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9784
+    },
+    {
+      "id": 5252199942,
+      "name": "St. Marys High School Gulberg",
+      "lat": 31.51947,
+      "lon": 74.3535248,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8716
+    },
+    {
+      "id": 5255279617,
+      "name": "LGS Shalimar Branch",
+      "lat": 31.5766181,
+      "lon": 74.3813258,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9869
+    },
+    {
+      "id": 5260103792,
+      "name": "PSR College of Rehabilitation Sciences",
+      "lat": 31.5290324,
+      "lon": 74.3229027,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.5783
+    },
+    {
+      "id": 5273347270,
+      "name": "\u062f\u0631\u0633 \u06af\u0627\u06c1 \u0639\u0628\u062f\u0627\u0644\u0633\u0644\u0627\u0645 \u0628\u0631\u0627\u0626\u06d2 \u0639\u0644\u0648\u0645 \u0631\u06cc\u0627\u0636\u06cc",
+      "lat": 31.5130104,
+      "lon": 74.314655,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.452
+    },
+    {
+      "id": 5273541664,
+      "name": "Punjab Judicial Academy",
+      "lat": 31.5619196,
+      "lon": 74.3150142,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6577
+    },
+    {
+      "id": 5273669393,
+      "name": "Government Rabia Basri College for Women",
+      "lat": 31.474605,
+      "lon": 74.3562941,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.558
+    },
+    {
+      "id": 5273669395,
+      "name": "Convent of Jesus and Mary",
+      "lat": 31.5613154,
+      "lon": 74.3400449,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8508
+    },
+    {
+      "id": 5276934831,
+      "name": "Virtual University of Pakistan",
+      "lat": 31.5495019,
+      "lon": 74.3280204,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.6842
+    },
+    {
+      "id": 5470536021,
+      "name": "Saint Anthony High School",
+      "lat": 31.480188,
+      "lon": 74.3011789,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6399
+    },
+    {
+      "id": 5577294963,
+      "name": "Government Jinnah Degree College for Women",
+      "lat": 31.5512286,
+      "lon": 74.317367,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6926
+    },
+    {
+      "id": 5737704522,
+      "name": "Lahore Garission University",
+      "lat": 31.4637789,
+      "lon": 74.4431405,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.706
+    },
+    {
+      "id": 5754766122,
+      "name": "Host",
+      "lat": 31.5125266,
+      "lon": 74.3224881,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5854
+    },
+    {
+      "id": 5759425670,
+      "name": "\u062d\u06a9\u0648\u0645\u062a \u0648\u06a9\u0679\u0648\u0631\u06cc\u06c1 \u06af\u0631\u0644\u0632 \u06c1\u0627\u0626\u0631 \u0633\u06cc\u06a9\u0646\u0688\u0631\u06cc \u0633\u06a9\u0648\u0644",
+      "lat": 31.5793746,
+      "lon": 74.3113139,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6233
+    },
+    {
+      "id": 6180693685,
+      "name": "The Educators Al Rauf Campus",
+      "lat": 31.5313314,
+      "lon": 74.303295,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7561
+    },
+    {
+      "id": 6369748585,
+      "name": "Institute Of Quality And Technology Management",
+      "lat": 31.4965038,
+      "lon": 74.3007836,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6547
+    },
+    {
+      "id": 6488951387,
+      "name": "\u0634\u06c1\u0631\u06cc \u0636\u0644\u0639 \u0627\u0633\u06a9\u0648\u0644",
+      "lat": 31.5695438,
+      "lon": 74.3741113,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9886
+    },
+    {
+      "id": 6514180539,
+      "name": "Al-Hadi Foundation School",
+      "lat": 31.5864054,
+      "lon": 74.4043219,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9792
+    },
+    {
+      "id": 6591968693,
+      "name": "The Readers School",
+      "lat": 31.5226451,
+      "lon": 74.2889328,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7887
+    },
+    {
+      "id": 6872788685,
+      "name": "University of south asia lahore",
+      "lat": 31.4257432,
+      "lon": 74.2313591,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6063
+    },
+    {
+      "id": 7244237485,
+      "name": "NCBMS",
+      "lat": 31.5554728,
+      "lon": 74.3414545,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7554
+    },
+    {
+      "id": 7441317585,
+      "name": "Jinnah memorial college",
+      "lat": 31.5507299,
+      "lon": 74.303323,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.8056
+    },
+    {
+      "id": 7442999185,
+      "name": "Jinnah memorial college",
+      "lat": 31.5507326,
+      "lon": 74.303362,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.8077
+    },
+    {
+      "id": 7796809886,
+      "name": "Pak Model School",
+      "lat": 31.5837955,
+      "lon": 74.3434899,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8241
+    },
+    {
+      "id": 7979807419,
+      "name": "Department of Computer Science, UET New Campus",
+      "lat": 31.6946178,
+      "lon": 74.2445,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9397
+    },
+    {
+      "id": 7979890303,
+      "name": "Department of Biomedical Engineering, UET New Campus",
+      "lat": 31.6945881,
+      "lon": 74.2486913,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9997
+    },
+    {
+      "id": 7979890304,
+      "name": "Administration Office, UET New Campus",
+      "lat": 31.693861,
+      "lon": 74.248299,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9997
+    },
+    {
+      "id": 7979890305,
+      "name": "Department of Chemical Engineering, UET New Campus",
+      "lat": 31.6948782,
+      "lon": 74.2475565,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9997
+    },
+    {
+      "id": 7979890306,
+      "name": "Department of Electrical Engineering, UET New Campus",
+      "lat": 31.6949139,
+      "lon": 74.2456745,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9897
+    },
+    {
+      "id": 7979890307,
+      "name": "Department of Mechanical Engineering, UET New Campus",
+      "lat": 31.6957802,
+      "lon": 74.2455951,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9897
+    },
+    {
+      "id": 7979890308,
+      "name": "Department of Basic Sciences & Humanities, UET New Campus",
+      "lat": 31.6957603,
+      "lon": 74.2476219,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9997
+    },
+    {
+      "id": 8285774417,
+      "name": "SKANS CA campus",
+      "lat": 31.4997588,
+      "lon": 74.3322323,
+      "actual_type": "school",
+      "predicted_type": "college",
+      "confidence": 0.5278
+    },
+    {
+      "id": 8398484969,
+      "name": "Gov't Primary School Ahmedabad",
+      "lat": 31.4831179,
+      "lon": 74.2399246,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8782
+    },
+    {
+      "id": 8399022560,
+      "name": "National University of Modern Languages, Lahore",
+      "lat": 31.5603732,
+      "lon": 74.3302278,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.6169
+    },
+    {
+      "id": 8871063105,
+      "name": "International College for Legal Studies | ICLS",
+      "lat": 31.5035589,
+      "lon": 74.327295,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.598
+    },
+    {
+      "id": 9393925154,
+      "name": "\u0622\u0645\u0646\u06c1 \u0639\u0646\u0627\u06cc\u062a \u0645\u06cc\u0688\u06cc\u06a9\u0644 \u06a9\u0627\u0644\u062c",
+      "lat": 31.6007717,
+      "lon": 74.2144117,
+      "actual_type": "college",
+      "predicted_type": "college",
+      "confidence": 0.6798
+    },
+    {
+      "id": 9451069565,
+      "name": "Naqsh School of Arts",
+      "lat": 31.5834861,
+      "lon": 74.3096668,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5816
+    },
+    {
+      "id": 9673745117,
+      "name": "TNS Beaconhouse Defence",
+      "lat": 31.4639941,
+      "lon": 74.3938025,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8312
+    },
+    {
+      "id": 10066722817,
+      "name": "Al Burhan",
+      "lat": 31.5106187,
+      "lon": 74.3527941,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9295
+    },
+    {
+      "id": 10066722917,
+      "name": "Al Burhan",
+      "lat": 31.50927,
+      "lon": 74.3527512,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9078
+    },
+    {
+      "id": 10279641409,
+      "name": "Unknown",
+      "lat": 31.4267435,
+      "lon": 74.3863215,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8736
+    },
+    {
+      "id": 11872569182,
+      "name": "SKANS School of Accountancy ACCA Campus",
+      "lat": 31.4952076,
+      "lon": 74.3127024,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5959
+    },
+    {
+      "id": 12442461774,
+      "name": "American National School",
+      "lat": 31.5038266,
+      "lon": 74.351436,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.7476
+    },
+    {
+      "id": 12748364182,
+      "name": "Information Technology University of the Punjab (ITU) - Barki Campus",
+      "lat": 31.5153953,
+      "lon": 74.4609504,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.6572
+    },
+    {
+      "id": 13184937339,
+      "name": "Student Service Center",
+      "lat": 31.4467891,
+      "lon": 74.2678234,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9921
+    },
+    {
+      "id": 13184937340,
+      "name": "Examination Office",
+      "lat": 31.4468201,
+      "lon": 74.2676774,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9921
+    },
+    {
+      "id": 13184937341,
+      "name": "Admission Office",
+      "lat": 31.447119,
+      "lon": 74.2678048,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9924
+    },
+    {
+      "id": 13184937342,
+      "name": "UCP Cricket Ground",
+      "lat": 31.4464015,
+      "lon": 74.2676118,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9671
+    },
+    {
+      "id": 13184937343,
+      "name": "Library",
+      "lat": 31.4477695,
+      "lon": 74.2677542,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9779
+    },
+    {
+      "id": 13184937344,
+      "name": "C parking",
+      "lat": 31.4482171,
+      "lon": 74.2686673,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.8479
+    },
+    {
+      "id": 13184937345,
+      "name": "B Parking",
+      "lat": 31.4475053,
+      "lon": 74.2686443,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9761
+    },
+    {
+      "id": 13184937346,
+      "name": "A Parking",
+      "lat": 31.446792,
+      "lon": 74.2684531,
+      "actual_type": "university",
+      "predicted_type": "university",
+      "confidence": 0.9899
+    },
+    {
+      "id": 13255813504,
+      "name": "Leads School System, Formanites Campus",
+      "lat": 31.4432256,
+      "lon": 74.4084934,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8757
+    },
+    {
+      "id": 13382680422,
+      "name": "The Trust School",
+      "lat": 31.4336654,
+      "lon": 74.2556129,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.8963
+    },
+    {
+      "id": 13417619802,
+      "name": "Inernational Grammar School",
+      "lat": 31.5439779,
+      "lon": 74.4214901,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.9842
+    },
+    {
+      "id": 13475388701,
+      "name": "LACAS ALJT",
+      "lat": 31.4694972,
+      "lon": 74.2940988,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.5759
+    },
+    {
+      "id": 13475388702,
+      "name": "Lecole Mondiale",
+      "lat": 31.463559,
+      "lon": 74.2950748,
+      "actual_type": "school",
+      "predicted_type": "school",
+      "confidence": 0.6093
+    }
+  ]
+}

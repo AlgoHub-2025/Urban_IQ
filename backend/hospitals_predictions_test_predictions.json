@@ -1,0 +1,494 @@
+{
+  "source": "hospital_classifier",
+  "stage": "test_set_predictions",
+  "num_test_rows": 46,
+  "model_metrics": {
+    "best_model": "gradient_boosting",
+    "test_accuracy": 0.8043,
+    "test_f1_weighted": 0.7886,
+    "all_candidates": {
+      "logistic_regression": {
+        "accuracy": 0.4348,
+        "f1_weighted": 0.4898
+      },
+      "random_forest": {
+        "accuracy": 0.7826,
+        "f1_weighted": 0.7719
+      },
+      "gradient_boosting": {
+        "accuracy": 0.8043,
+        "f1_weighted": 0.7886
+      },
+      "xgboost": {
+        "accuracy": 0.8043,
+        "f1_weighted": 0.7886
+      }
+    },
+    "class_distribution": {
+      "hospital": 183,
+      "clinic": 44
+    }
+  },
+  "predictions": [
+    {
+      "id": 4387255592,
+      "name": "Alnoor Clinical Laboratory",
+      "lat": 31.534592,
+      "lon": 74.3284011,
+      "actual_type": "clinic",
+      "predicted_type": "hospital",
+      "confidence": 0.9761,
+      "correct": false
+    },
+    {
+      "id": 9383530553,
+      "name": "Zeerak Matab (Herbal & Hijama)",
+      "lat": 31.4710831,
+      "lon": 74.2986453,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9538,
+      "correct": true
+    },
+    {
+      "id": 5032063027,
+      "name": "Naseem Bashir hospital",
+      "lat": 31.5837063,
+      "lon": 74.4026091,
+      "actual_type": "clinic",
+      "predicted_type": "hospital",
+      "confidence": 0.9903,
+      "correct": false
+    },
+    {
+      "id": 5255673577,
+      "name": "IOM Health Assessment Centre",
+      "lat": 31.5014054,
+      "lon": 74.3425527,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.8168,
+      "correct": true
+    },
+    {
+      "id": 5259838821,
+      "name": "PrimeCare Medical Complex",
+      "lat": 31.614987,
+      "lon": 74.2695614,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9517,
+      "correct": true
+    },
+    {
+      "id": 4945573322,
+      "name": "\u0628\u0644\u0648\u0686 \u0627\u0633\u067e\u062a\u0627\u0644",
+      "lat": 31.5516784,
+      "lon": 74.362567,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9961,
+      "correct": true
+    },
+    {
+      "id": 7244238288,
+      "name": "Malik Jalal Din Hospital",
+      "lat": 31.5788726,
+      "lon": 74.3140407,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9903,
+      "correct": true
+    },
+    {
+      "id": 526681507,
+      "name": "PU Health Center",
+      "lat": 31.502479,
+      "lon": 74.3116217,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.5368,
+      "correct": true
+    },
+    {
+      "id": 4763503521,
+      "name": "PKLI HOSPITAL",
+      "lat": 31.4557,
+      "lon": 74.4621886,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.8237,
+      "correct": true
+    },
+    {
+      "id": 4402013789,
+      "name": "Haq Hospital",
+      "lat": 31.5616506,
+      "lon": 74.2993709,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9915,
+      "correct": true
+    },
+    {
+      "id": 5259747068,
+      "name": "Gondal Hospital",
+      "lat": 31.5028083,
+      "lon": 74.2682073,
+      "actual_type": "hospital",
+      "predicted_type": "clinic",
+      "confidence": 0.7896,
+      "correct": false
+    },
+    {
+      "id": 5259838823,
+      "name": "Haq Orthopedic Hospital",
+      "lat": 31.5619307,
+      "lon": 74.3006778,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.989,
+      "correct": true
+    },
+    {
+      "id": 13417457769,
+      "name": "S and S Skincare",
+      "lat": 31.4833964,
+      "lon": 74.2799311,
+      "actual_type": "clinic",
+      "predicted_type": "hospital",
+      "confidence": 0.9772,
+      "correct": false
+    },
+    {
+      "id": 5255562361,
+      "name": "Cantonment General Hospital",
+      "lat": 31.5467613,
+      "lon": 74.3821858,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9941,
+      "correct": true
+    },
+    {
+      "id": 5255673575,
+      "name": "Al Razi Healthcare",
+      "lat": 31.5179704,
+      "lon": 74.2925226,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9869,
+      "correct": true
+    },
+    {
+      "id": 4910585768,
+      "name": "\u0628\u0644\u0627\u0644 \u06a9\u06cc\u0626\u0631 \u06c1\u0633\u067e\u062a\u0627\u0644",
+      "lat": 31.6176665,
+      "lon": 74.2546268,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.7949,
+      "correct": true
+    },
+    {
+      "id": 4912575644,
+      "name": "Dr.A.Q Khan Hospital",
+      "lat": 31.5978128,
+      "lon": 74.3105061,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.604,
+      "correct": true
+    },
+    {
+      "id": 5255424740,
+      "name": "CMH Lahore",
+      "lat": 31.5391648,
+      "lon": 74.3711747,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9948,
+      "correct": true
+    },
+    {
+      "id": 5255461648,
+      "name": "TB Hospital",
+      "lat": 31.5807937,
+      "lon": 74.2997071,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9924,
+      "correct": true
+    },
+    {
+      "id": 5255461644,
+      "name": "Bismillah Hospital",
+      "lat": 31.5566737,
+      "lon": 74.3164425,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9728,
+      "correct": true
+    },
+    {
+      "id": 5253925863,
+      "name": "Cavalry Hospital Lahore",
+      "lat": 31.5018965,
+      "lon": 74.3626328,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.8711,
+      "correct": true
+    },
+    {
+      "id": 5255424743,
+      "name": "Khairun Nisa Hospital",
+      "lat": 31.4741883,
+      "lon": 74.306422,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.8887,
+      "correct": true
+    },
+    {
+      "id": 4912575660,
+      "name": "Al-Sami Clinic",
+      "lat": 31.5972442,
+      "lon": 74.3067106,
+      "actual_type": "clinic",
+      "predicted_type": "hospital",
+      "confidence": 0.9894,
+      "correct": false
+    },
+    {
+      "id": 5016859021,
+      "name": "\u0627\u06cc\u0644 \u0622\u0631 \u0628\u06cc \u0679\u06cc \u0622\u0626\u06cc \u06c1\u0633\u067e\u062a\u0627\u0644",
+      "lat": 31.4762453,
+      "lon": 74.244126,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9515,
+      "correct": true
+    },
+    {
+      "id": 5844819918,
+      "name": "Department of Psychiatry",
+      "lat": 31.5696419,
+      "lon": 74.3176814,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9763,
+      "correct": true
+    },
+    {
+      "id": 4916641139,
+      "name": "Kalim Medical Center",
+      "lat": 31.4868873,
+      "lon": 74.3050323,
+      "actual_type": "clinic",
+      "predicted_type": "clinic",
+      "confidence": 0.6863,
+      "correct": true
+    },
+    {
+      "id": 4508861251,
+      "name": "Good Hope Clinic",
+      "lat": 31.553328,
+      "lon": 74.3806539,
+      "actual_type": "clinic",
+      "predicted_type": "hospital",
+      "confidence": 0.9941,
+      "correct": false
+    },
+    {
+      "id": 3940035722,
+      "name": "Basical Health Unit, Dograi Kalan, Lahore",
+      "lat": 31.5926873,
+      "lon": 74.4997202,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9425,
+      "correct": true
+    },
+    {
+      "id": 5259654960,
+      "name": "Mussarat Razzaq Hospital",
+      "lat": 31.5821198,
+      "lon": 74.3767228,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9737,
+      "correct": true
+    },
+    {
+      "id": 5260103787,
+      "name": "Al Shifa Hospital",
+      "lat": 31.4620272,
+      "lon": 74.2448532,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9515,
+      "correct": true
+    },
+    {
+      "id": 10734314530,
+      "name": "The Dental Suite by Dr. Mujtaba Anwar",
+      "lat": 31.4835473,
+      "lon": 74.2991692,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.8953,
+      "correct": true
+    },
+    {
+      "id": 5259654966,
+      "name": "Shaukat Khanum Lab",
+      "lat": 31.50182,
+      "lon": 74.3632983,
+      "actual_type": "clinic",
+      "predicted_type": "clinic",
+      "confidence": 0.8407,
+      "correct": true
+    },
+    {
+      "id": 5016859022,
+      "name": "Mughal eye hospital",
+      "lat": 31.4720389,
+      "lon": 74.2610578,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.952,
+      "correct": true
+    },
+    {
+      "id": 5255424738,
+      "name": "Rasheed Hospital",
+      "lat": 31.4886992,
+      "lon": 74.3802433,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.5059,
+      "correct": true
+    },
+    {
+      "id": 2405855921,
+      "name": "Zarrar Shaheed Trust hospital",
+      "lat": 31.5324402,
+      "lon": 74.437641,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9549,
+      "correct": true
+    },
+    {
+      "id": 2431251332,
+      "name": "Zahid Health Home",
+      "lat": 31.5624324,
+      "lon": 74.4330102,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9639,
+      "correct": true
+    },
+    {
+      "id": 4438658189,
+      "name": "\u0627\u0644\u0634\u0627\u062f \u0637\u0628\u064a \u0645\u0631\u06a9\u0632",
+      "lat": 31.5833853,
+      "lon": 74.4036333,
+      "actual_type": "clinic",
+      "predicted_type": "hospital",
+      "confidence": 0.9903,
+      "correct": false
+    },
+    {
+      "id": 12622278646,
+      "name": "\u0630\u06cc\u0631\u06a9 \u0645\u0637\u0628 \u06c1\u0631\u0628\u0644 \u0627\u0648\u0631 \u062d\u062c\u0627\u0645\u06c1\u06d4",
+      "lat": 31.4421421,
+      "lon": 74.4297974,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.5727,
+      "correct": true
+    },
+    {
+      "id": 7652817385,
+      "name": "Dr. Shahid Iqbal",
+      "lat": 31.4894273,
+      "lon": 74.2675562,
+      "actual_type": "clinic",
+      "predicted_type": "clinic",
+      "confidence": 0.7768,
+      "correct": true
+    },
+    {
+      "id": 674141730,
+      "name": "Social Security Hospital",
+      "lat": 31.4967802,
+      "lon": 74.263181,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9282,
+      "correct": true
+    },
+    {
+      "id": 3356330684,
+      "name": "Naseer Hospital",
+      "lat": 31.5064399,
+      "lon": 74.3150274,
+      "actual_type": "hospital",
+      "predicted_type": "clinic",
+      "confidence": 0.7633,
+      "correct": false
+    },
+    {
+      "id": 5255461650,
+      "name": "Saira Memorial Hospital",
+      "lat": 31.4812146,
+      "lon": 74.312232,
+      "actual_type": "hospital",
+      "predicted_type": "clinic",
+      "confidence": 0.5916,
+      "correct": false
+    },
+    {
+      "id": 5259838826,
+      "name": "Amina Medical Complex",
+      "lat": 31.5353527,
+      "lon": 74.3286172,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9761,
+      "correct": true
+    },
+    {
+      "id": 14007471801,
+      "name": "\u067e\u0627\u06a9 \u06c1\u0633\u067e\u062a\u0627\u0644",
+      "lat": 31.5317452,
+      "lon": 74.3234228,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9739,
+      "correct": true
+    },
+    {
+      "id": 13417622920,
+      "name": "MedEast Hospital",
+      "lat": 31.5318849,
+      "lon": 74.4538145,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9646,
+      "correct": true
+    },
+    {
+      "id": 4916785718,
+      "name": "Clapp Hospital",
+      "lat": 31.4728234,
+      "lon": 74.3028675,
+      "actual_type": "hospital",
+      "predicted_type": "hospital",
+      "confidence": 0.9168,
+      "correct": true
+    }
+  ]
+}

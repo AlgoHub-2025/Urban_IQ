@@ -1,0 +1,6674 @@
+{
+  "source": "weather_forecast_model",
+  "stage": "test_set_predictions",
+  "location": "Lahore, Pakistan",
+  "num_test_rows": 273,
+  "model_metrics": {
+    "avg_temp_c": {
+      "best_model": "linear_regression",
+      "test_mae": 0.7566,
+      "test_rmse": 1.007,
+      "test_r2": 0.9762,
+      "all_candidates": {
+        "linear_regression": {
+          "mae": 0.7566,
+          "rmse": 1.007,
+          "r2": 0.9762
+        },
+        "random_forest": {
+          "mae": 0.8129,
+          "rmse": 1.0132,
+          "r2": 0.9759
+        },
+        "gradient_boosting": {
+          "mae": 0.8051,
+          "rmse": 1.0513,
+          "r2": 0.974
+        },
+        "xgboost": {
+          "mae": 0.8003,
+          "rmse": 1.0182,
+          "r2": 0.9757
+        }
+      }
+    },
+    "avg_humidity_percent": {
+      "best_model": "random_forest",
+      "test_mae": 3.6998,
+      "test_rmse": 5.0259,
+      "test_r2": 0.9294,
+      "all_candidates": {
+        "linear_regression": {
+          "mae": 3.7539,
+          "rmse": 4.9449,
+          "r2": 0.9317
+        },
+        "random_forest": {
+          "mae": 3.6998,
+          "rmse": 5.0259,
+          "r2": 0.9294
+        },
+        "gradient_boosting": {
+          "mae": 3.8752,
+          "rmse": 5.1348,
+          "r2": 0.9264
+        },
+        "xgboost": {
+          "mae": 3.8549,
+          "rmse": 5.1067,
+          "r2": 0.9272
+        }
+      }
+    },
+    "total_rain_mm": {
+      "best_model": "linear_regression",
+      "test_mae": 2.7878,
+      "test_rmse": 6.8299,
+      "test_r2": 0.1546,
+      "all_candidates": {
+        "linear_regression": {
+          "mae": 2.7878,
+          "rmse": 6.8299,
+          "r2": 0.1546
+        },
+        "random_forest": {
+          "mae": 3.2185,
+          "rmse": 7.2177,
+          "r2": 0.0559
+        },
+        "gradient_boosting": {
+          "mae": 3.1136,
+          "rmse": 7.0508,
+          "r2": 0.099
+        },
+        "xgboost": {
+          "mae": 3.2316,
+          "rmse": 7.2415,
+          "r2": 0.0496
+        }
+      }
+    },
+    "max_wind_kmh": {
+      "best_model": "linear_regression",
+      "test_mae": 3.6108,
+      "test_rmse": 4.6455,
+      "test_r2": 0.4066,
+      "all_candidates": {
+        "linear_regression": {
+          "mae": 3.6108,
+          "rmse": 4.6455,
+          "r2": 0.4066
+        },
+        "random_forest": {
+          "mae": 3.9749,
+          "rmse": 4.9655,
+          "r2": 0.322
+        },
+        "gradient_boosting": {
+          "mae": 3.9457,
+          "rmse": 5.0062,
+          "r2": 0.3108
+        },
+        "xgboost": {
+          "mae": 4.0899,
+          "rmse": 5.1258,
+          "r2": 0.2775
+        }
+      }
+    }
+  },
+  "predictions": [
+    {
+      "date": "2024-04-03",
+      "avg_temp_c": {
+        "actual": 23.3,
+        "predicted": 22.46,
+        "error": -0.84
+      },
+      "avg_humidity_percent": {
+        "actual": 48.0,
+        "predicted": 57.33,
+        "error": 9.33
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 0.38,
+        "error": 0.28
+      },
+      "max_wind_kmh": {
+        "actual": 21.1,
+        "predicted": 13.94,
+        "error": -7.16
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-04",
+      "avg_temp_c": {
+        "actual": 23.6,
+        "predicted": 23.2,
+        "error": -0.4
+      },
+      "avg_humidity_percent": {
+        "actual": 44.0,
+        "predicted": 47.51,
+        "error": 3.51
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.11,
+        "error": 1.11
+      },
+      "max_wind_kmh": {
+        "actual": 15.7,
+        "predicted": 17.29,
+        "error": 1.59
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-05",
+      "avg_temp_c": {
+        "actual": 24.0,
+        "predicted": 23.87,
+        "error": -0.13
+      },
+      "avg_humidity_percent": {
+        "actual": 41.0,
+        "predicted": 46.04,
+        "error": 5.04
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.12,
+        "error": 0.12
+      },
+      "max_wind_kmh": {
+        "actual": 17.3,
+        "predicted": 16.01,
+        "error": -1.29
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-06",
+      "avg_temp_c": {
+        "actual": 23.2,
+        "predicted": 24.19,
+        "error": 0.99
+      },
+      "avg_humidity_percent": {
+        "actual": 40.0,
+        "predicted": 37.64,
+        "error": -2.36
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.02,
+        "error": -0.02
+      },
+      "max_wind_kmh": {
+        "actual": 16.8,
+        "predicted": 17.55,
+        "error": 0.75
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-07",
+      "avg_temp_c": {
+        "actual": 23.7,
+        "predicted": 23.26,
+        "error": -0.44
+      },
+      "avg_humidity_percent": {
+        "actual": 39.0,
+        "predicted": 37.96,
+        "error": -1.04
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.27,
+        "error": 0.27
+      },
+      "max_wind_kmh": {
+        "actual": 16.5,
+        "predicted": 16.51,
+        "error": 0.01
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-08",
+      "avg_temp_c": {
+        "actual": 24.4,
+        "predicted": 23.99,
+        "error": -0.41
+      },
+      "avg_humidity_percent": {
+        "actual": 39.0,
+        "predicted": 38.44,
+        "error": -0.56
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.47,
+        "error": 0.47
+      },
+      "max_wind_kmh": {
+        "actual": 15.5,
+        "predicted": 16.44,
+        "error": 0.94
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-09",
+      "avg_temp_c": {
+        "actual": 24.8,
+        "predicted": 24.71,
+        "error": -0.09
+      },
+      "avg_humidity_percent": {
+        "actual": 36.0,
+        "predicted": 38.82,
+        "error": 2.82
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.92,
+        "error": 0.92
+      },
+      "max_wind_kmh": {
+        "actual": 11.5,
+        "predicted": 16.02,
+        "error": 4.52
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-10",
+      "avg_temp_c": {
+        "actual": 25.2,
+        "predicted": 25.1,
+        "error": -0.1
+      },
+      "avg_humidity_percent": {
+        "actual": 38.0,
+        "predicted": 36.25,
+        "error": -1.75
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 0.21,
+        "error": 0.11
+      },
+      "max_wind_kmh": {
+        "actual": 21.3,
+        "predicted": 15.23,
+        "error": -6.07
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-11",
+      "avg_temp_c": {
+        "actual": 26.0,
+        "predicted": 24.95,
+        "error": -1.05
+      },
+      "avg_humidity_percent": {
+        "actual": 39.0,
+        "predicted": 39.7,
+        "error": 0.7
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.0,
+        "error": 1.0
+      },
+      "max_wind_kmh": {
+        "actual": 20.6,
+        "predicted": 18.65,
+        "error": -1.95
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-12",
+      "avg_temp_c": {
+        "actual": 26.2,
+        "predicted": 25.77,
+        "error": -0.43
+      },
+      "avg_humidity_percent": {
+        "actual": 41.0,
+        "predicted": 42.56,
+        "error": 1.56
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.84,
+        "error": 0.84
+      },
+      "max_wind_kmh": {
+        "actual": 13.4,
+        "predicted": 18.27,
+        "error": 4.87
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-13",
+      "avg_temp_c": {
+        "actual": 24.4,
+        "predicted": 26.14,
+        "error": 1.74
+      },
+      "avg_humidity_percent": {
+        "actual": 49.0,
+        "predicted": 41.96,
+        "error": -7.04
+      },
+      "total_rain_mm": {
+        "actual": 1.0,
+        "predicted": 0.28,
+        "error": -0.72
+      },
+      "max_wind_kmh": {
+        "actual": 22.6,
+        "predicted": 16.3,
+        "error": -6.3
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-14",
+      "avg_temp_c": {
+        "actual": 23.1,
+        "predicted": 23.81,
+        "error": 0.71
+      },
+      "avg_humidity_percent": {
+        "actual": 66.0,
+        "predicted": 52.54,
+        "error": -13.46
+      },
+      "total_rain_mm": {
+        "actual": 4.0,
+        "predicted": 1.86,
+        "error": -2.14
+      },
+      "max_wind_kmh": {
+        "actual": 15.0,
+        "predicted": 18.74,
+        "error": 3.74
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-15",
+      "avg_temp_c": {
+        "actual": 22.9,
+        "predicted": 23.59,
+        "error": 0.69
+      },
+      "avg_humidity_percent": {
+        "actual": 74.0,
+        "predicted": 61.2,
+        "error": -12.8
+      },
+      "total_rain_mm": {
+        "actual": 10.1,
+        "predicted": 2.77,
+        "error": -7.33
+      },
+      "max_wind_kmh": {
+        "actual": 19.5,
+        "predicted": 16.95,
+        "error": -2.55
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-16",
+      "avg_temp_c": {
+        "actual": 23.1,
+        "predicted": 23.29,
+        "error": 0.19
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 67.01,
+        "error": -0.99
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 4.59,
+        "error": 4.59
+      },
+      "max_wind_kmh": {
+        "actual": 14.4,
+        "predicted": 17.47,
+        "error": 3.07
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-17",
+      "avg_temp_c": {
+        "actual": 24.3,
+        "predicted": 23.55,
+        "error": -0.75
+      },
+      "avg_humidity_percent": {
+        "actual": 54.0,
+        "predicted": 62.19,
+        "error": 8.19
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.57,
+        "error": 1.57
+      },
+      "max_wind_kmh": {
+        "actual": 16.9,
+        "predicted": 14.77,
+        "error": -2.13
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-18",
+      "avg_temp_c": {
+        "actual": 25.3,
+        "predicted": 24.64,
+        "error": -0.66
+      },
+      "avg_humidity_percent": {
+        "actual": 52.0,
+        "predicted": 51.94,
+        "error": -0.06
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.95,
+        "error": 0.95
+      },
+      "max_wind_kmh": {
+        "actual": 24.6,
+        "predicted": 16.44,
+        "error": -8.16
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-19",
+      "avg_temp_c": {
+        "actual": 23.9,
+        "predicted": 25.11,
+        "error": 1.21
+      },
+      "avg_humidity_percent": {
+        "actual": 60.0,
+        "predicted": 52.45,
+        "error": -7.55
+      },
+      "total_rain_mm": {
+        "actual": 3.2,
+        "predicted": 1.45,
+        "error": -1.75
+      },
+      "max_wind_kmh": {
+        "actual": 29.1,
+        "predicted": 19.29,
+        "error": -9.81
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-20",
+      "avg_temp_c": {
+        "actual": 23.5,
+        "predicted": 23.11,
+        "error": -0.39
+      },
+      "avg_humidity_percent": {
+        "actual": 61.0,
+        "predicted": 57.0,
+        "error": -4.0
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 3.34,
+        "error": 3.24
+      },
+      "max_wind_kmh": {
+        "actual": 14.0,
+        "predicted": 20.09,
+        "error": 6.09
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-21",
+      "avg_temp_c": {
+        "actual": 24.4,
+        "predicted": 24.01,
+        "error": -0.39
+      },
+      "avg_humidity_percent": {
+        "actual": 55.0,
+        "predicted": 56.47,
+        "error": 1.47
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.41,
+        "error": 1.41
+      },
+      "max_wind_kmh": {
+        "actual": 20.3,
+        "predicted": 14.81,
+        "error": -5.49
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-22",
+      "avg_temp_c": {
+        "actual": 25.1,
+        "predicted": 24.57,
+        "error": -0.53
+      },
+      "avg_humidity_percent": {
+        "actual": 50.0,
+        "predicted": 54.87,
+        "error": 4.87
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.36,
+        "error": 2.36
+      },
+      "max_wind_kmh": {
+        "actual": 15.5,
+        "predicted": 17.26,
+        "error": 1.76
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-23",
+      "avg_temp_c": {
+        "actual": 24.8,
+        "predicted": 25.46,
+        "error": 0.66
+      },
+      "avg_humidity_percent": {
+        "actual": 50.0,
+        "predicted": 49.87,
+        "error": -0.13
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.94,
+        "error": 1.94
+      },
+      "max_wind_kmh": {
+        "actual": 14.8,
+        "predicted": 15.68,
+        "error": 0.88
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-24",
+      "avg_temp_c": {
+        "actual": 25.3,
+        "predicted": 24.94,
+        "error": -0.36
+      },
+      "avg_humidity_percent": {
+        "actual": 48.0,
+        "predicted": 50.02,
+        "error": 2.02
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.44,
+        "error": 1.44
+      },
+      "max_wind_kmh": {
+        "actual": 19.8,
+        "predicted": 16.16,
+        "error": -3.64
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-25",
+      "avg_temp_c": {
+        "actual": 27.1,
+        "predicted": 25.32,
+        "error": -1.78
+      },
+      "avg_humidity_percent": {
+        "actual": 41.0,
+        "predicted": 50.09,
+        "error": 9.09
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.51,
+        "error": 1.51
+      },
+      "max_wind_kmh": {
+        "actual": 15.0,
+        "predicted": 18.13,
+        "error": 3.13
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-26",
+      "avg_temp_c": {
+        "actual": 27.1,
+        "predicted": 27.42,
+        "error": 0.32
+      },
+      "avg_humidity_percent": {
+        "actual": 44.0,
+        "predicted": 38.65,
+        "error": -5.35
+      },
+      "total_rain_mm": {
+        "actual": 1.4,
+        "predicted": 0.82,
+        "error": -0.58
+      },
+      "max_wind_kmh": {
+        "actual": 26.0,
+        "predicted": 16.83,
+        "error": -9.17
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-27",
+      "avg_temp_c": {
+        "actual": 25.6,
+        "predicted": 26.6,
+        "error": 1.0
+      },
+      "avg_humidity_percent": {
+        "actual": 46.0,
+        "predicted": 48.69,
+        "error": 2.69
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.27,
+        "error": 2.27
+      },
+      "max_wind_kmh": {
+        "actual": 19.7,
+        "predicted": 19.84,
+        "error": 0.14
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-28",
+      "avg_temp_c": {
+        "actual": 25.8,
+        "predicted": 25.42,
+        "error": -0.38
+      },
+      "avg_humidity_percent": {
+        "actual": 47.0,
+        "predicted": 48.8,
+        "error": 1.8
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.31,
+        "error": 1.31
+      },
+      "max_wind_kmh": {
+        "actual": 15.6,
+        "predicted": 16.97,
+        "error": 1.37
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-29",
+      "avg_temp_c": {
+        "actual": 23.3,
+        "predicted": 26.19,
+        "error": 2.89
+      },
+      "avg_humidity_percent": {
+        "actual": 54.0,
+        "predicted": 48.19,
+        "error": -5.81
+      },
+      "total_rain_mm": {
+        "actual": 5.1,
+        "predicted": 0.65,
+        "error": -4.45
+      },
+      "max_wind_kmh": {
+        "actual": 23.2,
+        "predicted": 16.4,
+        "error": -6.8
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-04-30",
+      "avg_temp_c": {
+        "actual": 22.5,
+        "predicted": 23.02,
+        "error": 0.52
+      },
+      "avg_humidity_percent": {
+        "actual": 53.0,
+        "predicted": 57.14,
+        "error": 4.14
+      },
+      "total_rain_mm": {
+        "actual": 0.2,
+        "predicted": 3.1,
+        "error": 2.9
+      },
+      "max_wind_kmh": {
+        "actual": 35.0,
+        "predicted": 17.13,
+        "error": -17.87
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-01",
+      "avg_temp_c": {
+        "actual": 22.2,
+        "predicted": 22.1,
+        "error": -0.1
+      },
+      "avg_humidity_percent": {
+        "actual": 45.0,
+        "predicted": 54.26,
+        "error": 9.26
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.94,
+        "error": 1.94
+      },
+      "max_wind_kmh": {
+        "actual": 18.9,
+        "predicted": 19.29,
+        "error": 0.39
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-02",
+      "avg_temp_c": {
+        "actual": 25.3,
+        "predicted": 22.91,
+        "error": -2.39
+      },
+      "avg_humidity_percent": {
+        "actual": 36.0,
+        "predicted": 44.15,
+        "error": 8.15
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.53,
+        "error": -0.53
+      },
+      "max_wind_kmh": {
+        "actual": 14.8,
+        "predicted": 13.56,
+        "error": -1.24
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-03",
+      "avg_temp_c": {
+        "actual": 27.3,
+        "predicted": 26.38,
+        "error": -0.92
+      },
+      "avg_humidity_percent": {
+        "actual": 37.0,
+        "predicted": 36.59,
+        "error": -0.41
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -1.15,
+        "error": -1.15
+      },
+      "max_wind_kmh": {
+        "actual": 11.8,
+        "predicted": 15.48,
+        "error": 3.68
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-04",
+      "avg_temp_c": {
+        "actual": 28.8,
+        "predicted": 27.93,
+        "error": -0.87
+      },
+      "avg_humidity_percent": {
+        "actual": 37.0,
+        "predicted": 35.66,
+        "error": -1.34
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.34,
+        "error": 0.34
+      },
+      "max_wind_kmh": {
+        "actual": 19.2,
+        "predicted": 16.45,
+        "error": -2.75
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-05",
+      "avg_temp_c": {
+        "actual": 29.8,
+        "predicted": 28.92,
+        "error": -0.88
+      },
+      "avg_humidity_percent": {
+        "actual": 36.0,
+        "predicted": 35.89,
+        "error": -0.11
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.95,
+        "error": 0.95
+      },
+      "max_wind_kmh": {
+        "actual": 19.4,
+        "predicted": 19.81,
+        "error": 0.41
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-06",
+      "avg_temp_c": {
+        "actual": 30.4,
+        "predicted": 29.66,
+        "error": -0.74
+      },
+      "avg_humidity_percent": {
+        "actual": 33.0,
+        "predicted": 36.33,
+        "error": 3.33
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.3,
+        "error": 1.3
+      },
+      "max_wind_kmh": {
+        "actual": 14.3,
+        "predicted": 20.07,
+        "error": 5.77
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-07",
+      "avg_temp_c": {
+        "actual": 31.6,
+        "predicted": 30.32,
+        "error": -1.28
+      },
+      "avg_humidity_percent": {
+        "actual": 28.0,
+        "predicted": 32.59,
+        "error": 4.59
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.03,
+        "error": 0.03
+      },
+      "max_wind_kmh": {
+        "actual": 16.6,
+        "predicted": 18.53,
+        "error": 1.93
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-08",
+      "avg_temp_c": {
+        "actual": 31.5,
+        "predicted": 31.2,
+        "error": -0.3
+      },
+      "avg_humidity_percent": {
+        "actual": 25.0,
+        "predicted": 29.65,
+        "error": 4.65
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.28,
+        "error": 0.28
+      },
+      "max_wind_kmh": {
+        "actual": 13.4,
+        "predicted": 18.67,
+        "error": 5.27
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-09",
+      "avg_temp_c": {
+        "actual": 31.9,
+        "predicted": 31.2,
+        "error": -0.7
+      },
+      "avg_humidity_percent": {
+        "actual": 32.0,
+        "predicted": 27.13,
+        "error": -4.87
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.01,
+        "error": -0.01
+      },
+      "max_wind_kmh": {
+        "actual": 22.3,
+        "predicted": 17.14,
+        "error": -5.16
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-10",
+      "avg_temp_c": {
+        "actual": 31.2,
+        "predicted": 31.43,
+        "error": 0.23
+      },
+      "avg_humidity_percent": {
+        "actual": 39.0,
+        "predicted": 34.19,
+        "error": -4.81
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.22,
+        "error": 1.22
+      },
+      "max_wind_kmh": {
+        "actual": 24.2,
+        "predicted": 20.72,
+        "error": -3.48
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-11",
+      "avg_temp_c": {
+        "actual": 29.8,
+        "predicted": 30.54,
+        "error": 0.74
+      },
+      "avg_humidity_percent": {
+        "actual": 48.0,
+        "predicted": 43.83,
+        "error": -4.17
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.07,
+        "error": 2.07
+      },
+      "max_wind_kmh": {
+        "actual": 14.7,
+        "predicted": 20.0,
+        "error": 5.3
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-12",
+      "avg_temp_c": {
+        "actual": 28.5,
+        "predicted": 29.93,
+        "error": 1.43
+      },
+      "avg_humidity_percent": {
+        "actual": 50.0,
+        "predicted": 50.73,
+        "error": 0.73
+      },
+      "total_rain_mm": {
+        "actual": 1.1,
+        "predicted": 1.26,
+        "error": 0.16
+      },
+      "max_wind_kmh": {
+        "actual": 21.7,
+        "predicted": 16.9,
+        "error": -4.8
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-13",
+      "avg_temp_c": {
+        "actual": 29.5,
+        "predicted": 28.44,
+        "error": -1.06
+      },
+      "avg_humidity_percent": {
+        "actual": 37.0,
+        "predicted": 55.43,
+        "error": 18.43
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.83,
+        "error": 1.83
+      },
+      "max_wind_kmh": {
+        "actual": 14.0,
+        "predicted": 17.87,
+        "error": 3.87
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-14",
+      "avg_temp_c": {
+        "actual": 30.5,
+        "predicted": 30.15,
+        "error": -0.35
+      },
+      "avg_humidity_percent": {
+        "actual": 30.0,
+        "predicted": 35.45,
+        "error": 5.45
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.15,
+        "error": -0.15
+      },
+      "max_wind_kmh": {
+        "actual": 15.6,
+        "predicted": 14.99,
+        "error": -0.61
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-15",
+      "avg_temp_c": {
+        "actual": 31.1,
+        "predicted": 30.78,
+        "error": -0.32
+      },
+      "avg_humidity_percent": {
+        "actual": 35.0,
+        "predicted": 30.39,
+        "error": -4.61
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.26,
+        "error": -0.26
+      },
+      "max_wind_kmh": {
+        "actual": 14.1,
+        "predicted": 16.62,
+        "error": 2.52
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-16",
+      "avg_temp_c": {
+        "actual": 33.0,
+        "predicted": 31.39,
+        "error": -1.61
+      },
+      "avg_humidity_percent": {
+        "actual": 29.0,
+        "predicted": 33.76,
+        "error": 4.76
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.29,
+        "error": 0.29
+      },
+      "max_wind_kmh": {
+        "actual": 17.4,
+        "predicted": 17.83,
+        "error": 0.43
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-17",
+      "avg_temp_c": {
+        "actual": 32.6,
+        "predicted": 33.1,
+        "error": 0.5
+      },
+      "avg_humidity_percent": {
+        "actual": 31.0,
+        "predicted": 28.88,
+        "error": -2.12
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.22,
+        "error": 0.22
+      },
+      "max_wind_kmh": {
+        "actual": 21.4,
+        "predicted": 18.89,
+        "error": -2.51
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-18",
+      "avg_temp_c": {
+        "actual": 33.6,
+        "predicted": 32.28,
+        "error": -1.32
+      },
+      "avg_humidity_percent": {
+        "actual": 28.0,
+        "predicted": 33.07,
+        "error": 5.07
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.07,
+        "error": 1.07
+      },
+      "max_wind_kmh": {
+        "actual": 20.5,
+        "predicted": 19.6,
+        "error": -0.9
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-19",
+      "avg_temp_c": {
+        "actual": 33.4,
+        "predicted": 33.46,
+        "error": 0.06
+      },
+      "avg_humidity_percent": {
+        "actual": 30.0,
+        "predicted": 28.79,
+        "error": -1.21
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.81,
+        "error": 0.81
+      },
+      "max_wind_kmh": {
+        "actual": 21.3,
+        "predicted": 19.69,
+        "error": -1.61
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-20",
+      "avg_temp_c": {
+        "actual": 33.2,
+        "predicted": 32.82,
+        "error": -0.38
+      },
+      "avg_humidity_percent": {
+        "actual": 30.0,
+        "predicted": 32.14,
+        "error": 2.14
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.9,
+        "error": 0.9
+      },
+      "max_wind_kmh": {
+        "actual": 13.8,
+        "predicted": 19.3,
+        "error": 5.5
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-21",
+      "avg_temp_c": {
+        "actual": 33.9,
+        "predicted": 33.05,
+        "error": -0.85
+      },
+      "avg_humidity_percent": {
+        "actual": 26.0,
+        "predicted": 32.41,
+        "error": 6.41
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.35,
+        "error": 0.35
+      },
+      "max_wind_kmh": {
+        "actual": 14.7,
+        "predicted": 17.16,
+        "error": 2.46
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-22",
+      "avg_temp_c": {
+        "actual": 34.1,
+        "predicted": 33.86,
+        "error": -0.24
+      },
+      "avg_humidity_percent": {
+        "actual": 30.0,
+        "predicted": 26.17,
+        "error": -3.83
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.59,
+        "error": 0.59
+      },
+      "max_wind_kmh": {
+        "actual": 11.2,
+        "predicted": 17.6,
+        "error": 6.4
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-23",
+      "avg_temp_c": {
+        "actual": 34.2,
+        "predicted": 34.17,
+        "error": -0.03
+      },
+      "avg_humidity_percent": {
+        "actual": 33.0,
+        "predicted": 34.75,
+        "error": 1.75
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.69,
+        "error": 0.69
+      },
+      "max_wind_kmh": {
+        "actual": 21.9,
+        "predicted": 17.4,
+        "error": -4.5
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-24",
+      "avg_temp_c": {
+        "actual": 34.1,
+        "predicted": 33.59,
+        "error": -0.51
+      },
+      "avg_humidity_percent": {
+        "actual": 36.0,
+        "predicted": 38.24,
+        "error": 2.24
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 1.79,
+        "error": 1.69
+      },
+      "max_wind_kmh": {
+        "actual": 22.1,
+        "predicted": 20.36,
+        "error": -1.74
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-25",
+      "avg_temp_c": {
+        "actual": 34.5,
+        "predicted": 33.61,
+        "error": -0.89
+      },
+      "avg_humidity_percent": {
+        "actual": 29.0,
+        "predicted": 41.83,
+        "error": 12.83
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.61,
+        "error": 1.61
+      },
+      "max_wind_kmh": {
+        "actual": 20.7,
+        "predicted": 19.81,
+        "error": -0.89
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-26",
+      "avg_temp_c": {
+        "actual": 35.0,
+        "predicted": 34.1,
+        "error": -0.9
+      },
+      "avg_humidity_percent": {
+        "actual": 28.0,
+        "predicted": 30.93,
+        "error": 2.93
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.51,
+        "error": 0.51
+      },
+      "max_wind_kmh": {
+        "actual": 14.8,
+        "predicted": 18.6,
+        "error": 3.8
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-27",
+      "avg_temp_c": {
+        "actual": 34.8,
+        "predicted": 34.96,
+        "error": 0.16
+      },
+      "avg_humidity_percent": {
+        "actual": 26.0,
+        "predicted": 26.62,
+        "error": 0.62
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.2,
+        "error": 0.2
+      },
+      "max_wind_kmh": {
+        "actual": 14.0,
+        "predicted": 17.67,
+        "error": 3.67
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-28",
+      "avg_temp_c": {
+        "actual": 35.1,
+        "predicted": 34.63,
+        "error": -0.47
+      },
+      "avg_humidity_percent": {
+        "actual": 22.0,
+        "predicted": 26.04,
+        "error": 4.04
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.34,
+        "error": 0.34
+      },
+      "max_wind_kmh": {
+        "actual": 13.4,
+        "predicted": 17.47,
+        "error": 4.07
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-29",
+      "avg_temp_c": {
+        "actual": 35.8,
+        "predicted": 35.2,
+        "error": -0.6
+      },
+      "avg_humidity_percent": {
+        "actual": 19.0,
+        "predicted": 23.87,
+        "error": 4.87
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.34,
+        "error": 0.34
+      },
+      "max_wind_kmh": {
+        "actual": 23.7,
+        "predicted": 17.48,
+        "error": -6.22
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-30",
+      "avg_temp_c": {
+        "actual": 35.1,
+        "predicted": 35.32,
+        "error": 0.22
+      },
+      "avg_humidity_percent": {
+        "actual": 19.0,
+        "predicted": 18.96,
+        "error": -0.04
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.11,
+        "error": 1.11
+      },
+      "max_wind_kmh": {
+        "actual": 21.1,
+        "predicted": 20.79,
+        "error": -0.31
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-05-31",
+      "avg_temp_c": {
+        "actual": 35.6,
+        "predicted": 34.74,
+        "error": -0.86
+      },
+      "avg_humidity_percent": {
+        "actual": 18.0,
+        "predicted": 19.85,
+        "error": 1.85
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.8,
+        "error": 0.8
+      },
+      "max_wind_kmh": {
+        "actual": 15.4,
+        "predicted": 19.04,
+        "error": 3.64
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-01",
+      "avg_temp_c": {
+        "actual": 35.8,
+        "predicted": 35.71,
+        "error": -0.09
+      },
+      "avg_humidity_percent": {
+        "actual": 17.0,
+        "predicted": 19.89,
+        "error": 2.89
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.34,
+        "error": -0.34
+      },
+      "max_wind_kmh": {
+        "actual": 16.6,
+        "predicted": 17.98,
+        "error": 1.38
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-02",
+      "avg_temp_c": {
+        "actual": 35.6,
+        "predicted": 35.74,
+        "error": 0.14
+      },
+      "avg_humidity_percent": {
+        "actual": 22.0,
+        "predicted": 16.97,
+        "error": -5.03
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.12,
+        "error": 0.12
+      },
+      "max_wind_kmh": {
+        "actual": 16.5,
+        "predicted": 18.15,
+        "error": 1.65
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-03",
+      "avg_temp_c": {
+        "actual": 36.3,
+        "predicted": 35.5,
+        "error": -0.8
+      },
+      "avg_humidity_percent": {
+        "actual": 21.0,
+        "predicted": 24.11,
+        "error": 3.11
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.78,
+        "error": 0.78
+      },
+      "max_wind_kmh": {
+        "actual": 22.6,
+        "predicted": 18.58,
+        "error": -4.02
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-04",
+      "avg_temp_c": {
+        "actual": 34.7,
+        "predicted": 35.85,
+        "error": 1.15
+      },
+      "avg_humidity_percent": {
+        "actual": 26.0,
+        "predicted": 22.11,
+        "error": -3.89
+      },
+      "total_rain_mm": {
+        "actual": 1.7,
+        "predicted": 1.2,
+        "error": -0.5
+      },
+      "max_wind_kmh": {
+        "actual": 21.4,
+        "predicted": 20.08,
+        "error": -1.32
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-05",
+      "avg_temp_c": {
+        "actual": 32.3,
+        "predicted": 34.1,
+        "error": 1.8
+      },
+      "avg_humidity_percent": {
+        "actual": 33.0,
+        "predicted": 26.56,
+        "error": -6.44
+      },
+      "total_rain_mm": {
+        "actual": 0.4,
+        "predicted": 1.35,
+        "error": 0.95
+      },
+      "max_wind_kmh": {
+        "actual": 27.3,
+        "predicted": 19.23,
+        "error": -8.07
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-06",
+      "avg_temp_c": {
+        "actual": 31.2,
+        "predicted": 31.67,
+        "error": 0.47
+      },
+      "avg_humidity_percent": {
+        "actual": 42.0,
+        "predicted": 45.28,
+        "error": 3.28
+      },
+      "total_rain_mm": {
+        "actual": 0.2,
+        "predicted": 1.0,
+        "error": 0.8
+      },
+      "max_wind_kmh": {
+        "actual": 28.7,
+        "predicted": 19.84,
+        "error": -8.86
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-07",
+      "avg_temp_c": {
+        "actual": 31.4,
+        "predicted": 31.08,
+        "error": -0.32
+      },
+      "avg_humidity_percent": {
+        "actual": 40.0,
+        "predicted": 43.51,
+        "error": 3.51
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 1.22,
+        "error": 1.12
+      },
+      "max_wind_kmh": {
+        "actual": 23.1,
+        "predicted": 19.62,
+        "error": -3.48
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-08",
+      "avg_temp_c": {
+        "actual": 31.6,
+        "predicted": 31.6,
+        "error": 0.0
+      },
+      "avg_humidity_percent": {
+        "actual": 37.0,
+        "predicted": 39.5,
+        "error": 2.5
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.51,
+        "error": 0.51
+      },
+      "max_wind_kmh": {
+        "actual": 14.4,
+        "predicted": 16.91,
+        "error": 2.51
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-09",
+      "avg_temp_c": {
+        "actual": 32.8,
+        "predicted": 32.2,
+        "error": -0.6
+      },
+      "avg_humidity_percent": {
+        "actual": 31.0,
+        "predicted": 36.75,
+        "error": 5.75
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.19,
+        "error": -0.19
+      },
+      "max_wind_kmh": {
+        "actual": 17.7,
+        "predicted": 15.11,
+        "error": -2.59
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-10",
+      "avg_temp_c": {
+        "actual": 33.7,
+        "predicted": 33.16,
+        "error": -0.54
+      },
+      "avg_humidity_percent": {
+        "actual": 26.0,
+        "predicted": 33.96,
+        "error": 7.96
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.04,
+        "error": -0.04
+      },
+      "max_wind_kmh": {
+        "actual": 16.0,
+        "predicted": 17.64,
+        "error": 1.64
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-11",
+      "avg_temp_c": {
+        "actual": 34.2,
+        "predicted": 33.89,
+        "error": -0.31
+      },
+      "avg_humidity_percent": {
+        "actual": 25.0,
+        "predicted": 26.97,
+        "error": 1.97
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.4,
+        "error": 0.4
+      },
+      "max_wind_kmh": {
+        "actual": 15.3,
+        "predicted": 17.68,
+        "error": 2.38
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-12",
+      "avg_temp_c": {
+        "actual": 35.4,
+        "predicted": 34.22,
+        "error": -1.18
+      },
+      "avg_humidity_percent": {
+        "actual": 23.0,
+        "predicted": 25.43,
+        "error": 2.43
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.61,
+        "error": 0.61
+      },
+      "max_wind_kmh": {
+        "actual": 14.6,
+        "predicted": 18.37,
+        "error": 3.77
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-13",
+      "avg_temp_c": {
+        "actual": 34.9,
+        "predicted": 35.53,
+        "error": 0.63
+      },
+      "avg_humidity_percent": {
+        "actual": 29.0,
+        "predicted": 24.57,
+        "error": -4.43
+      },
+      "total_rain_mm": {
+        "actual": 0.3,
+        "predicted": 0.54,
+        "error": 0.24
+      },
+      "max_wind_kmh": {
+        "actual": 36.7,
+        "predicted": 18.53,
+        "error": -18.17
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-14",
+      "avg_temp_c": {
+        "actual": 35.6,
+        "predicted": 33.6,
+        "error": -2.0
+      },
+      "avg_humidity_percent": {
+        "actual": 29.0,
+        "predicted": 30.06,
+        "error": 1.06
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.55,
+        "error": 2.55
+      },
+      "max_wind_kmh": {
+        "actual": 18.2,
+        "predicted": 24.21,
+        "error": 6.01
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-15",
+      "avg_temp_c": {
+        "actual": 35.5,
+        "predicted": 35.65,
+        "error": 0.15
+      },
+      "avg_humidity_percent": {
+        "actual": 30.0,
+        "predicted": 31.2,
+        "error": 1.2
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.69,
+        "error": 0.69
+      },
+      "max_wind_kmh": {
+        "actual": 19.7,
+        "predicted": 17.88,
+        "error": -1.82
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-16",
+      "avg_temp_c": {
+        "actual": 36.7,
+        "predicted": 35.08,
+        "error": -1.62
+      },
+      "avg_humidity_percent": {
+        "actual": 32.0,
+        "predicted": 33.34,
+        "error": 1.34
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.68,
+        "error": 0.68
+      },
+      "max_wind_kmh": {
+        "actual": 16.8,
+        "predicted": 18.81,
+        "error": 2.01
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-17",
+      "avg_temp_c": {
+        "actual": 37.4,
+        "predicted": 36.58,
+        "error": -0.82
+      },
+      "avg_humidity_percent": {
+        "actual": 31.0,
+        "predicted": 40.22,
+        "error": 9.22
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.35,
+        "error": 1.35
+      },
+      "max_wind_kmh": {
+        "actual": 18.0,
+        "predicted": 19.15,
+        "error": 1.15
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-18",
+      "avg_temp_c": {
+        "actual": 36.7,
+        "predicted": 36.91,
+        "error": 0.21
+      },
+      "avg_humidity_percent": {
+        "actual": 33.0,
+        "predicted": 36.45,
+        "error": 3.45
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.6,
+        "error": 1.6
+      },
+      "max_wind_kmh": {
+        "actual": 23.8,
+        "predicted": 19.23,
+        "error": -4.57
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-19",
+      "avg_temp_c": {
+        "actual": 36.0,
+        "predicted": 35.84,
+        "error": -0.16
+      },
+      "avg_humidity_percent": {
+        "actual": 36.0,
+        "predicted": 43.31,
+        "error": 7.31
+      },
+      "total_rain_mm": {
+        "actual": 0.3,
+        "predicted": 2.05,
+        "error": 1.75
+      },
+      "max_wind_kmh": {
+        "actual": 14.5,
+        "predicted": 20.75,
+        "error": 6.25
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-20",
+      "avg_temp_c": {
+        "actual": 32.3,
+        "predicted": 35.68,
+        "error": 3.38
+      },
+      "avg_humidity_percent": {
+        "actual": 50.0,
+        "predicted": 44.16,
+        "error": -5.84
+      },
+      "total_rain_mm": {
+        "actual": 2.3,
+        "predicted": 1.13,
+        "error": -1.17
+      },
+      "max_wind_kmh": {
+        "actual": 29.9,
+        "predicted": 18.21,
+        "error": -11.69
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-21",
+      "avg_temp_c": {
+        "actual": 31.2,
+        "predicted": 31.29,
+        "error": 0.09
+      },
+      "avg_humidity_percent": {
+        "actual": 57.0,
+        "predicted": 62.56,
+        "error": 5.56
+      },
+      "total_rain_mm": {
+        "actual": 0.7,
+        "predicted": 2.82,
+        "error": 2.12
+      },
+      "max_wind_kmh": {
+        "actual": 18.7,
+        "predicted": 20.62,
+        "error": 1.92
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-22",
+      "avg_temp_c": {
+        "actual": 32.1,
+        "predicted": 31.64,
+        "error": -0.46
+      },
+      "avg_humidity_percent": {
+        "actual": 50.0,
+        "predicted": 55.85,
+        "error": 5.85
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.37,
+        "error": 1.37
+      },
+      "max_wind_kmh": {
+        "actual": 9.5,
+        "predicted": 16.18,
+        "error": 6.68
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-23",
+      "avg_temp_c": {
+        "actual": 33.7,
+        "predicted": 33.15,
+        "error": -0.55
+      },
+      "avg_humidity_percent": {
+        "actual": 41.0,
+        "predicted": 52.08,
+        "error": 11.08
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.51,
+        "error": -0.51
+      },
+      "max_wind_kmh": {
+        "actual": 9.8,
+        "predicted": 13.0,
+        "error": 3.2
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-24",
+      "avg_temp_c": {
+        "actual": 34.8,
+        "predicted": 34.56,
+        "error": -0.24
+      },
+      "avg_humidity_percent": {
+        "actual": 34.0,
+        "predicted": 38.74,
+        "error": 4.74
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.62,
+        "error": -0.62
+      },
+      "max_wind_kmh": {
+        "actual": 9.2,
+        "predicted": 14.63,
+        "error": 5.43
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-25",
+      "avg_temp_c": {
+        "actual": 34.5,
+        "predicted": 35.4,
+        "error": 0.9
+      },
+      "avg_humidity_percent": {
+        "actual": 43.0,
+        "predicted": 38.94,
+        "error": -4.06
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.72,
+        "error": -0.72
+      },
+      "max_wind_kmh": {
+        "actual": 14.5,
+        "predicted": 15.75,
+        "error": 1.25
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-26",
+      "avg_temp_c": {
+        "actual": 35.8,
+        "predicted": 34.71,
+        "error": -1.09
+      },
+      "avg_humidity_percent": {
+        "actual": 43.0,
+        "predicted": 42.55,
+        "error": -0.45
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.39,
+        "error": 0.39
+      },
+      "max_wind_kmh": {
+        "actual": 18.9,
+        "predicted": 18.43,
+        "error": -0.47
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-27",
+      "avg_temp_c": {
+        "actual": 32.9,
+        "predicted": 35.63,
+        "error": 2.73
+      },
+      "avg_humidity_percent": {
+        "actual": 61.0,
+        "predicted": 42.64,
+        "error": -18.36
+      },
+      "total_rain_mm": {
+        "actual": 1.6,
+        "predicted": 1.45,
+        "error": -0.15
+      },
+      "max_wind_kmh": {
+        "actual": 23.9,
+        "predicted": 19.53,
+        "error": -4.37
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-28",
+      "avg_temp_c": {
+        "actual": 33.7,
+        "predicted": 32.22,
+        "error": -1.48
+      },
+      "avg_humidity_percent": {
+        "actual": 55.0,
+        "predicted": 66.68,
+        "error": 11.68
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 3.25,
+        "error": 3.25
+      },
+      "max_wind_kmh": {
+        "actual": 16.8,
+        "predicted": 19.28,
+        "error": 2.48
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-29",
+      "avg_temp_c": {
+        "actual": 34.2,
+        "predicted": 34.08,
+        "error": -0.12
+      },
+      "avg_humidity_percent": {
+        "actual": 54.0,
+        "predicted": 56.43,
+        "error": 2.43
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.38,
+        "error": 1.38
+      },
+      "max_wind_kmh": {
+        "actual": 11.9,
+        "predicted": 15.98,
+        "error": 4.08
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-06-30",
+      "avg_temp_c": {
+        "actual": 33.3,
+        "predicted": 34.52,
+        "error": 1.22
+      },
+      "avg_humidity_percent": {
+        "actual": 60.0,
+        "predicted": 58.71,
+        "error": -1.29
+      },
+      "total_rain_mm": {
+        "actual": 7.3,
+        "predicted": 1.26,
+        "error": -6.04
+      },
+      "max_wind_kmh": {
+        "actual": 13.0,
+        "predicted": 15.25,
+        "error": 2.25
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-01",
+      "avg_temp_c": {
+        "actual": 33.5,
+        "predicted": 33.39,
+        "error": -0.11
+      },
+      "avg_humidity_percent": {
+        "actual": 63.0,
+        "predicted": 63.55,
+        "error": 0.55
+      },
+      "total_rain_mm": {
+        "actual": 0.9,
+        "predicted": 4.04,
+        "error": 3.14
+      },
+      "max_wind_kmh": {
+        "actual": 17.4,
+        "predicted": 15.87,
+        "error": -1.53
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-02",
+      "avg_temp_c": {
+        "actual": 33.5,
+        "predicted": 33.43,
+        "error": -0.07
+      },
+      "avg_humidity_percent": {
+        "actual": 67.0,
+        "predicted": 67.21,
+        "error": 0.21
+      },
+      "total_rain_mm": {
+        "actual": 1.2,
+        "predicted": 3.21,
+        "error": 2.01
+      },
+      "max_wind_kmh": {
+        "actual": 21.2,
+        "predicted": 16.84,
+        "error": -4.36
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-03",
+      "avg_temp_c": {
+        "actual": 32.0,
+        "predicted": 33.18,
+        "error": 1.18
+      },
+      "avg_humidity_percent": {
+        "actual": 74.0,
+        "predicted": 68.19,
+        "error": -5.81
+      },
+      "total_rain_mm": {
+        "actual": 3.2,
+        "predicted": 3.86,
+        "error": 0.66
+      },
+      "max_wind_kmh": {
+        "actual": 27.4,
+        "predicted": 18.13,
+        "error": -9.27
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-04",
+      "avg_temp_c": {
+        "actual": 30.0,
+        "predicted": 31.23,
+        "error": 1.23
+      },
+      "avg_humidity_percent": {
+        "actual": 76.0,
+        "predicted": 72.51,
+        "error": -3.49
+      },
+      "total_rain_mm": {
+        "actual": 7.3,
+        "predicted": 5.38,
+        "error": -1.92
+      },
+      "max_wind_kmh": {
+        "actual": 24.5,
+        "predicted": 18.39,
+        "error": -6.11
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-05",
+      "avg_temp_c": {
+        "actual": 30.8,
+        "predicted": 29.79,
+        "error": -1.01
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 73.19,
+        "error": 0.19
+      },
+      "total_rain_mm": {
+        "actual": 1.0,
+        "predicted": 4.69,
+        "error": 3.69
+      },
+      "max_wind_kmh": {
+        "actual": 15.5,
+        "predicted": 15.82,
+        "error": 0.32
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-06",
+      "avg_temp_c": {
+        "actual": 28.7,
+        "predicted": 31.44,
+        "error": 2.74
+      },
+      "avg_humidity_percent": {
+        "actual": 80.0,
+        "predicted": 69.98,
+        "error": -10.02
+      },
+      "total_rain_mm": {
+        "actual": 14.9,
+        "predicted": 2.15,
+        "error": -12.75
+      },
+      "max_wind_kmh": {
+        "actual": 18.4,
+        "predicted": 13.59,
+        "error": -4.81
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-07",
+      "avg_temp_c": {
+        "actual": 28.6,
+        "predicted": 28.83,
+        "error": 0.23
+      },
+      "avg_humidity_percent": {
+        "actual": 79.0,
+        "predicted": 76.27,
+        "error": -2.73
+      },
+      "total_rain_mm": {
+        "actual": 16.9,
+        "predicted": 6.82,
+        "error": -10.08
+      },
+      "max_wind_kmh": {
+        "actual": 16.2,
+        "predicted": 14.32,
+        "error": -1.88
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-08",
+      "avg_temp_c": {
+        "actual": 30.5,
+        "predicted": 29.38,
+        "error": -1.12
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 77.91,
+        "error": 4.91
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 5.84,
+        "error": 5.74
+      },
+      "max_wind_kmh": {
+        "actual": 12.2,
+        "predicted": 13.4,
+        "error": 1.2
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-09",
+      "avg_temp_c": {
+        "actual": 31.0,
+        "predicted": 31.25,
+        "error": 0.25
+      },
+      "avg_humidity_percent": {
+        "actual": 71.0,
+        "predicted": 70.94,
+        "error": -0.06
+      },
+      "total_rain_mm": {
+        "actual": 0.2,
+        "predicted": 2.43,
+        "error": 2.23
+      },
+      "max_wind_kmh": {
+        "actual": 13.2,
+        "predicted": 13.33,
+        "error": 0.13
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-10",
+      "avg_temp_c": {
+        "actual": 31.5,
+        "predicted": 31.16,
+        "error": -0.34
+      },
+      "avg_humidity_percent": {
+        "actual": 72.0,
+        "predicted": 73.0,
+        "error": 1.0
+      },
+      "total_rain_mm": {
+        "actual": 1.7,
+        "predicted": 4.2,
+        "error": 2.5
+      },
+      "max_wind_kmh": {
+        "actual": 16.6,
+        "predicted": 14.86,
+        "error": -1.74
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-11",
+      "avg_temp_c": {
+        "actual": 32.5,
+        "predicted": 31.34,
+        "error": -1.16
+      },
+      "avg_humidity_percent": {
+        "actual": 70.0,
+        "predicted": 74.59,
+        "error": 4.59
+      },
+      "total_rain_mm": {
+        "actual": 0.7,
+        "predicted": 4.8,
+        "error": 4.1
+      },
+      "max_wind_kmh": {
+        "actual": 12.3,
+        "predicted": 15.63,
+        "error": 3.33
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-12",
+      "avg_temp_c": {
+        "actual": 29.8,
+        "predicted": 32.59,
+        "error": 2.79
+      },
+      "avg_humidity_percent": {
+        "actual": 74.0,
+        "predicted": 71.69,
+        "error": -2.31
+      },
+      "total_rain_mm": {
+        "actual": 7.6,
+        "predicted": 3.48,
+        "error": -4.12
+      },
+      "max_wind_kmh": {
+        "actual": 19.7,
+        "predicted": 14.58,
+        "error": -5.12
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-13",
+      "avg_temp_c": {
+        "actual": 29.3,
+        "predicted": 29.15,
+        "error": -0.15
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 77.27,
+        "error": 4.27
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 6.11,
+        "error": 6.01
+      },
+      "max_wind_kmh": {
+        "actual": 9.2,
+        "predicted": 15.1,
+        "error": 5.9
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-14",
+      "avg_temp_c": {
+        "actual": 30.0,
+        "predicted": 29.75,
+        "error": -0.25
+      },
+      "avg_humidity_percent": {
+        "actual": 74.0,
+        "predicted": 71.99,
+        "error": -2.01
+      },
+      "total_rain_mm": {
+        "actual": 0.2,
+        "predicted": 2.72,
+        "error": 2.52
+      },
+      "max_wind_kmh": {
+        "actual": 11.5,
+        "predicted": 11.77,
+        "error": 0.27
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-15",
+      "avg_temp_c": {
+        "actual": 31.5,
+        "predicted": 30.39,
+        "error": -1.11
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 73.72,
+        "error": 5.72
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.95,
+        "error": 2.95
+      },
+      "max_wind_kmh": {
+        "actual": 8.8,
+        "predicted": 13.26,
+        "error": 4.46
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-16",
+      "avg_temp_c": {
+        "actual": 32.1,
+        "predicted": 31.92,
+        "error": -0.18
+      },
+      "avg_humidity_percent": {
+        "actual": 69.0,
+        "predicted": 69.66,
+        "error": 0.66
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.62,
+        "error": 2.62
+      },
+      "max_wind_kmh": {
+        "actual": 10.6,
+        "predicted": 12.2,
+        "error": 1.6
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-17",
+      "avg_temp_c": {
+        "actual": 32.6,
+        "predicted": 32.24,
+        "error": -0.36
+      },
+      "avg_humidity_percent": {
+        "actual": 70.0,
+        "predicted": 71.07,
+        "error": 1.07
+      },
+      "total_rain_mm": {
+        "actual": 0.7,
+        "predicted": 2.59,
+        "error": 1.89
+      },
+      "max_wind_kmh": {
+        "actual": 12.6,
+        "predicted": 13.92,
+        "error": 1.32
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-18",
+      "avg_temp_c": {
+        "actual": 31.2,
+        "predicted": 32.7,
+        "error": 1.5
+      },
+      "avg_humidity_percent": {
+        "actual": 74.0,
+        "predicted": 71.48,
+        "error": -2.52
+      },
+      "total_rain_mm": {
+        "actual": 2.2,
+        "predicted": 2.57,
+        "error": 0.37
+      },
+      "max_wind_kmh": {
+        "actual": 22.6,
+        "predicted": 14.94,
+        "error": -7.66
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-19",
+      "avg_temp_c": {
+        "actual": 32.6,
+        "predicted": 30.4,
+        "error": -2.2
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 75.71,
+        "error": 7.71
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 4.21,
+        "error": 4.21
+      },
+      "max_wind_kmh": {
+        "actual": 9.5,
+        "predicted": 16.86,
+        "error": 7.36
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-20",
+      "avg_temp_c": {
+        "actual": 33.1,
+        "predicted": 33.02,
+        "error": -0.08
+      },
+      "avg_humidity_percent": {
+        "actual": 67.0,
+        "predicted": 68.67,
+        "error": 1.67
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 1.9,
+        "error": 1.8
+      },
+      "max_wind_kmh": {
+        "actual": 14.8,
+        "predicted": 12.66,
+        "error": -2.14
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-21",
+      "avg_temp_c": {
+        "actual": 32.8,
+        "predicted": 32.82,
+        "error": 0.02
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 70.56,
+        "error": 2.56
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.88,
+        "error": 2.88
+      },
+      "max_wind_kmh": {
+        "actual": 16.6,
+        "predicted": 14.75,
+        "error": -1.85
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-22",
+      "avg_temp_c": {
+        "actual": 32.6,
+        "predicted": 32.43,
+        "error": -0.17
+      },
+      "avg_humidity_percent": {
+        "actual": 70.0,
+        "predicted": 70.24,
+        "error": 0.24
+      },
+      "total_rain_mm": {
+        "actual": 0.7,
+        "predicted": 3.34,
+        "error": 2.64
+      },
+      "max_wind_kmh": {
+        "actual": 16.9,
+        "predicted": 15.16,
+        "error": -1.74
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-23",
+      "avg_temp_c": {
+        "actual": 31.6,
+        "predicted": 32.35,
+        "error": 0.75
+      },
+      "avg_humidity_percent": {
+        "actual": 70.0,
+        "predicted": 70.8,
+        "error": 0.8
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 3.42,
+        "error": 3.42
+      },
+      "max_wind_kmh": {
+        "actual": 20.4,
+        "predicted": 15.26,
+        "error": -5.14
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-24",
+      "avg_temp_c": {
+        "actual": 32.1,
+        "predicted": 31.14,
+        "error": -0.96
+      },
+      "avg_humidity_percent": {
+        "actual": 70.0,
+        "predicted": 69.96,
+        "error": -0.04
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 3.4,
+        "error": 3.3
+      },
+      "max_wind_kmh": {
+        "actual": 13.4,
+        "predicted": 15.28,
+        "error": 1.88
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-25",
+      "avg_temp_c": {
+        "actual": 31.5,
+        "predicted": 32.16,
+        "error": 0.66
+      },
+      "avg_humidity_percent": {
+        "actual": 72.0,
+        "predicted": 70.59,
+        "error": -1.41
+      },
+      "total_rain_mm": {
+        "actual": 10.5,
+        "predicted": 3.12,
+        "error": -7.38
+      },
+      "max_wind_kmh": {
+        "actual": 12.6,
+        "predicted": 13.99,
+        "error": 1.39
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-26",
+      "avg_temp_c": {
+        "actual": 31.6,
+        "predicted": 31.51,
+        "error": -0.09
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 75.02,
+        "error": 2.02
+      },
+      "total_rain_mm": {
+        "actual": 0.2,
+        "predicted": 5.03,
+        "error": 4.83
+      },
+      "max_wind_kmh": {
+        "actual": 15.4,
+        "predicted": 13.68,
+        "error": -1.72
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-27",
+      "avg_temp_c": {
+        "actual": 32.3,
+        "predicted": 31.47,
+        "error": -0.83
+      },
+      "avg_humidity_percent": {
+        "actual": 74.0,
+        "predicted": 72.31,
+        "error": -1.69
+      },
+      "total_rain_mm": {
+        "actual": 1.1,
+        "predicted": 2.99,
+        "error": 1.89
+      },
+      "max_wind_kmh": {
+        "actual": 16.0,
+        "predicted": 14.59,
+        "error": -1.41
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-28",
+      "avg_temp_c": {
+        "actual": 31.9,
+        "predicted": 32.11,
+        "error": 0.21
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 75.75,
+        "error": 0.75
+      },
+      "total_rain_mm": {
+        "actual": 3.1,
+        "predicted": 4.31,
+        "error": 1.21
+      },
+      "max_wind_kmh": {
+        "actual": 13.8,
+        "predicted": 15.76,
+        "error": 1.96
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-29",
+      "avg_temp_c": {
+        "actual": 29.9,
+        "predicted": 31.67,
+        "error": 1.77
+      },
+      "avg_humidity_percent": {
+        "actual": 83.0,
+        "predicted": 75.9,
+        "error": -7.1
+      },
+      "total_rain_mm": {
+        "actual": 17.5,
+        "predicted": 4.27,
+        "error": -13.23
+      },
+      "max_wind_kmh": {
+        "actual": 18.4,
+        "predicted": 14.07,
+        "error": -4.33
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-30",
+      "avg_temp_c": {
+        "actual": 31.6,
+        "predicted": 29.6,
+        "error": -2.0
+      },
+      "avg_humidity_percent": {
+        "actual": 78.0,
+        "predicted": 81.04,
+        "error": 3.04
+      },
+      "total_rain_mm": {
+        "actual": 6.3,
+        "predicted": 7.54,
+        "error": 1.24
+      },
+      "max_wind_kmh": {
+        "actual": 13.5,
+        "predicted": 15.59,
+        "error": 2.09
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-07-31",
+      "avg_temp_c": {
+        "actual": 32.3,
+        "predicted": 32.03,
+        "error": -0.27
+      },
+      "avg_humidity_percent": {
+        "actual": 77.0,
+        "predicted": 77.77,
+        "error": 0.77
+      },
+      "total_rain_mm": {
+        "actual": 26.4,
+        "predicted": 3.93,
+        "error": -22.47
+      },
+      "max_wind_kmh": {
+        "actual": 14.0,
+        "predicted": 13.17,
+        "error": -0.83
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-01",
+      "avg_temp_c": {
+        "actual": 26.8,
+        "predicted": 32.47,
+        "error": 5.67
+      },
+      "avg_humidity_percent": {
+        "actual": 94.0,
+        "predicted": 76.44,
+        "error": -17.56
+      },
+      "total_rain_mm": {
+        "actual": 93.9,
+        "predicted": 9.46,
+        "error": -84.44
+      },
+      "max_wind_kmh": {
+        "actual": 21.6,
+        "predicted": 14.46,
+        "error": -7.14
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-02",
+      "avg_temp_c": {
+        "actual": 29.9,
+        "predicted": 26.9,
+        "error": -3.0
+      },
+      "avg_humidity_percent": {
+        "actual": 81.0,
+        "predicted": 82.82,
+        "error": 1.82
+      },
+      "total_rain_mm": {
+        "actual": 1.2,
+        "predicted": 22.19,
+        "error": 20.99
+      },
+      "max_wind_kmh": {
+        "actual": 10.5,
+        "predicted": 17.79,
+        "error": 7.29
+      },
+      "flood_risk_predicted": "Moderate"
+    },
+    {
+      "date": "2024-08-03",
+      "avg_temp_c": {
+        "actual": 29.6,
+        "predicted": 30.87,
+        "error": 1.27
+      },
+      "avg_humidity_percent": {
+        "actual": 81.0,
+        "predicted": 79.31,
+        "error": -1.69
+      },
+      "total_rain_mm": {
+        "actual": 8.5,
+        "predicted": -0.43,
+        "error": -8.93
+      },
+      "max_wind_kmh": {
+        "actual": 18.2,
+        "predicted": 12.21,
+        "error": -5.99
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-04",
+      "avg_temp_c": {
+        "actual": 28.9,
+        "predicted": 29.25,
+        "error": 0.35
+      },
+      "avg_humidity_percent": {
+        "actual": 85.0,
+        "predicted": 80.16,
+        "error": -4.84
+      },
+      "total_rain_mm": {
+        "actual": 30.1,
+        "predicted": 9.73,
+        "error": -20.37
+      },
+      "max_wind_kmh": {
+        "actual": 13.7,
+        "predicted": 19.19,
+        "error": 5.49
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-05",
+      "avg_temp_c": {
+        "actual": 29.9,
+        "predicted": 29.25,
+        "error": -0.65
+      },
+      "avg_humidity_percent": {
+        "actual": 81.0,
+        "predicted": 82.82,
+        "error": 1.82
+      },
+      "total_rain_mm": {
+        "actual": 9.8,
+        "predicted": 12.17,
+        "error": 2.37
+      },
+      "max_wind_kmh": {
+        "actual": 9.2,
+        "predicted": 12.26,
+        "error": 3.06
+      },
+      "flood_risk_predicted": "Moderate"
+    },
+    {
+      "date": "2024-08-06",
+      "avg_temp_c": {
+        "actual": 30.7,
+        "predicted": 30.47,
+        "error": -0.23
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 78.95,
+        "error": 3.95
+      },
+      "total_rain_mm": {
+        "actual": 0.4,
+        "predicted": 5.81,
+        "error": 5.41
+      },
+      "max_wind_kmh": {
+        "actual": 7.9,
+        "predicted": 11.18,
+        "error": 3.28
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-07",
+      "avg_temp_c": {
+        "actual": 29.5,
+        "predicted": 30.95,
+        "error": 1.45
+      },
+      "avg_humidity_percent": {
+        "actual": 81.0,
+        "predicted": 74.6,
+        "error": -6.4
+      },
+      "total_rain_mm": {
+        "actual": 1.5,
+        "predicted": 5.69,
+        "error": 4.19
+      },
+      "max_wind_kmh": {
+        "actual": 14.7,
+        "predicted": 12.97,
+        "error": -1.73
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-08",
+      "avg_temp_c": {
+        "actual": 28.8,
+        "predicted": 28.47,
+        "error": -0.33
+      },
+      "avg_humidity_percent": {
+        "actual": 83.0,
+        "predicted": 80.5,
+        "error": -2.5
+      },
+      "total_rain_mm": {
+        "actual": 1.3,
+        "predicted": 8.67,
+        "error": 7.37
+      },
+      "max_wind_kmh": {
+        "actual": 14.0,
+        "predicted": 14.73,
+        "error": 0.73
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-09",
+      "avg_temp_c": {
+        "actual": 29.1,
+        "predicted": 28.77,
+        "error": -0.33
+      },
+      "avg_humidity_percent": {
+        "actual": 82.0,
+        "predicted": 80.61,
+        "error": -1.39
+      },
+      "total_rain_mm": {
+        "actual": 1.7,
+        "predicted": 4.66,
+        "error": 2.96
+      },
+      "max_wind_kmh": {
+        "actual": 15.4,
+        "predicted": 12.84,
+        "error": -2.56
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-10",
+      "avg_temp_c": {
+        "actual": 28.7,
+        "predicted": 28.98,
+        "error": 0.28
+      },
+      "avg_humidity_percent": {
+        "actual": 85.0,
+        "predicted": 81.51,
+        "error": -3.49
+      },
+      "total_rain_mm": {
+        "actual": 7.0,
+        "predicted": 4.62,
+        "error": -2.38
+      },
+      "max_wind_kmh": {
+        "actual": 13.8,
+        "predicted": 13.1,
+        "error": -0.7
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-11",
+      "avg_temp_c": {
+        "actual": 27.4,
+        "predicted": 28.59,
+        "error": 1.19
+      },
+      "avg_humidity_percent": {
+        "actual": 88.0,
+        "predicted": 83.12,
+        "error": -4.88
+      },
+      "total_rain_mm": {
+        "actual": 10.5,
+        "predicted": 5.97,
+        "error": -4.53
+      },
+      "max_wind_kmh": {
+        "actual": 16.9,
+        "predicted": 12.17,
+        "error": -4.73
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-12",
+      "avg_temp_c": {
+        "actual": 28.1,
+        "predicted": 27.47,
+        "error": -0.63
+      },
+      "avg_humidity_percent": {
+        "actual": 83.0,
+        "predicted": 83.4,
+        "error": 0.4
+      },
+      "total_rain_mm": {
+        "actual": 0.3,
+        "predicted": 5.49,
+        "error": 5.19
+      },
+      "max_wind_kmh": {
+        "actual": 9.7,
+        "predicted": 12.19,
+        "error": 2.49
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-13",
+      "avg_temp_c": {
+        "actual": 29.6,
+        "predicted": 28.71,
+        "error": -0.89
+      },
+      "avg_humidity_percent": {
+        "actual": 81.0,
+        "predicted": 79.92,
+        "error": -1.08
+      },
+      "total_rain_mm": {
+        "actual": 0.4,
+        "predicted": 2.18,
+        "error": 1.78
+      },
+      "max_wind_kmh": {
+        "actual": 10.2,
+        "predicted": 10.74,
+        "error": 0.54
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-14",
+      "avg_temp_c": {
+        "actual": 30.6,
+        "predicted": 29.85,
+        "error": -0.75
+      },
+      "avg_humidity_percent": {
+        "actual": 77.0,
+        "predicted": 79.68,
+        "error": 2.68
+      },
+      "total_rain_mm": {
+        "actual": 0.6,
+        "predicted": 3.64,
+        "error": 3.04
+      },
+      "max_wind_kmh": {
+        "actual": 8.7,
+        "predicted": 12.61,
+        "error": 3.91
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-15",
+      "avg_temp_c": {
+        "actual": 28.6,
+        "predicted": 30.64,
+        "error": 2.04
+      },
+      "avg_humidity_percent": {
+        "actual": 88.0,
+        "predicted": 76.25,
+        "error": -11.75
+      },
+      "total_rain_mm": {
+        "actual": 26.4,
+        "predicted": 3.54,
+        "error": -22.86
+      },
+      "max_wind_kmh": {
+        "actual": 15.9,
+        "predicted": 11.99,
+        "error": -3.91
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-16",
+      "avg_temp_c": {
+        "actual": 29.1,
+        "predicted": 28.37,
+        "error": -0.73
+      },
+      "avg_humidity_percent": {
+        "actual": 84.0,
+        "predicted": 82.53,
+        "error": -1.47
+      },
+      "total_rain_mm": {
+        "actual": 16.9,
+        "predicted": 9.43,
+        "error": -7.47
+      },
+      "max_wind_kmh": {
+        "actual": 15.2,
+        "predicted": 15.23,
+        "error": 0.03
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-17",
+      "avg_temp_c": {
+        "actual": 27.7,
+        "predicted": 29.38,
+        "error": 1.68
+      },
+      "avg_humidity_percent": {
+        "actual": 88.0,
+        "predicted": 83.26,
+        "error": -4.74
+      },
+      "total_rain_mm": {
+        "actual": 17.6,
+        "predicted": 5.87,
+        "error": -11.73
+      },
+      "max_wind_kmh": {
+        "actual": 16.5,
+        "predicted": 12.63,
+        "error": -3.87
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-18",
+      "avg_temp_c": {
+        "actual": 28.9,
+        "predicted": 27.65,
+        "error": -1.25
+      },
+      "avg_humidity_percent": {
+        "actual": 85.0,
+        "predicted": 82.82,
+        "error": -2.18
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 7.75,
+        "error": 7.75
+      },
+      "max_wind_kmh": {
+        "actual": 13.7,
+        "predicted": 13.39,
+        "error": -0.31
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-19",
+      "avg_temp_c": {
+        "actual": 28.6,
+        "predicted": 29.04,
+        "error": 0.44
+      },
+      "avg_humidity_percent": {
+        "actual": 86.0,
+        "predicted": 82.11,
+        "error": -3.89
+      },
+      "total_rain_mm": {
+        "actual": 17.4,
+        "predicted": 3.72,
+        "error": -13.68
+      },
+      "max_wind_kmh": {
+        "actual": 10.4,
+        "predicted": 12.56,
+        "error": 2.16
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-20",
+      "avg_temp_c": {
+        "actual": 28.8,
+        "predicted": 28.98,
+        "error": 0.18
+      },
+      "avg_humidity_percent": {
+        "actual": 82.0,
+        "predicted": 82.63,
+        "error": 0.63
+      },
+      "total_rain_mm": {
+        "actual": 2.7,
+        "predicted": 8.05,
+        "error": 5.35
+      },
+      "max_wind_kmh": {
+        "actual": 11.5,
+        "predicted": 11.57,
+        "error": 0.07
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-21",
+      "avg_temp_c": {
+        "actual": 28.7,
+        "predicted": 29.06,
+        "error": 0.36
+      },
+      "avg_humidity_percent": {
+        "actual": 82.0,
+        "predicted": 81.49,
+        "error": -0.51
+      },
+      "total_rain_mm": {
+        "actual": 9.9,
+        "predicted": 3.73,
+        "error": -6.17
+      },
+      "max_wind_kmh": {
+        "actual": 8.5,
+        "predicted": 10.43,
+        "error": 1.93
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-22",
+      "avg_temp_c": {
+        "actual": 29.6,
+        "predicted": 29.14,
+        "error": -0.46
+      },
+      "avg_humidity_percent": {
+        "actual": 80.0,
+        "predicted": 83.55,
+        "error": 3.55
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 7.22,
+        "error": 7.12
+      },
+      "max_wind_kmh": {
+        "actual": 6.5,
+        "predicted": 10.49,
+        "error": 3.99
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-23",
+      "avg_temp_c": {
+        "actual": 29.5,
+        "predicted": 29.95,
+        "error": 0.45
+      },
+      "avg_humidity_percent": {
+        "actual": 79.0,
+        "predicted": 79.91,
+        "error": 0.91
+      },
+      "total_rain_mm": {
+        "actual": 0.3,
+        "predicted": 3.56,
+        "error": 3.26
+      },
+      "max_wind_kmh": {
+        "actual": 15.2,
+        "predicted": 10.24,
+        "error": -4.96
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-24",
+      "avg_temp_c": {
+        "actual": 29.4,
+        "predicted": 28.97,
+        "error": -0.43
+      },
+      "avg_humidity_percent": {
+        "actual": 79.0,
+        "predicted": 80.06,
+        "error": 1.06
+      },
+      "total_rain_mm": {
+        "actual": 2.0,
+        "predicted": 5.11,
+        "error": 3.11
+      },
+      "max_wind_kmh": {
+        "actual": 23.7,
+        "predicted": 13.6,
+        "error": -10.1
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-25",
+      "avg_temp_c": {
+        "actual": 29.4,
+        "predicted": 28.65,
+        "error": -0.75
+      },
+      "avg_humidity_percent": {
+        "actual": 80.0,
+        "predicted": 79.61,
+        "error": -0.39
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 4.79,
+        "error": 4.79
+      },
+      "max_wind_kmh": {
+        "actual": 9.7,
+        "predicted": 15.72,
+        "error": 6.02
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-26",
+      "avg_temp_c": {
+        "actual": 29.6,
+        "predicted": 29.43,
+        "error": -0.17
+      },
+      "avg_humidity_percent": {
+        "actual": 80.0,
+        "predicted": 79.66,
+        "error": -0.34
+      },
+      "total_rain_mm": {
+        "actual": 1.7,
+        "predicted": 3.16,
+        "error": 1.46
+      },
+      "max_wind_kmh": {
+        "actual": 9.7,
+        "predicted": 11.09,
+        "error": 1.39
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-27",
+      "avg_temp_c": {
+        "actual": 28.2,
+        "predicted": 29.53,
+        "error": 1.33
+      },
+      "avg_humidity_percent": {
+        "actual": 83.0,
+        "predicted": 80.24,
+        "error": -2.76
+      },
+      "total_rain_mm": {
+        "actual": 0.8,
+        "predicted": 3.23,
+        "error": 2.43
+      },
+      "max_wind_kmh": {
+        "actual": 18.6,
+        "predicted": 12.17,
+        "error": -6.43
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-28",
+      "avg_temp_c": {
+        "actual": 26.7,
+        "predicted": 27.49,
+        "error": 0.79
+      },
+      "avg_humidity_percent": {
+        "actual": 89.0,
+        "predicted": 80.09,
+        "error": -8.91
+      },
+      "total_rain_mm": {
+        "actual": 27.7,
+        "predicted": 4.36,
+        "error": -23.34
+      },
+      "max_wind_kmh": {
+        "actual": 13.0,
+        "predicted": 13.78,
+        "error": 0.78
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-29",
+      "avg_temp_c": {
+        "actual": 25.9,
+        "predicted": 26.99,
+        "error": 1.09
+      },
+      "avg_humidity_percent": {
+        "actual": 90.0,
+        "predicted": 82.97,
+        "error": -7.03
+      },
+      "total_rain_mm": {
+        "actual": 31.4,
+        "predicted": 8.59,
+        "error": -22.81
+      },
+      "max_wind_kmh": {
+        "actual": 24.6,
+        "predicted": 13.32,
+        "error": -11.28
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-30",
+      "avg_temp_c": {
+        "actual": 27.3,
+        "predicted": 25.73,
+        "error": -1.57
+      },
+      "avg_humidity_percent": {
+        "actual": 83.0,
+        "predicted": 82.78,
+        "error": -0.22
+      },
+      "total_rain_mm": {
+        "actual": 1.3,
+        "predicted": 8.64,
+        "error": 7.34
+      },
+      "max_wind_kmh": {
+        "actual": 14.8,
+        "predicted": 14.94,
+        "error": 0.14
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-08-31",
+      "avg_temp_c": {
+        "actual": 28.5,
+        "predicted": 27.45,
+        "error": -1.05
+      },
+      "avg_humidity_percent": {
+        "actual": 82.0,
+        "predicted": 79.67,
+        "error": -2.33
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.48,
+        "error": 2.48
+      },
+      "max_wind_kmh": {
+        "actual": 11.0,
+        "predicted": 12.67,
+        "error": 1.67
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-01",
+      "avg_temp_c": {
+        "actual": 29.7,
+        "predicted": 28.55,
+        "error": -1.15
+      },
+      "avg_humidity_percent": {
+        "actual": 78.0,
+        "predicted": 79.33,
+        "error": 1.33
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": 3.97,
+        "error": 3.87
+      },
+      "max_wind_kmh": {
+        "actual": 6.3,
+        "predicted": 13.62,
+        "error": 7.32
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-02",
+      "avg_temp_c": {
+        "actual": 28.4,
+        "predicted": 29.8,
+        "error": 1.4
+      },
+      "avg_humidity_percent": {
+        "actual": 85.0,
+        "predicted": 77.5,
+        "error": -7.5
+      },
+      "total_rain_mm": {
+        "actual": 8.9,
+        "predicted": 3.5,
+        "error": -5.4
+      },
+      "max_wind_kmh": {
+        "actual": 12.9,
+        "predicted": 11.86,
+        "error": -1.04
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-03",
+      "avg_temp_c": {
+        "actual": 26.7,
+        "predicted": 27.91,
+        "error": 1.21
+      },
+      "avg_humidity_percent": {
+        "actual": 90.0,
+        "predicted": 82.37,
+        "error": -7.63
+      },
+      "total_rain_mm": {
+        "actual": 12.9,
+        "predicted": 6.54,
+        "error": -6.36
+      },
+      "max_wind_kmh": {
+        "actual": 11.0,
+        "predicted": 14.25,
+        "error": 3.25
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-04",
+      "avg_temp_c": {
+        "actual": 27.5,
+        "predicted": 26.7,
+        "error": -0.8
+      },
+      "avg_humidity_percent": {
+        "actual": 86.0,
+        "predicted": 83.96,
+        "error": -2.04
+      },
+      "total_rain_mm": {
+        "actual": 1.2,
+        "predicted": 7.24,
+        "error": 6.04
+      },
+      "max_wind_kmh": {
+        "actual": 6.3,
+        "predicted": 11.27,
+        "error": 4.97
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-05",
+      "avg_temp_c": {
+        "actual": 27.2,
+        "predicted": 27.65,
+        "error": 0.45
+      },
+      "avg_humidity_percent": {
+        "actual": 84.0,
+        "predicted": 84.47,
+        "error": 0.47
+      },
+      "total_rain_mm": {
+        "actual": 2.1,
+        "predicted": 3.61,
+        "error": 1.51
+      },
+      "max_wind_kmh": {
+        "actual": 13.1,
+        "predicted": 10.63,
+        "error": -2.47
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-06",
+      "avg_temp_c": {
+        "actual": 27.8,
+        "predicted": 26.84,
+        "error": -0.96
+      },
+      "avg_humidity_percent": {
+        "actual": 84.0,
+        "predicted": 81.7,
+        "error": -2.3
+      },
+      "total_rain_mm": {
+        "actual": 2.8,
+        "predicted": 4.06,
+        "error": 1.26
+      },
+      "max_wind_kmh": {
+        "actual": 23.4,
+        "predicted": 12.24,
+        "error": -11.16
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-07",
+      "avg_temp_c": {
+        "actual": 27.4,
+        "predicted": 27.22,
+        "error": -0.18
+      },
+      "avg_humidity_percent": {
+        "actual": 82.0,
+        "predicted": 82.49,
+        "error": 0.49
+      },
+      "total_rain_mm": {
+        "actual": 9.1,
+        "predicted": 4.25,
+        "error": -4.85
+      },
+      "max_wind_kmh": {
+        "actual": 16.1,
+        "predicted": 14.85,
+        "error": -1.25
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-08",
+      "avg_temp_c": {
+        "actual": 28.2,
+        "predicted": 27.32,
+        "error": -0.88
+      },
+      "avg_humidity_percent": {
+        "actual": 81.0,
+        "predicted": 79.71,
+        "error": -1.29
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 4.22,
+        "error": 4.22
+      },
+      "max_wind_kmh": {
+        "actual": 9.2,
+        "predicted": 11.57,
+        "error": 2.37
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-09",
+      "avg_temp_c": {
+        "actual": 29.3,
+        "predicted": 28.41,
+        "error": -0.89
+      },
+      "avg_humidity_percent": {
+        "actual": 77.0,
+        "predicted": 79.66,
+        "error": 2.66
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.16,
+        "error": 2.16
+      },
+      "max_wind_kmh": {
+        "actual": 6.3,
+        "predicted": 10.89,
+        "error": 4.59
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-10",
+      "avg_temp_c": {
+        "actual": 28.3,
+        "predicted": 29.36,
+        "error": 1.06
+      },
+      "avg_humidity_percent": {
+        "actual": 82.0,
+        "predicted": 75.53,
+        "error": -6.47
+      },
+      "total_rain_mm": {
+        "actual": 5.7,
+        "predicted": 3.39,
+        "error": -2.31
+      },
+      "max_wind_kmh": {
+        "actual": 14.8,
+        "predicted": 11.45,
+        "error": -3.35
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-11",
+      "avg_temp_c": {
+        "actual": 28.7,
+        "predicted": 27.79,
+        "error": -0.91
+      },
+      "avg_humidity_percent": {
+        "actual": 81.0,
+        "predicted": 80.68,
+        "error": -0.32
+      },
+      "total_rain_mm": {
+        "actual": 0.2,
+        "predicted": 5.15,
+        "error": 4.95
+      },
+      "max_wind_kmh": {
+        "actual": 16.5,
+        "predicted": 13.72,
+        "error": -2.78
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-12",
+      "avg_temp_c": {
+        "actual": 29.9,
+        "predicted": 28.19,
+        "error": -1.71
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 78.95,
+        "error": 5.95
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 3.81,
+        "error": 3.81
+      },
+      "max_wind_kmh": {
+        "actual": 12.9,
+        "predicted": 13.81,
+        "error": 0.91
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-13",
+      "avg_temp_c": {
+        "actual": 28.9,
+        "predicted": 29.48,
+        "error": 0.58
+      },
+      "avg_humidity_percent": {
+        "actual": 77.0,
+        "predicted": 73.67,
+        "error": -3.33
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.9,
+        "error": 2.9
+      },
+      "max_wind_kmh": {
+        "actual": 13.3,
+        "predicted": 13.16,
+        "error": -0.14
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-14",
+      "avg_temp_c": {
+        "actual": 28.3,
+        "predicted": 28.1,
+        "error": -0.2
+      },
+      "avg_humidity_percent": {
+        "actual": 76.0,
+        "predicted": 76.78,
+        "error": 0.78
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 3.2,
+        "error": 3.2
+      },
+      "max_wind_kmh": {
+        "actual": 17.1,
+        "predicted": 13.11,
+        "error": -3.99
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-15",
+      "avg_temp_c": {
+        "actual": 28.8,
+        "predicted": 27.64,
+        "error": -1.16
+      },
+      "avg_humidity_percent": {
+        "actual": 70.0,
+        "predicted": 76.0,
+        "error": 6.0
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 3.09,
+        "error": 3.09
+      },
+      "max_wind_kmh": {
+        "actual": 8.4,
+        "predicted": 13.66,
+        "error": 5.26
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-16",
+      "avg_temp_c": {
+        "actual": 28.6,
+        "predicted": 28.85,
+        "error": 0.25
+      },
+      "avg_humidity_percent": {
+        "actual": 67.0,
+        "predicted": 69.72,
+        "error": 2.72
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.88,
+        "error": 1.88
+      },
+      "max_wind_kmh": {
+        "actual": 8.0,
+        "predicted": 10.99,
+        "error": 2.99
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-17",
+      "avg_temp_c": {
+        "actual": 29.1,
+        "predicted": 28.42,
+        "error": -0.68
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 67.68,
+        "error": -0.32
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.26,
+        "error": 2.26
+      },
+      "max_wind_kmh": {
+        "actual": 10.3,
+        "predicted": 11.35,
+        "error": 1.05
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-18",
+      "avg_temp_c": {
+        "actual": 28.6,
+        "predicted": 29.0,
+        "error": 0.4
+      },
+      "avg_humidity_percent": {
+        "actual": 71.0,
+        "predicted": 68.96,
+        "error": -2.04
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.5,
+        "error": 2.5
+      },
+      "max_wind_kmh": {
+        "actual": 12.7,
+        "predicted": 12.77,
+        "error": 0.07
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-19",
+      "avg_temp_c": {
+        "actual": 27.1,
+        "predicted": 28.2,
+        "error": 1.1
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 71.89,
+        "error": -3.11
+      },
+      "total_rain_mm": {
+        "actual": 0.4,
+        "predicted": 2.42,
+        "error": 2.02
+      },
+      "max_wind_kmh": {
+        "actual": 21.9,
+        "predicted": 12.82,
+        "error": -9.08
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-20",
+      "avg_temp_c": {
+        "actual": 28.1,
+        "predicted": 26.29,
+        "error": -1.81
+      },
+      "avg_humidity_percent": {
+        "actual": 72.0,
+        "predicted": 75.35,
+        "error": 3.35
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 3.13,
+        "error": 3.13
+      },
+      "max_wind_kmh": {
+        "actual": 7.6,
+        "predicted": 14.66,
+        "error": 7.06
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-21",
+      "avg_temp_c": {
+        "actual": 29.0,
+        "predicted": 28.38,
+        "error": -0.62
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 71.35,
+        "error": 3.35
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.39,
+        "error": 1.39
+      },
+      "max_wind_kmh": {
+        "actual": 8.4,
+        "predicted": 10.69,
+        "error": 2.29
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-22",
+      "avg_temp_c": {
+        "actual": 30.2,
+        "predicted": 28.87,
+        "error": -1.33
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 69.51,
+        "error": 1.51
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.31,
+        "error": 1.31
+      },
+      "max_wind_kmh": {
+        "actual": 9.7,
+        "predicted": 11.31,
+        "error": 1.61
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-23",
+      "avg_temp_c": {
+        "actual": 31.0,
+        "predicted": 29.88,
+        "error": -1.12
+      },
+      "avg_humidity_percent": {
+        "actual": 66.0,
+        "predicted": 69.76,
+        "error": 3.76
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 2.05,
+        "error": 2.05
+      },
+      "max_wind_kmh": {
+        "actual": 8.8,
+        "predicted": 13.12,
+        "error": 4.32
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-24",
+      "avg_temp_c": {
+        "actual": 31.0,
+        "predicted": 30.56,
+        "error": -0.44
+      },
+      "avg_humidity_percent": {
+        "actual": 65.0,
+        "predicted": 67.84,
+        "error": 2.84
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.67,
+        "error": 1.67
+      },
+      "max_wind_kmh": {
+        "actual": 8.8,
+        "predicted": 13.1,
+        "error": 4.3
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-25",
+      "avg_temp_c": {
+        "actual": 30.3,
+        "predicted": 30.45,
+        "error": 0.15
+      },
+      "avg_humidity_percent": {
+        "actual": 69.0,
+        "predicted": 65.93,
+        "error": -3.07
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.5,
+        "error": 1.5
+      },
+      "max_wind_kmh": {
+        "actual": 8.4,
+        "predicted": 13.38,
+        "error": 4.98
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-26",
+      "avg_temp_c": {
+        "actual": 29.0,
+        "predicted": 29.64,
+        "error": 0.64
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 69.93,
+        "error": -5.07
+      },
+      "total_rain_mm": {
+        "actual": 0.2,
+        "predicted": 1.84,
+        "error": 1.64
+      },
+      "max_wind_kmh": {
+        "actual": 21.3,
+        "predicted": 13.35,
+        "error": -7.95
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-27",
+      "avg_temp_c": {
+        "actual": 28.6,
+        "predicted": 27.81,
+        "error": -0.79
+      },
+      "avg_humidity_percent": {
+        "actual": 76.0,
+        "predicted": 76.28,
+        "error": 0.28
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 3.09,
+        "error": 3.09
+      },
+      "max_wind_kmh": {
+        "actual": 12.8,
+        "predicted": 15.54,
+        "error": 2.74
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-28",
+      "avg_temp_c": {
+        "actual": 27.2,
+        "predicted": 28.16,
+        "error": 0.96
+      },
+      "avg_humidity_percent": {
+        "actual": 78.0,
+        "predicted": 74.38,
+        "error": -3.62
+      },
+      "total_rain_mm": {
+        "actual": 13.0,
+        "predicted": 2.05,
+        "error": -10.95
+      },
+      "max_wind_kmh": {
+        "actual": 24.8,
+        "predicted": 12.01,
+        "error": -12.79
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-29",
+      "avg_temp_c": {
+        "actual": 27.8,
+        "predicted": 26.17,
+        "error": -1.63
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 77.48,
+        "error": 4.48
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 4.87,
+        "error": 4.87
+      },
+      "max_wind_kmh": {
+        "actual": 7.8,
+        "predicted": 15.62,
+        "error": 7.82
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-09-30",
+      "avg_temp_c": {
+        "actual": 28.2,
+        "predicted": 27.97,
+        "error": -0.23
+      },
+      "avg_humidity_percent": {
+        "actual": 77.0,
+        "predicted": 70.79,
+        "error": -6.21
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.05,
+        "error": -0.05
+      },
+      "max_wind_kmh": {
+        "actual": 13.4,
+        "predicted": 10.23,
+        "error": -3.17
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-01",
+      "avg_temp_c": {
+        "actual": 29.1,
+        "predicted": 27.75,
+        "error": -1.35
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 75.34,
+        "error": 0.34
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.3,
+        "error": 1.3
+      },
+      "max_wind_kmh": {
+        "actual": 9.3,
+        "predicted": 15.02,
+        "error": 5.72
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-02",
+      "avg_temp_c": {
+        "actual": 29.5,
+        "predicted": 28.75,
+        "error": -0.75
+      },
+      "avg_humidity_percent": {
+        "actual": 69.0,
+        "predicted": 72.76,
+        "error": 3.76
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.67,
+        "error": 1.67
+      },
+      "max_wind_kmh": {
+        "actual": 10.6,
+        "predicted": 13.34,
+        "error": 2.74
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-03",
+      "avg_temp_c": {
+        "actual": 28.5,
+        "predicted": 28.77,
+        "error": 0.27
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 70.8,
+        "error": 2.8
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.49,
+        "error": 1.49
+      },
+      "max_wind_kmh": {
+        "actual": 7.8,
+        "predicted": 14.15,
+        "error": 6.35
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-04",
+      "avg_temp_c": {
+        "actual": 28.2,
+        "predicted": 27.97,
+        "error": -0.23
+      },
+      "avg_humidity_percent": {
+        "actual": 64.0,
+        "predicted": 69.7,
+        "error": 5.7
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.13,
+        "error": 1.13
+      },
+      "max_wind_kmh": {
+        "actual": 10.3,
+        "predicted": 13.15,
+        "error": 2.85
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-05",
+      "avg_temp_c": {
+        "actual": 26.9,
+        "predicted": 27.56,
+        "error": 0.66
+      },
+      "avg_humidity_percent": {
+        "actual": 67.0,
+        "predicted": 63.85,
+        "error": -3.15
+      },
+      "total_rain_mm": {
+        "actual": 0.3,
+        "predicted": 1.15,
+        "error": 0.85
+      },
+      "max_wind_kmh": {
+        "actual": 29.3,
+        "predicted": 13.71,
+        "error": -15.59
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-06",
+      "avg_temp_c": {
+        "actual": 24.9,
+        "predicted": 25.47,
+        "error": 0.57
+      },
+      "avg_humidity_percent": {
+        "actual": 76.0,
+        "predicted": 67.69,
+        "error": -8.31
+      },
+      "total_rain_mm": {
+        "actual": 0.9,
+        "predicted": 2.13,
+        "error": 1.23
+      },
+      "max_wind_kmh": {
+        "actual": 22.5,
+        "predicted": 17.28,
+        "error": -5.22
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-07",
+      "avg_temp_c": {
+        "actual": 25.6,
+        "predicted": 24.22,
+        "error": -1.38
+      },
+      "avg_humidity_percent": {
+        "actual": 74.0,
+        "predicted": 74.52,
+        "error": 0.52
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.36,
+        "error": 1.36
+      },
+      "max_wind_kmh": {
+        "actual": 8.8,
+        "predicted": 14.05,
+        "error": 5.25
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-08",
+      "avg_temp_c": {
+        "actual": 24.0,
+        "predicted": 26.08,
+        "error": 2.08
+      },
+      "avg_humidity_percent": {
+        "actual": 82.0,
+        "predicted": 71.77,
+        "error": -10.23
+      },
+      "total_rain_mm": {
+        "actual": 11.5,
+        "predicted": -0.81,
+        "error": -12.31
+      },
+      "max_wind_kmh": {
+        "actual": 27.4,
+        "predicted": 10.29,
+        "error": -17.11
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-09",
+      "avg_temp_c": {
+        "actual": 24.8,
+        "predicted": 23.11,
+        "error": -1.69
+      },
+      "avg_humidity_percent": {
+        "actual": 67.0,
+        "predicted": 76.35,
+        "error": 9.35
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 4.06,
+        "error": 4.06
+      },
+      "max_wind_kmh": {
+        "actual": 11.1,
+        "predicted": 16.72,
+        "error": 5.62
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-10",
+      "avg_temp_c": {
+        "actual": 24.6,
+        "predicted": 25.07,
+        "error": 0.47
+      },
+      "avg_humidity_percent": {
+        "actual": 65.0,
+        "predicted": 67.33,
+        "error": 2.33
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.57,
+        "error": -0.57
+      },
+      "max_wind_kmh": {
+        "actual": 11.6,
+        "predicted": 10.36,
+        "error": -1.24
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-11",
+      "avg_temp_c": {
+        "actual": 25.0,
+        "predicted": 24.49,
+        "error": -0.51
+      },
+      "avg_humidity_percent": {
+        "actual": 65.0,
+        "predicted": 64.19,
+        "error": -0.81
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.3,
+        "error": 0.3
+      },
+      "max_wind_kmh": {
+        "actual": 13.2,
+        "predicted": 13.32,
+        "error": 0.12
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-12",
+      "avg_temp_c": {
+        "actual": 25.4,
+        "predicted": 24.63,
+        "error": -0.77
+      },
+      "avg_humidity_percent": {
+        "actual": 64.0,
+        "predicted": 64.72,
+        "error": 0.72
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.32,
+        "error": 1.32
+      },
+      "max_wind_kmh": {
+        "actual": 8.5,
+        "predicted": 14.47,
+        "error": 5.97
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-13",
+      "avg_temp_c": {
+        "actual": 24.8,
+        "predicted": 25.21,
+        "error": 0.41
+      },
+      "avg_humidity_percent": {
+        "actual": 66.0,
+        "predicted": 62.84,
+        "error": -3.16
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.36,
+        "error": 1.36
+      },
+      "max_wind_kmh": {
+        "actual": 10.3,
+        "predicted": 12.7,
+        "error": 2.4
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-14",
+      "avg_temp_c": {
+        "actual": 24.6,
+        "predicted": 24.55,
+        "error": -0.05
+      },
+      "avg_humidity_percent": {
+        "actual": 62.0,
+        "predicted": 67.16,
+        "error": 5.16
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.33,
+        "error": 1.33
+      },
+      "max_wind_kmh": {
+        "actual": 11.2,
+        "predicted": 13.04,
+        "error": 1.84
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-15",
+      "avg_temp_c": {
+        "actual": 24.4,
+        "predicted": 24.28,
+        "error": -0.12
+      },
+      "avg_humidity_percent": {
+        "actual": 63.0,
+        "predicted": 63.28,
+        "error": 0.28
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.51,
+        "error": 1.51
+      },
+      "max_wind_kmh": {
+        "actual": 10.7,
+        "predicted": 13.0,
+        "error": 2.3
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-16",
+      "avg_temp_c": {
+        "actual": 24.7,
+        "predicted": 24.08,
+        "error": -0.62
+      },
+      "avg_humidity_percent": {
+        "actual": 63.0,
+        "predicted": 63.19,
+        "error": 0.19
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.65,
+        "error": 0.65
+      },
+      "max_wind_kmh": {
+        "actual": 10.2,
+        "predicted": 11.96,
+        "error": 1.76
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-17",
+      "avg_temp_c": {
+        "actual": 24.7,
+        "predicted": 24.35,
+        "error": -0.35
+      },
+      "avg_humidity_percent": {
+        "actual": 63.0,
+        "predicted": 63.06,
+        "error": 0.06
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.69,
+        "error": 0.69
+      },
+      "max_wind_kmh": {
+        "actual": 9.7,
+        "predicted": 11.88,
+        "error": 2.18
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-18",
+      "avg_temp_c": {
+        "actual": 25.4,
+        "predicted": 24.32,
+        "error": -1.08
+      },
+      "avg_humidity_percent": {
+        "actual": 65.0,
+        "predicted": 63.04,
+        "error": -1.96
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.56,
+        "error": 0.56
+      },
+      "max_wind_kmh": {
+        "actual": 8.9,
+        "predicted": 11.74,
+        "error": 2.84
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-19",
+      "avg_temp_c": {
+        "actual": 25.8,
+        "predicted": 25.17,
+        "error": -0.63
+      },
+      "avg_humidity_percent": {
+        "actual": 63.0,
+        "predicted": 65.54,
+        "error": 2.54
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.55,
+        "error": 0.55
+      },
+      "max_wind_kmh": {
+        "actual": 8.1,
+        "predicted": 12.25,
+        "error": 4.15
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-20",
+      "avg_temp_c": {
+        "actual": 25.1,
+        "predicted": 25.4,
+        "error": 0.3
+      },
+      "avg_humidity_percent": {
+        "actual": 67.0,
+        "predicted": 63.72,
+        "error": -3.28
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.62,
+        "error": 0.62
+      },
+      "max_wind_kmh": {
+        "actual": 8.9,
+        "predicted": 11.84,
+        "error": 2.94
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-21",
+      "avg_temp_c": {
+        "actual": 24.6,
+        "predicted": 24.51,
+        "error": -0.09
+      },
+      "avg_humidity_percent": {
+        "actual": 69.0,
+        "predicted": 67.78,
+        "error": -1.22
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.81,
+        "error": 0.81
+      },
+      "max_wind_kmh": {
+        "actual": 7.7,
+        "predicted": 12.46,
+        "error": 4.76
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-22",
+      "avg_temp_c": {
+        "actual": 25.0,
+        "predicted": 24.2,
+        "error": -0.8
+      },
+      "avg_humidity_percent": {
+        "actual": 66.0,
+        "predicted": 69.98,
+        "error": 3.98
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.73,
+        "error": 0.73
+      },
+      "max_wind_kmh": {
+        "actual": 9.2,
+        "predicted": 11.73,
+        "error": 2.53
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-23",
+      "avg_temp_c": {
+        "actual": 25.0,
+        "predicted": 24.58,
+        "error": -0.42
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 66.89,
+        "error": -1.11
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.54,
+        "error": 0.54
+      },
+      "max_wind_kmh": {
+        "actual": 14.9,
+        "predicted": 11.83,
+        "error": -3.07
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-24",
+      "avg_temp_c": {
+        "actual": 24.8,
+        "predicted": 24.17,
+        "error": -0.63
+      },
+      "avg_humidity_percent": {
+        "actual": 66.0,
+        "predicted": 68.71,
+        "error": 2.71
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.11,
+        "error": 1.11
+      },
+      "max_wind_kmh": {
+        "actual": 12.3,
+        "predicted": 13.55,
+        "error": 1.25
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-25",
+      "avg_temp_c": {
+        "actual": 24.6,
+        "predicted": 24.21,
+        "error": -0.39
+      },
+      "avg_humidity_percent": {
+        "actual": 66.0,
+        "predicted": 67.13,
+        "error": 1.13
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.44,
+        "error": 0.44
+      },
+      "max_wind_kmh": {
+        "actual": 12.8,
+        "predicted": 12.14,
+        "error": -0.66
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-26",
+      "avg_temp_c": {
+        "actual": 24.0,
+        "predicted": 24.03,
+        "error": 0.03
+      },
+      "avg_humidity_percent": {
+        "actual": 66.0,
+        "predicted": 66.91,
+        "error": 0.91
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.17,
+        "error": 0.17
+      },
+      "max_wind_kmh": {
+        "actual": 10.1,
+        "predicted": 12.69,
+        "error": 2.59
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-27",
+      "avg_temp_c": {
+        "actual": 24.3,
+        "predicted": 23.53,
+        "error": -0.77
+      },
+      "avg_humidity_percent": {
+        "actual": 69.0,
+        "predicted": 67.26,
+        "error": -1.74
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.33,
+        "error": 0.33
+      },
+      "max_wind_kmh": {
+        "actual": 8.5,
+        "predicted": 11.62,
+        "error": 3.12
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-28",
+      "avg_temp_c": {
+        "actual": 24.8,
+        "predicted": 24.05,
+        "error": -0.75
+      },
+      "avg_humidity_percent": {
+        "actual": 71.0,
+        "predicted": 70.25,
+        "error": -0.75
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.68,
+        "error": 0.68
+      },
+      "max_wind_kmh": {
+        "actual": 10.4,
+        "predicted": 11.95,
+        "error": 1.55
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-29",
+      "avg_temp_c": {
+        "actual": 25.6,
+        "predicted": 24.29,
+        "error": -1.31
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 72.13,
+        "error": 4.13
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.24,
+        "error": 1.24
+      },
+      "max_wind_kmh": {
+        "actual": 12.5,
+        "predicted": 12.67,
+        "error": 0.17
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-30",
+      "avg_temp_c": {
+        "actual": 25.2,
+        "predicted": 24.89,
+        "error": -0.31
+      },
+      "avg_humidity_percent": {
+        "actual": 66.0,
+        "predicted": 69.73,
+        "error": 3.73
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.12,
+        "error": 1.12
+      },
+      "max_wind_kmh": {
+        "actual": 12.6,
+        "predicted": 13.41,
+        "error": 0.81
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-10-31",
+      "avg_temp_c": {
+        "actual": 24.3,
+        "predicted": 24.3,
+        "error": 0.0
+      },
+      "avg_humidity_percent": {
+        "actual": 62.0,
+        "predicted": 67.8,
+        "error": 5.8
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.74,
+        "error": 0.74
+      },
+      "max_wind_kmh": {
+        "actual": 13.5,
+        "predicted": 13.12,
+        "error": -0.38
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-01",
+      "avg_temp_c": {
+        "actual": 22.8,
+        "predicted": 23.44,
+        "error": 0.64
+      },
+      "avg_humidity_percent": {
+        "actual": 62.0,
+        "predicted": 63.41,
+        "error": 1.41
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.22,
+        "error": 0.22
+      },
+      "max_wind_kmh": {
+        "actual": 10.4,
+        "predicted": 12.91,
+        "error": 2.51
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-02",
+      "avg_temp_c": {
+        "actual": 22.2,
+        "predicted": 22.24,
+        "error": 0.04
+      },
+      "avg_humidity_percent": {
+        "actual": 66.0,
+        "predicted": 63.78,
+        "error": -2.22
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.22,
+        "error": -0.22
+      },
+      "max_wind_kmh": {
+        "actual": 8.8,
+        "predicted": 11.39,
+        "error": 2.59
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-03",
+      "avg_temp_c": {
+        "actual": 23.1,
+        "predicted": 22.05,
+        "error": -1.05
+      },
+      "avg_humidity_percent": {
+        "actual": 63.0,
+        "predicted": 67.92,
+        "error": 4.92
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.24,
+        "error": -0.24
+      },
+      "max_wind_kmh": {
+        "actual": 8.4,
+        "predicted": 11.04,
+        "error": 2.64
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-04",
+      "avg_temp_c": {
+        "actual": 22.5,
+        "predicted": 23.08,
+        "error": 0.58
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 63.76,
+        "error": -9.24
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.22,
+        "error": -0.22
+      },
+      "max_wind_kmh": {
+        "actual": 9.3,
+        "predicted": 10.78,
+        "error": 1.48
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-05",
+      "avg_temp_c": {
+        "actual": 22.7,
+        "predicted": 22.27,
+        "error": -0.43
+      },
+      "avg_humidity_percent": {
+        "actual": 71.0,
+        "predicted": 72.65,
+        "error": 1.65
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.31,
+        "error": 0.31
+      },
+      "max_wind_kmh": {
+        "actual": 10.0,
+        "predicted": 11.96,
+        "error": 1.96
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-06",
+      "avg_temp_c": {
+        "actual": 23.0,
+        "predicted": 22.51,
+        "error": -0.49
+      },
+      "avg_humidity_percent": {
+        "actual": 72.0,
+        "predicted": 71.96,
+        "error": -0.04
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.15,
+        "error": 0.15
+      },
+      "max_wind_kmh": {
+        "actual": 6.8,
+        "predicted": 11.77,
+        "error": 4.97
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-07",
+      "avg_temp_c": {
+        "actual": 23.2,
+        "predicted": 22.84,
+        "error": -0.36
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 71.81,
+        "error": -3.19
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.03,
+        "error": 0.03
+      },
+      "max_wind_kmh": {
+        "actual": 9.0,
+        "predicted": 11.61,
+        "error": 2.61
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-08",
+      "avg_temp_c": {
+        "actual": 22.5,
+        "predicted": 22.67,
+        "error": 0.17
+      },
+      "avg_humidity_percent": {
+        "actual": 80.0,
+        "predicted": 74.25,
+        "error": -5.75
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.94,
+        "error": 0.94
+      },
+      "max_wind_kmh": {
+        "actual": 8.8,
+        "predicted": 12.55,
+        "error": 3.75
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-09",
+      "avg_temp_c": {
+        "actual": 22.3,
+        "predicted": 21.89,
+        "error": -0.41
+      },
+      "avg_humidity_percent": {
+        "actual": 80.0,
+        "predicted": 78.92,
+        "error": -1.08
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.41,
+        "error": 1.41
+      },
+      "max_wind_kmh": {
+        "actual": 8.0,
+        "predicted": 12.06,
+        "error": 4.06
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-10",
+      "avg_temp_c": {
+        "actual": 22.4,
+        "predicted": 21.87,
+        "error": -0.53
+      },
+      "avg_humidity_percent": {
+        "actual": 79.0,
+        "predicted": 77.82,
+        "error": -1.18
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.81,
+        "error": 0.81
+      },
+      "max_wind_kmh": {
+        "actual": 8.7,
+        "predicted": 11.55,
+        "error": 2.85
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-11",
+      "avg_temp_c": {
+        "actual": 21.6,
+        "predicted": 21.93,
+        "error": 0.33
+      },
+      "avg_humidity_percent": {
+        "actual": 81.0,
+        "predicted": 80.18,
+        "error": -0.82
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.93,
+        "error": 0.93
+      },
+      "max_wind_kmh": {
+        "actual": 11.1,
+        "predicted": 11.52,
+        "error": 0.42
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-12",
+      "avg_temp_c": {
+        "actual": 21.6,
+        "predicted": 20.9,
+        "error": -0.7
+      },
+      "avg_humidity_percent": {
+        "actual": 81.0,
+        "predicted": 80.38,
+        "error": -0.62
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.97,
+        "error": 0.97
+      },
+      "max_wind_kmh": {
+        "actual": 9.9,
+        "predicted": 11.88,
+        "error": 1.98
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-13",
+      "avg_temp_c": {
+        "actual": 21.5,
+        "predicted": 21.18,
+        "error": -0.32
+      },
+      "avg_humidity_percent": {
+        "actual": 80.0,
+        "predicted": 79.09,
+        "error": -0.91
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.54,
+        "error": 0.54
+      },
+      "max_wind_kmh": {
+        "actual": 4.9,
+        "predicted": 11.42,
+        "error": 6.52
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-14",
+      "avg_temp_c": {
+        "actual": 20.9,
+        "predicted": 21.29,
+        "error": 0.39
+      },
+      "avg_humidity_percent": {
+        "actual": 80.0,
+        "predicted": 80.19,
+        "error": 0.19
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.06,
+        "error": -0.06
+      },
+      "max_wind_kmh": {
+        "actual": 7.2,
+        "predicted": 9.92,
+        "error": 2.72
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-15",
+      "avg_temp_c": {
+        "actual": 20.0,
+        "predicted": 20.5,
+        "error": 0.5
+      },
+      "avg_humidity_percent": {
+        "actual": 82.0,
+        "predicted": 79.98,
+        "error": -2.02
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.3,
+        "error": 0.3
+      },
+      "max_wind_kmh": {
+        "actual": 5.1,
+        "predicted": 10.6,
+        "error": 5.5
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-16",
+      "avg_temp_c": {
+        "actual": 18.8,
+        "predicted": 19.84,
+        "error": 1.04
+      },
+      "avg_humidity_percent": {
+        "actual": 82.0,
+        "predicted": 80.48,
+        "error": -1.52
+      },
+      "total_rain_mm": {
+        "actual": 0.6,
+        "predicted": 0.09,
+        "error": -0.51
+      },
+      "max_wind_kmh": {
+        "actual": 19.9,
+        "predicted": 9.77,
+        "error": -10.13
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-17",
+      "avg_temp_c": {
+        "actual": 18.3,
+        "predicted": 17.94,
+        "error": -0.36
+      },
+      "avg_humidity_percent": {
+        "actual": 83.0,
+        "predicted": 79.04,
+        "error": -3.96
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.69,
+        "error": 0.69
+      },
+      "max_wind_kmh": {
+        "actual": 6.0,
+        "predicted": 13.15,
+        "error": 7.15
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-18",
+      "avg_temp_c": {
+        "actual": 18.3,
+        "predicted": 18.46,
+        "error": 0.16
+      },
+      "avg_humidity_percent": {
+        "actual": 70.0,
+        "predicted": 80.54,
+        "error": 10.54
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.81,
+        "error": -0.81
+      },
+      "max_wind_kmh": {
+        "actual": 5.8,
+        "predicted": 8.72,
+        "error": 2.92
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-19",
+      "avg_temp_c": {
+        "actual": 17.9,
+        "predicted": 18.51,
+        "error": 0.61
+      },
+      "avg_humidity_percent": {
+        "actual": 71.0,
+        "predicted": 71.54,
+        "error": 0.54
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -1.92,
+        "error": -1.92
+      },
+      "max_wind_kmh": {
+        "actual": 5.9,
+        "predicted": 8.07,
+        "error": 2.17
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-20",
+      "avg_temp_c": {
+        "actual": 17.8,
+        "predicted": 18.27,
+        "error": 0.47
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 72.48,
+        "error": -2.52
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -1.32,
+        "error": -1.32
+      },
+      "max_wind_kmh": {
+        "actual": 6.0,
+        "predicted": 9.52,
+        "error": 3.52
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-21",
+      "avg_temp_c": {
+        "actual": 17.5,
+        "predicted": 18.16,
+        "error": 0.66
+      },
+      "avg_humidity_percent": {
+        "actual": 77.0,
+        "predicted": 74.48,
+        "error": -2.52
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.65,
+        "error": -0.65
+      },
+      "max_wind_kmh": {
+        "actual": 4.0,
+        "predicted": 9.98,
+        "error": 5.98
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-22",
+      "avg_temp_c": {
+        "actual": 17.9,
+        "predicted": 17.93,
+        "error": 0.03
+      },
+      "avg_humidity_percent": {
+        "actual": 74.0,
+        "predicted": 75.8,
+        "error": 1.8
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.33,
+        "error": -0.33
+      },
+      "max_wind_kmh": {
+        "actual": 7.2,
+        "predicted": 9.16,
+        "error": 1.96
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-23",
+      "avg_temp_c": {
+        "actual": 17.9,
+        "predicted": 18.01,
+        "error": 0.11
+      },
+      "avg_humidity_percent": {
+        "actual": 74.0,
+        "predicted": 74.56,
+        "error": 0.56
+      },
+      "total_rain_mm": {
+        "actual": 1.6,
+        "predicted": -0.11,
+        "error": -1.71
+      },
+      "max_wind_kmh": {
+        "actual": 17.1,
+        "predicted": 10.56,
+        "error": -6.54
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-24",
+      "avg_temp_c": {
+        "actual": 18.3,
+        "predicted": 17.48,
+        "error": -0.82
+      },
+      "avg_humidity_percent": {
+        "actual": 71.0,
+        "predicted": 75.29,
+        "error": 4.29
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.09,
+        "error": 1.09
+      },
+      "max_wind_kmh": {
+        "actual": 10.0,
+        "predicted": 12.83,
+        "error": 2.83
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-25",
+      "avg_temp_c": {
+        "actual": 18.0,
+        "predicted": 18.11,
+        "error": 0.11
+      },
+      "avg_humidity_percent": {
+        "actual": 69.0,
+        "predicted": 71.27,
+        "error": 2.27
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.45,
+        "error": -0.45
+      },
+      "max_wind_kmh": {
+        "actual": 7.5,
+        "predicted": 10.59,
+        "error": 3.09
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-26",
+      "avg_temp_c": {
+        "actual": 17.8,
+        "predicted": 17.78,
+        "error": -0.02
+      },
+      "avg_humidity_percent": {
+        "actual": 69.0,
+        "predicted": 70.32,
+        "error": 1.32
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.58,
+        "error": -0.58
+      },
+      "max_wind_kmh": {
+        "actual": 6.0,
+        "predicted": 10.28,
+        "error": 4.28
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-27",
+      "avg_temp_c": {
+        "actual": 17.0,
+        "predicted": 17.81,
+        "error": 0.81
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 70.3,
+        "error": -2.7
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.24,
+        "error": -0.24
+      },
+      "max_wind_kmh": {
+        "actual": 4.2,
+        "predicted": 10.28,
+        "error": 6.08
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-28",
+      "avg_temp_c": {
+        "actual": 17.2,
+        "predicted": 17.11,
+        "error": -0.09
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 72.67,
+        "error": -2.33
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.09,
+        "error": 0.09
+      },
+      "max_wind_kmh": {
+        "actual": 4.9,
+        "predicted": 9.6,
+        "error": 4.7
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-29",
+      "avg_temp_c": {
+        "actual": 17.3,
+        "predicted": 17.37,
+        "error": 0.07
+      },
+      "avg_humidity_percent": {
+        "actual": 76.0,
+        "predicted": 74.77,
+        "error": -1.23
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.19,
+        "error": 0.19
+      },
+      "max_wind_kmh": {
+        "actual": 5.7,
+        "predicted": 10.09,
+        "error": 4.39
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-11-30",
+      "avg_temp_c": {
+        "actual": 17.6,
+        "predicted": 17.27,
+        "error": -0.33
+      },
+      "avg_humidity_percent": {
+        "actual": 71.0,
+        "predicted": 75.42,
+        "error": 4.42
+      },
+      "total_rain_mm": {
+        "actual": 1.4,
+        "predicted": 0.19,
+        "error": -1.21
+      },
+      "max_wind_kmh": {
+        "actual": 7.6,
+        "predicted": 10.25,
+        "error": 2.65
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-01",
+      "avg_temp_c": {
+        "actual": 17.2,
+        "predicted": 17.5,
+        "error": 0.3
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 72.88,
+        "error": -2.12
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.18,
+        "error": -0.18
+      },
+      "max_wind_kmh": {
+        "actual": 5.6,
+        "predicted": 10.21,
+        "error": 4.61
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-02",
+      "avg_temp_c": {
+        "actual": 18.1,
+        "predicted": 17.12,
+        "error": -0.98
+      },
+      "avg_humidity_percent": {
+        "actual": 71.0,
+        "predicted": 74.19,
+        "error": 3.19
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.5,
+        "error": -0.5
+      },
+      "max_wind_kmh": {
+        "actual": 6.8,
+        "predicted": 10.11,
+        "error": 3.31
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-03",
+      "avg_temp_c": {
+        "actual": 18.5,
+        "predicted": 18.0,
+        "error": -0.5
+      },
+      "avg_humidity_percent": {
+        "actual": 67.0,
+        "predicted": 72.07,
+        "error": 5.07
+      },
+      "total_rain_mm": {
+        "actual": 0.1,
+        "predicted": -0.51,
+        "error": -0.61
+      },
+      "max_wind_kmh": {
+        "actual": 7.9,
+        "predicted": 10.53,
+        "error": 2.63
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-04",
+      "avg_temp_c": {
+        "actual": 17.0,
+        "predicted": 18.18,
+        "error": 1.18
+      },
+      "avg_humidity_percent": {
+        "actual": 55.0,
+        "predicted": 70.02,
+        "error": 15.02
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.34,
+        "error": -0.34
+      },
+      "max_wind_kmh": {
+        "actual": 9.0,
+        "predicted": 10.64,
+        "error": 1.64
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-05",
+      "avg_temp_c": {
+        "actual": 16.0,
+        "predicted": 16.69,
+        "error": 0.69
+      },
+      "avg_humidity_percent": {
+        "actual": 54.0,
+        "predicted": 56.75,
+        "error": 2.75
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -1.16,
+        "error": -1.16
+      },
+      "max_wind_kmh": {
+        "actual": 8.1,
+        "predicted": 9.48,
+        "error": 1.38
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-06",
+      "avg_temp_c": {
+        "actual": 15.2,
+        "predicted": 16.29,
+        "error": 1.09
+      },
+      "avg_humidity_percent": {
+        "actual": 60.0,
+        "predicted": 56.85,
+        "error": -3.15
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -1.64,
+        "error": -1.64
+      },
+      "max_wind_kmh": {
+        "actual": 8.2,
+        "predicted": 10.16,
+        "error": 1.96
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-07",
+      "avg_temp_c": {
+        "actual": 14.2,
+        "predicted": 15.49,
+        "error": 1.29
+      },
+      "avg_humidity_percent": {
+        "actual": 67.0,
+        "predicted": 62.12,
+        "error": -4.88
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -1.24,
+        "error": -1.24
+      },
+      "max_wind_kmh": {
+        "actual": 6.4,
+        "predicted": 9.93,
+        "error": 3.53
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-08",
+      "avg_temp_c": {
+        "actual": 12.6,
+        "predicted": 14.73,
+        "error": 2.13
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 69.61,
+        "error": 1.61
+      },
+      "total_rain_mm": {
+        "actual": 2.3,
+        "predicted": -0.95,
+        "error": -3.25
+      },
+      "max_wind_kmh": {
+        "actual": 12.4,
+        "predicted": 8.7,
+        "error": -3.7
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-09",
+      "avg_temp_c": {
+        "actual": 12.8,
+        "predicted": 12.92,
+        "error": 0.12
+      },
+      "avg_humidity_percent": {
+        "actual": 64.0,
+        "predicted": 69.2,
+        "error": 5.2
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.81,
+        "error": -0.81
+      },
+      "max_wind_kmh": {
+        "actual": 6.6,
+        "predicted": 9.37,
+        "error": 2.77
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-10",
+      "avg_temp_c": {
+        "actual": 12.5,
+        "predicted": 13.8,
+        "error": 1.3
+      },
+      "avg_humidity_percent": {
+        "actual": 54.0,
+        "predicted": 66.98,
+        "error": 12.98
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -2.63,
+        "error": -2.63
+      },
+      "max_wind_kmh": {
+        "actual": 8.2,
+        "predicted": 7.83,
+        "error": -0.37
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-11",
+      "avg_temp_c": {
+        "actual": 12.4,
+        "predicted": 12.92,
+        "error": 0.52
+      },
+      "avg_humidity_percent": {
+        "actual": 61.0,
+        "predicted": 55.17,
+        "error": -5.83
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -2.7,
+        "error": -2.7
+      },
+      "max_wind_kmh": {
+        "actual": 8.1,
+        "predicted": 8.05,
+        "error": -0.05
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-12",
+      "avg_temp_c": {
+        "actual": 12.2,
+        "predicted": 12.91,
+        "error": 0.71
+      },
+      "avg_humidity_percent": {
+        "actual": 66.0,
+        "predicted": 63.67,
+        "error": -2.33
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -1.88,
+        "error": -1.88
+      },
+      "max_wind_kmh": {
+        "actual": 8.5,
+        "predicted": 9.93,
+        "error": 1.43
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-13",
+      "avg_temp_c": {
+        "actual": 12.8,
+        "predicted": 12.58,
+        "error": -0.22
+      },
+      "avg_humidity_percent": {
+        "actual": 54.0,
+        "predicted": 70.48,
+        "error": 16.48
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -1.04,
+        "error": -1.04
+      },
+      "max_wind_kmh": {
+        "actual": 11.6,
+        "predicted": 9.59,
+        "error": -2.01
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-14",
+      "avg_temp_c": {
+        "actual": 12.2,
+        "predicted": 13.13,
+        "error": 0.93
+      },
+      "avg_humidity_percent": {
+        "actual": 58.0,
+        "predicted": 56.02,
+        "error": -1.98
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -1.17,
+        "error": -1.17
+      },
+      "max_wind_kmh": {
+        "actual": 7.5,
+        "predicted": 9.57,
+        "error": 2.07
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-15",
+      "avg_temp_c": {
+        "actual": 12.2,
+        "predicted": 12.57,
+        "error": 0.37
+      },
+      "avg_humidity_percent": {
+        "actual": 67.0,
+        "predicted": 63.41,
+        "error": -3.59
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.8,
+        "error": -0.8
+      },
+      "max_wind_kmh": {
+        "actual": 6.7,
+        "predicted": 9.67,
+        "error": 2.97
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-16",
+      "avg_temp_c": {
+        "actual": 11.5,
+        "predicted": 12.74,
+        "error": 1.24
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 69.74,
+        "error": -3.26
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.32,
+        "error": -0.32
+      },
+      "max_wind_kmh": {
+        "actual": 3.9,
+        "predicted": 10.03,
+        "error": 6.13
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-17",
+      "avg_temp_c": {
+        "actual": 11.3,
+        "predicted": 11.91,
+        "error": 0.61
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 73.24,
+        "error": -1.76
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.05,
+        "error": -0.05
+      },
+      "max_wind_kmh": {
+        "actual": 4.8,
+        "predicted": 8.72,
+        "error": 3.92
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-18",
+      "avg_temp_c": {
+        "actual": 12.1,
+        "predicted": 11.88,
+        "error": -0.22
+      },
+      "avg_humidity_percent": {
+        "actual": 72.0,
+        "predicted": 75.74,
+        "error": 3.74
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.1,
+        "error": -0.1
+      },
+      "max_wind_kmh": {
+        "actual": 5.2,
+        "predicted": 8.91,
+        "error": 3.71
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-19",
+      "avg_temp_c": {
+        "actual": 11.5,
+        "predicted": 12.74,
+        "error": 1.24
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 72.75,
+        "error": -0.25
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.19,
+        "error": -0.19
+      },
+      "max_wind_kmh": {
+        "actual": 5.9,
+        "predicted": 8.95,
+        "error": 3.05
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-20",
+      "avg_temp_c": {
+        "actual": 12.1,
+        "predicted": 11.73,
+        "error": -0.37
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 73.28,
+        "error": 0.28
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.62,
+        "error": -0.62
+      },
+      "max_wind_kmh": {
+        "actual": 6.2,
+        "predicted": 9.16,
+        "error": 2.96
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-21",
+      "avg_temp_c": {
+        "actual": 11.9,
+        "predicted": 12.43,
+        "error": 0.53
+      },
+      "avg_humidity_percent": {
+        "actual": 68.0,
+        "predicted": 73.02,
+        "error": 5.02
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.67,
+        "error": -0.67
+      },
+      "max_wind_kmh": {
+        "actual": 6.4,
+        "predicted": 9.59,
+        "error": 3.19
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-22",
+      "avg_temp_c": {
+        "actual": 12.3,
+        "predicted": 12.04,
+        "error": -0.26
+      },
+      "avg_humidity_percent": {
+        "actual": 71.0,
+        "predicted": 71.32,
+        "error": 0.32
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.99,
+        "error": -0.99
+      },
+      "max_wind_kmh": {
+        "actual": 7.5,
+        "predicted": 8.48,
+        "error": 0.98
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-23",
+      "avg_temp_c": {
+        "actual": 11.2,
+        "predicted": 12.58,
+        "error": 1.38
+      },
+      "avg_humidity_percent": {
+        "actual": 85.0,
+        "predicted": 73.4,
+        "error": -11.6
+      },
+      "total_rain_mm": {
+        "actual": 2.7,
+        "predicted": -0.58,
+        "error": -3.28
+      },
+      "max_wind_kmh": {
+        "actual": 10.4,
+        "predicted": 9.93,
+        "error": -0.47
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-24",
+      "avg_temp_c": {
+        "actual": 12.2,
+        "predicted": 11.23,
+        "error": -0.97
+      },
+      "avg_humidity_percent": {
+        "actual": 75.0,
+        "predicted": 84.55,
+        "error": 9.55
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 1.45,
+        "error": 1.45
+      },
+      "max_wind_kmh": {
+        "actual": 7.4,
+        "predicted": 10.93,
+        "error": 3.53
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-25",
+      "avg_temp_c": {
+        "actual": 13.0,
+        "predicted": 12.6,
+        "error": -0.4
+      },
+      "avg_humidity_percent": {
+        "actual": 73.0,
+        "predicted": 75.0,
+        "error": 2.0
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.44,
+        "error": -0.44
+      },
+      "max_wind_kmh": {
+        "actual": 6.5,
+        "predicted": 8.74,
+        "error": 2.24
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-26",
+      "avg_temp_c": {
+        "actual": 13.3,
+        "predicted": 13.25,
+        "error": -0.05
+      },
+      "avg_humidity_percent": {
+        "actual": 72.0,
+        "predicted": 74.17,
+        "error": 2.17
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.27,
+        "error": -0.27
+      },
+      "max_wind_kmh": {
+        "actual": 6.4,
+        "predicted": 9.88,
+        "error": 3.48
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-27",
+      "avg_temp_c": {
+        "actual": 12.1,
+        "predicted": 13.45,
+        "error": 1.35
+      },
+      "avg_humidity_percent": {
+        "actual": 83.0,
+        "predicted": 73.92,
+        "error": -9.08
+      },
+      "total_rain_mm": {
+        "actual": 0.7,
+        "predicted": -0.24,
+        "error": -0.94
+      },
+      "max_wind_kmh": {
+        "actual": 10.9,
+        "predicted": 10.04,
+        "error": -0.86
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-28",
+      "avg_temp_c": {
+        "actual": 12.1,
+        "predicted": 11.87,
+        "error": -0.23
+      },
+      "avg_humidity_percent": {
+        "actual": 87.0,
+        "predicted": 80.52,
+        "error": -6.48
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.96,
+        "error": 0.96
+      },
+      "max_wind_kmh": {
+        "actual": 5.9,
+        "predicted": 11.81,
+        "error": 5.91
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-29",
+      "avg_temp_c": {
+        "actual": 11.9,
+        "predicted": 12.43,
+        "error": 0.53
+      },
+      "avg_humidity_percent": {
+        "actual": 86.0,
+        "predicted": 85.56,
+        "error": -0.44
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.43,
+        "error": 0.43
+      },
+      "max_wind_kmh": {
+        "actual": 8.0,
+        "predicted": 9.82,
+        "error": 1.82
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-30",
+      "avg_temp_c": {
+        "actual": 11.3,
+        "predicted": 12.04,
+        "error": 0.74
+      },
+      "avg_humidity_percent": {
+        "actual": 80.0,
+        "predicted": 86.37,
+        "error": 6.37
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": 0.85,
+        "error": 0.85
+      },
+      "max_wind_kmh": {
+        "actual": 6.3,
+        "predicted": 9.62,
+        "error": 3.32
+      },
+      "flood_risk_predicted": "Low"
+    },
+    {
+      "date": "2024-12-31",
+      "avg_temp_c": {
+        "actual": 10.4,
+        "predicted": 11.54,
+        "error": 1.14
+      },
+      "avg_humidity_percent": {
+        "actual": 89.0,
+        "predicted": 80.33,
+        "error": -8.67
+      },
+      "total_rain_mm": {
+        "actual": 0.0,
+        "predicted": -0.21,
+        "error": -0.21
+      },
+      "max_wind_kmh": {
+        "actual": 5.8,
+        "predicted": 8.36,
+        "error": 2.56
+      },
+      "flood_risk_predicted": "Low"
+    }
+  ]
+}
