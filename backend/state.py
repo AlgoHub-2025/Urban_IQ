@@ -1,49 +1,24 @@
-# state.py
+import operator
+from typing import TypedDict, List, Dict, Any, Optional, Annotated
 
-from typing import TypedDict, List, Dict, Any, Optional
+class AgentState(TypedDict):
+    query: str
+    intent: str
 
-
-class AgentState(TypedDict, total=False):
-    """
-    Shared state for the complete Agentic AI workflow.
-
-    Flow:
-
-    Data Agent
-        ↓
-    Risk Agent
-        ↓
-    Decision Agent
-        ↓
-    Explanation Agent
-    """
-
-    # Original user request
-    user_query: str
-
-    # Location requested by user
     location: str
+    zone_id: Optional[str]
 
-    # Raw data collected by Data Agent
-    raw_data: Dict[str, Any]
+    provider_data: Dict[str, Any]
+    predictions: Dict[str, Any]
+    risks: Annotated[list, operator.add]
+    decisions: Annotated[list, operator.add]
 
-    # Cleaned and validated data
-    validated_data: Dict[str, Any]
+    scenario: Optional[Dict[str, Any]]
 
-    # Engineered features
-    features: Dict[str, Any]
+    evidence: Annotated[List[str], operator.add]
+    provenance: Annotated[List[str], operator.add]
 
-    # Risk analysis
-    risk_results: List[Dict[str, Any]]
+    response: str
+    explainability: Annotated[list, operator.add] # Phase 10 XAI outputs
 
-    # Decision intelligence
-    decisions: Dict[str, Any]
-
-    # Final explanation
-    explanation: str
-
-    # Final structured response
-    final_response: Dict[str, Any]
-
-    # Error information
-    error: Optional[str]
+    status_events: Annotated[List[str], operator.add]

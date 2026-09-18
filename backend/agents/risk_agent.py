@@ -1,34 +1,48 @@
-# agents/risk_agent.py
+from typing import Dict, Any, List, Optional
+from pydantic import BaseModel
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from services.model_registry import registry as model_registry
 
-from typing import Dict, Any, List
+from datetime import datetime
 
+class RiskThresholds(BaseModel):
+    low: float = 40.0
+    moderate: float = 70.0
+    high: float = 85.0
 
-def calculate_risk_score(features: Dict[str, Any]) -> float:
-    """
-    Calculate overall risk score.
+class MLPrediction(BaseModel):
+    value: float
+    confidence: float
+    model_version: str
 
-    Current version:
-    Weighted intelligence/risk engine.
+class TopFactor(BaseModel):
+    name: str
+    contribution: float
 
-    Later:
-    Replace or augment this with trained ML models such as:
+class RiskResult(BaseModel):
+    zone_id: str
+    risk_type: str
+    score_0_100: float
+    level: str
+    confidence: float
+    forecast_horizon: str
+    top_factors: List[TopFactor]
+    factor_breakdown: List[Dict[str, Any]] = [] # For Explainability
+    evidence: List[str]
+    data_freshness: str
+    generated_at: str
+    ml_predictions: Optional[Dict[str, MLPrediction]] = None
 
-    - Logistic Regression
-    - Random Forest
-    - Gradient Boosting
-    - XGBoost
-    - LightGBM
-    - Ensemble Models
-    """
+def calculate_base_risk(features: Dict[str, Any]) -> float:
+    rainfall = features.get("rainfall_feature", 0)
+    aqi = features.get("aqi_feature", 0)
+    traffic = features.get("traffic_feature", 0)
+    exposure = features.get("exposure_feature", 0)
+    historical = features.get("historical_feature", 0)
+    trend = features.get("trend_feature", 0)
 
-    rainfall = features["rainfall_feature"]
-    aqi = features["aqi_feature"]
-    traffic = features["traffic_feature"]
-    exposure = features["exposure_feature"]
-    historical = features["historical_feature"]
-    trend = features["trend_feature"]
-
-    # Weighted risk model
     score = (
         rainfall * 20
         + aqi * 20
@@ -37,163 +51,130 @@ def calculate_risk_score(features: Dict[str, Any]) -> float:
         + historical * 20
         + trend * 10
     )
+    return score
 
-    return round(min(max(score, 0), 100), 2)
-
-
-def classify_risk(score: float) -> str:
-    """
-    Risk classification.
-
-    0 - 39   LOW
-    40 - 69  MODERATE
-    70 - 84  HIGH
-    85 - 100 CRITICAL
-    """
-
-    if score < 40:
-        return "LOW"
-
-    if score < 70:
-        return "MODERATE"
-
-    if score < 85:
-        return "HIGH"
-
+def classify_risk(score: float, thresholds: RiskThresholds) -> str:
+    if score < thresholds.low: return "LOW"
+    if score < thresholds.moderate: return "MODERATE"
+    if score < thresholds.high: return "HIGH"
     return "CRITICAL"
 
-
 def identify_risk_type(features: Dict[str, Any]) -> str:
-    """
-    Identify the dominant risk type.
-    """
-
     risks = {
-        "Flood": features["rainfall_feature"],
-        "Air Pollution": features["aqi_feature"],
-        "Traffic": features["traffic_feature"],
-        "Population Exposure": features["exposure_feature"],
-        "Historical Risk": features["historical_feature"],
+        "Flood": features.get("rainfall_feature", 0),
+        "Air Pollution": features.get("aqi_feature", 0),
+        "Traffic": features.get("traffic_feature", 0),
+        "Population Exposure": features.get("exposure_feature", 0),
+        "Historical Risk": features.get("historical_feature", 0),
     }
+    return max(risks, key=risks.get) if risks else "Unknown"
 
-    return max(risks, key=risks.get)
+ZONES = [
+    {"zone_id": "central_lahore", "name": "Central Lahore", "lat": 31.5497, "lon": 74.3436, "rain_f": 1.05, "traffic_f": 1.10},
+    {"zone_id": "gulberg", "name": "Gulberg", "lat": 31.5167, "lon": 74.3436, "rain_f": 0.90, "traffic_f": 1.15},
+    {"zone_id": "johar_town", "name": "Johar Town", "lat": 31.4697, "lon": 74.2728, "rain_f": 1.00, "traffic_f": 0.95},
+    {"zone_id": "dha_lahore", "name": "DHA Lahore", "lat": 31.4805, "lon": 74.4206, "rain_f": 0.80, "traffic_f": 0.85},
+    {"zone_id": "ravi_zone", "name": "Ravi Zone", "lat": 31.5833, "lon": 74.3167, "rain_f": 1.20, "traffic_f": 0.85},
+]
 
-
-def calculate_zone_risks(features: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """
-    Generate risk estimates for major Lahore zones.
-
-    In the production version, these will be generated
-    using actual spatial/grid-level data.
-    """
-
-    zones = [
-        {
-            "zone": "Central Lahore",
-            "rain_factor": 1.05,
-            "traffic_factor": 1.10,
-            "exposure_factor": 1.10,
-        },
-        {
-            "zone": "Gulberg",
-            "rain_factor": 0.90,
-            "traffic_factor": 1.15,
-            "exposure_factor": 0.95,
-        },
-        {
-            "zone": "Johar Town",
-            "rain_factor": 1.00,
-            "traffic_factor": 0.95,
-            "exposure_factor": 1.05,
-        },
-        {
-            "zone": "DHA Lahore",
-            "rain_factor": 0.80,
-            "traffic_factor": 0.85,
-            "exposure_factor": 0.75,
-        },
-        {
-            "zone": "Ravi Zone",
-            "rain_factor": 1.20,
-            "traffic_factor": 0.85,
-            "exposure_factor": 1.20,
-        },
-    ]
-
+def calculate_zone_risks(features: Dict[str, Any], predictions: Dict[str, Any], thresholds: RiskThresholds) -> List[Dict[str, Any]]:
     results = []
+    base_score = calculate_base_risk(features)
 
-    base_score = calculate_risk_score(features)
+    for z in ZONES:
+        pop_res = predictions.get(z["zone_id"], {}).get("population_density")
+        
+        ml_predictions = {}
+        ml_exposure_factor = features.get("exposure_feature", 0)
+        pop_confidence = 0.5
+        
+        if pop_res and pop_res["status"] == "success":
+            ml_exposure_factor = pop_res["prediction"] / 50000.0
+            ml_exposure_factor = min(max(ml_exposure_factor, 0), 1.0)
+            pop_confidence = pop_res["confidence"]
+            ml_predictions["population_density"] = MLPrediction(
+                value=pop_res["prediction"],
+                confidence=pop_res["confidence"],
+                model_version=pop_res["model_version"]
+            )
+            
+        rain_f_mult = features.get("rain_f_multiplier", 1.0)
+        traffic_f_mult = features.get("traffic_f_multiplier", 1.0)
+        
+        # AQI override affects base score
+        if "aqi_override" in features:
+            base_score = features["aqi_override"] / 5.0 # Max 500 AQI = 100 base score
+        
+        rain_contrib = base_score * (z["rain_f"] * rain_f_mult) * 0.25
+        traffic_contrib = base_score * (z["traffic_f"] * traffic_f_mult) * 0.20
+        exposure_contrib = base_score * ml_exposure_factor * 0.20
+        base_contrib = base_score * 0.35
 
-    for zone in zones:
+        adjusted_score = rain_contrib + traffic_contrib + exposure_contrib + base_contrib
+        adjusted_score = round(min(max(adjusted_score, 0), 100), 2)
+        
+        # Calculate top factors
+        factors = [
+            {"name": "Rain/Flood", "val": rain_contrib},
+            {"name": "Traffic", "val": traffic_contrib},
+            {"name": "Population Exposure", "val": exposure_contrib},
+            {"name": "Base Air/History", "val": base_contrib}
+        ]
+        factors.sort(key=lambda x: x["val"], reverse=True)
+        top_factors = [TopFactor(name=f["name"], contribution=round(f["val"], 2)) for f in factors[:2]]
 
-        adjusted_score = (
-            base_score
-            * 0.35
-            + base_score * zone["rain_factor"] * 0.25
-            + base_score * zone["traffic_factor"] * 0.20
-            + base_score * zone["exposure_factor"] * 0.20
+        # Override risk type if rain is the highest factor
+        inferred_risk_type = identify_risk_type(features)
+        if factors[0]["name"] == "Rain/Flood" and adjusted_score > 60:
+            inferred_risk_type = "Flood"
+
+        # Determine Exposed Facilities (dummy deterministic logic for demo based on score & zone)
+        exposed_facilities = int((adjusted_score / 10.0) * (len(z["name"]) / 2.0))
+        if "population_density" in ml_predictions:
+            ml_predictions["population_density"].value = ml_predictions["population_density"].value * (1.0 + (adjusted_score/100.0) * 0.5)
+
+        evidence = [
+            f"Rainfall factor scaled by {z['rain_f']}x for {z['name']}",
+            f"Traffic volume evaluated against primary arteries in {z['name']}"
+        ]
+        if rain_f_mult > 1.0:
+            evidence.append(f"Severe Rain simulation multiplier active ({rain_f_mult}x)")
+            
+        if "population_density" in ml_predictions:
+            evidence.append(f"ML Population Density estimated at {round(ml_predictions['population_density'].value)} per sqkm")
+        
+        risk_result = RiskResult(
+            zone_id=z["zone_id"],
+            risk_type=inferred_risk_type,
+            score_0_100=adjusted_score,
+            level=classify_risk(adjusted_score, thresholds),
+            confidence=round(pop_confidence * 0.9, 2), # Aggregate confidence
+            forecast_horizon="24h",
+            top_factors=top_factors,
+            factor_breakdown=factors,
+            evidence=evidence,
+            data_freshness="live" if pop_res and pop_res["status"] == "success" else "fallback",
+            generated_at=datetime.utcnow().isoformat() + "Z",
+            ml_predictions=ml_predictions
         )
+        
+        # Inject exposed facilities directly into the result dump
+        dumped = risk_result.model_dump()
+        dumped["exposed_facilities"] = exposed_facilities
+        results.append(dumped)
 
-        adjusted_score = round(
-            min(max(adjusted_score, 0), 100),
-            2
-        )
+    return sorted(results, key=lambda x: x["score_0_100"], reverse=True)
 
-        risk_level = classify_risk(adjusted_score)
+from state import AgentState
 
-        risk_type = identify_risk_type(features)
+def risk_agent(state: AgentState) -> AgentState:
+    features = state.get("provider_data", {})
+    predictions = state.get("predictions", {})
 
-        results.append(
-            {
-                "zone": zone["zone"],
-                "risk_score": adjusted_score,
-                "risk_level": risk_level,
-                "risk_type": risk_type,
-                "factors": {
-                    "rainfall": features["rainfall_feature"],
-                    "air_quality": features["aqi_feature"],
-                    "traffic": features["traffic_feature"],
-                    "population_exposure": features["exposure_feature"],
-                    "historical_risk": features["historical_feature"],
-                    "recent_trend": features["trend_feature"],
-                },
-            }
-        )
-
-    return sorted(
-        results,
-        key=lambda x: x["risk_score"],
-        reverse=True
-    )
-
-
-def risk_agent(state: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Main Risk Intelligence Agent.
-    """
-
-    print("\n" + "=" * 70)
-    print("⚠️ RISK INTELLIGENCE AGENT")
-    print("=" * 70)
-
-    features = state.get("features", {})
-
-    if not features:
-        return {
-            "error": "No features available for risk analysis."
-        }
-
-    risk_results = calculate_zone_risks(features)
-
-    print("\n🚨 Risk analysis completed:\n")
-
-    for result in risk_results:
-        print(
-            f"{result['zone']:20} "
-            f"{result['risk_score']:>6} "
-            f"{result['risk_level']}"
-        )
+    thresholds = RiskThresholds() 
+    risk_results = calculate_zone_risks(features, predictions, thresholds)
 
     return {
-        "risk_results": risk_results
+        "risks": risk_results,
+        "status_events": ["Calculated zone risk indices..."]
     }

@@ -13,6 +13,7 @@ export const fetchHospitals = async () => (await axios.get(`${API_BASE}/hospital
 export const fetchSchools = async () => (await axios.get(`${API_BASE}/schools`)).data;
 export const fetchRoads = async () => (await axios.get(`${API_BASE}/roads`)).data;
 export const fetchPopulation = async () => (await axios.get(`${API_BASE}/population`)).data;
+export const fetchZones = async () => (await axios.get(`${API_BASE}/map/zones`)).data;
 export const fetchAlerts = async () => {
   const res = await axios.get(`${API_BASE}/alerts`);
   return res.data;

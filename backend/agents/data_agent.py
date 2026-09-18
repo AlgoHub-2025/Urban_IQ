@@ -1,172 +1,78 @@
-# agents/data_agent.py
-
 from typing import Dict, Any
 from datetime import datetime
 
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-def get_mock_weather() -> Dict[str, Any]:
-    """
-    Simulated weather data.
+from state import AgentState
+from providers.weather_provider import WeatherProvider
+from providers.aqi_provider import AQIProvider
+from providers.local_provider import LocalProvider
+from providers.osm_provider import OSMProvider
 
-    Later:
-    Replace this with Open-Meteo API.
-    """
+def get_weather(location: str) -> Dict[str, Any]:
+    provider = WeatherProvider()
+    return provider.get_data(location=location)
 
-    return {
-        "temperature": 31.5,
-        "humidity": 72,
-        "rainfall_1h": 8.5,
-        "rainfall_6h": 24.0,
-        "rainfall_24h": 48.0,
-        "wind_speed": 12.5,
-        "wind_direction": "NW",
-    }
+def get_air_quality(location: str) -> Dict[str, Any]:
+    provider = AQIProvider()
+    return provider.get_data(location=location)
 
+def get_traffic(location: str) -> Dict[str, Any]:
+    provider = LocalProvider("Punjab_Traffic", "traffic")
+    return provider.get_data(location=location)
 
-def get_mock_air_quality() -> Dict[str, Any]:
-    """
-    Simulated air quality data.
-
-    Later:
-    Replace this with OpenAQ API.
-    """
-
-    return {
-        "aqi": 168,
-        "pm25": 92.0,
-        "pm10": 145.0,
-        "no2": 42.0,
-        "so2": 11.0,
-        "co": 1.8,
-        "o3": 38.0,
-    }
+def get_spatial_data(location: str) -> Dict[str, Any]:
+    provider = OSMProvider()
+    return provider.get_data(location=location)
 
 
-def get_mock_traffic() -> Dict[str, Any]:
-    """
-    Simulated traffic information.
-
-    Later:
-    Replace this with a real traffic API.
-    """
-
-    return {
-        "traffic_level": "HIGH",
-        "traffic_index": 78,
-        "average_speed_kmh": 24,
-        "congestion": 0.78,
-    }
-
-
-def get_mock_spatial_data() -> Dict[str, Any]:
-    """
-    Simulated spatial/geographical information.
-
-    Later:
-    Replace with PostGIS + OSM processing.
-    """
-
-    return {
-        "road_density": 0.68,
-        "waterway_density": 0.42,
-        "poi_density": 0.73,
-        "hospital_distance_km": 2.4,
-        "school_density": 0.61,
-        "population_exposure": 0.76,
-    }
-
-
-def get_mock_historical_data() -> Dict[str, Any]:
-    """
-    Simulated historical risk information.
-
-    Later:
-    Replace with historical datasets from Punjab BOS,
-    PBS, HDX and other datasets.
-    """
-
-    return {
-        "historical_flood_risk": 0.64,
-        "historical_traffic_risk": 0.71,
-        "historical_air_pollution_risk": 0.69,
-        "recent_risk_trend": 0.74,
-    }
+def get_historical_data(location: str) -> Dict[str, Any]:
+    provider = LocalProvider("Punjab_BOS", "historical")
+    return provider.get_data(location=location)
 
 
 def validate_data(data: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Basic data validation.
-
-    Removes obviously invalid values and ensures
-    required fields exist.
+    Basic data validation on normalized_fields.
     """
+    weather = data["weather"].get("normalized_fields", {})
+    air_quality = data["air_quality"].get("normalized_fields", {})
+    traffic = data["traffic"].get("normalized_fields", {})
+    
+    # Validation logic with default fallbacks if missing
+    weather["temperature_c"] = max(-50, min(weather.get("temperature_c", 0), 60))
+    weather["humidity_percent"] = max(0, min(weather.get("humidity_percent", 0), 100))
+    weather["precipitation_mm"] = max(0, weather.get("precipitation_mm", 0))
+    
+    air_quality["aqi"] = max(0, air_quality.get("aqi", 0))
+    air_quality["pm25"] = max(0, air_quality.get("pm25", 0))
+    air_quality["pm10"] = max(0, air_quality.get("pm10", 0))
 
-    weather = data["weather"]
-    air_quality = data["air_quality"]
-    traffic = data["traffic"]
-    spatial = data["spatial"]
-    historical = data["historical"]
-
-    # Basic validation
-    weather["temperature"] = max(-50, min(weather["temperature"], 60))
-    weather["humidity"] = max(0, min(weather["humidity"], 100))
-
-    weather["rainfall_1h"] = max(0, weather["rainfall_1h"])
-    weather["rainfall_6h"] = max(0, weather["rainfall_6h"])
-    weather["rainfall_24h"] = max(0, weather["rainfall_24h"])
-
-    air_quality["aqi"] = max(0, air_quality["aqi"])
-    air_quality["pm25"] = max(0, air_quality["pm25"])
-    air_quality["pm10"] = max(0, air_quality["pm10"])
-
-    traffic["traffic_index"] = max(
-        0,
-        min(traffic["traffic_index"], 100)
-    )
+    traffic["traffic_index"] = max(0, min(traffic.get("traffic_index", 0), 100))
 
     return data
 
 
 def feature_engineering(data: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Converts raw data into normalized features.
+    weather = data["weather"]["normalized_fields"]
+    air = data["air_quality"]["normalized_fields"]
+    traffic = data["traffic"]["normalized_fields"]
+    spatial = data["spatial"]["normalized_fields"]
+    historical = data["historical"]["normalized_fields"]
 
-    These features are later consumed by the Risk Agent.
-    """
-
-    weather = data["weather"]
-    air = data["air_quality"]
-    traffic = data["traffic"]
-    spatial = data["spatial"]
-    historical = data["historical"]
-
-    # Rainfall feature
-    rainfall_feature = min(
-        weather["rainfall_24h"] / 100,
-        1.0
-    )
-
-    # AQI feature
-    aqi_feature = min(
-        air["aqi"] / 300,
-        1.0
-    )
-
-    # Traffic feature
-    traffic_feature = traffic["traffic_index"] / 100
-
-    # Population exposure
-    exposure_feature = spatial["population_exposure"]
-
-    # Historical risk
+    rainfall_feature = min(weather.get("precipitation_mm", 0) / 100, 1.0)
+    aqi_feature = min(air.get("aqi", 0) / 300, 1.0)
+    traffic_feature = traffic.get("traffic_index", 0) / 100
+    exposure_feature = spatial.get("population_exposure", 0)
+    
     historical_feature = (
-        historical["historical_flood_risk"]
-        + historical["historical_traffic_risk"]
-        + historical["historical_air_pollution_risk"]
+        historical.get("historical_flood_risk", 0)
+        + historical.get("historical_traffic_risk", 0)
+        + historical.get("historical_air_pollution_risk", 0)
     ) / 3
-
-    # Recent trend
-    trend_feature = historical["recent_risk_trend"]
+    trend_feature = historical.get("recent_risk_trend", 0)
 
     return {
         "rainfall_feature": round(rainfall_feature, 3),
@@ -176,80 +82,51 @@ def feature_engineering(data: Dict[str, Any]) -> Dict[str, Any]:
         "historical_feature": round(historical_feature, 3),
         "trend_feature": round(trend_feature, 3),
 
-        "temperature": weather["temperature"],
-        "humidity": weather["humidity"],
-        "wind_speed": weather["wind_speed"],
+        "temperature": weather.get("temperature_c", 0),
+        "humidity": weather.get("humidity_percent", 0),
+        "wind_speed": weather.get("wind_speed_kmh", 0),
+        "precipitation_mm": weather.get("precipitation_mm", 0),
 
-        "aqi": air["aqi"],
-        "pm25": air["pm25"],
-        "pm10": air["pm10"],
+        "aqi": air.get("aqi", 0),
+        "pm25": air.get("pm25", 0),
+        "pm10": air.get("pm10", 0),
 
-        "traffic_level": traffic["traffic_level"],
-        "traffic_index": traffic["traffic_index"],
+        "traffic_level": traffic.get("traffic_level", "UNKNOWN"),
+        "traffic_index": traffic.get("traffic_index", 0),
 
-        "road_density": spatial["road_density"],
-        "waterway_density": spatial["waterway_density"],
-        "poi_density": spatial["poi_density"],
-        "population_exposure": spatial["population_exposure"],
+        "road_density": spatial.get("road_density", 0),
+        "waterway_density": spatial.get("waterway_density", 0),
+        "poi_density": spatial.get("poi_density", 0),
+        "population_exposure": spatial.get("population_exposure", 0),
     }
 
 
-def data_agent(state: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Main Data Intelligence Agent.
-
-    Responsibilities:
-
-    1. Collect data
-    2. Validate data
-    3. Normalize data
-    4. Perform feature engineering
-    """
-
-    print("\n" + "=" * 70)
-    print("📊 DATA INTELLIGENCE AGENT")
-    print("=" * 70)
-
+def data_agent(state: AgentState) -> AgentState:
     location = state.get("location", "Lahore")
-
-    print(f"📍 Location: {location}")
-    print("🔄 Collecting city intelligence data...")
 
     raw_data = {
         "timestamp": datetime.now().isoformat(),
         "location": location,
-
-        "weather": get_mock_weather(),
-
-        "air_quality": get_mock_air_quality(),
-
-        "traffic": get_mock_traffic(),
-
-        "spatial": get_mock_spatial_data(),
-
-        "historical": get_mock_historical_data(),
+        "weather": get_weather(location),
+        "air_quality": get_air_quality(location),
+        "traffic": get_traffic(location),
+        "spatial": get_spatial_data(location),
+        "historical": get_historical_data(location),
     }
 
-    print("✅ Weather data collected")
-    print("✅ Air quality data collected")
-    print("✅ Traffic data collected")
-    print("✅ Spatial data collected")
-    print("✅ Historical data collected")
-
-    print("\n🔍 Validating data...")
-
     validated_data = validate_data(raw_data)
-
-    print("✅ Data validation completed")
-
-    print("\n⚙️ Performing feature engineering...")
-
     features = feature_engineering(validated_data)
 
-    print("✅ Feature engineering completed")
+    events = [f"Fetching {location} live provider data..."]
+    provenance = []
+    
+    for key in ["weather", "air_quality", "traffic", "spatial", "historical"]:
+        source = raw_data[key].get("source", "Unknown")
+        status = raw_data[key].get("status", "unavailable")
+        provenance.append(f"{key.capitalize()}: {source} [{status.upper()}]")
 
     return {
-        "raw_data": raw_data,
-        "validated_data": validated_data,
-        "features": features,
+        "provider_data": features, # We store the engineered features here for now
+        "status_events": events,
+        "provenance": provenance
     }

@@ -1,0 +1,507 @@
+--- backend/api.py ---
+import json
+import random
+import os
+import requests
+from dotenv import load_dotenv
+from fastapi import FastAPI, HTTPException, Depends
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from sqlalchemy.orm import Session
+
+load_dotenv()
+AQICN_TOKEN = os.getenv("AQICN_TOKEN")
+
+try:
+    from database import SessionLocal, AQIReport
+except ImportError:
+    SessionLocal = None
+
+def get_db():
+    if not SessionLocal:
+        yield None
+        return
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+try:
+    from graph.workflow import app as ai_workflow
+except ImportError:
+    ai_workflow = None
+
+app = FastAPI(title="Lahore City Intelligence API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+class QueryRequest(BaseModel):
+    query: str
+    location: str = "Lahore"
+
+@app.post("/api/analyze")
+async def analyze_city(request: QueryRequest):
+    if not ai_workflow:
+
+... (truncated)
+
+
+
+--- backend/main.py ---
+# main.py
+
+from graph.workflow import app
+
+
+def print_final_result(result):
+    """
+    Print the final structured intelligence.
+    """
+
+    print("\n")
+    print("=" * 80)
+    print("🏙️ LAHORE CITY INTELLIGENCE PLATFORM")
+    print("=" * 80)
+
+    final_response = result.get(
+        "final_response",
+        {}
+    )
+
+    print("\n🎯 PROJECT MISSION")
+    print("------------------")
+
+    print(
+        "Predicting Problems Before They Happen"
+    )
+
+    print("\n📍 LOCATION")
+    print("-----------")
+
+    print(
+        final_response.get(
+            "location",
+            "Lahore"
+        )
+    )
+
+    print("\n🚨 PRIORITY ZONE")
+    print("----------------")
+
+    print(
+        final_response.get(
+            "priority_zone",
+            "Unknown"
+        )
+    )
+
+    print("\n📊 RISK SCORE")
+    print("-------------")
+
+
+... (truncated)
+
+
+
+--- backend/state.py ---
+# state.py
+
+from typing import TypedDict, List, Dict, Any, Optional
+
+
+class AgentState(TypedDict, total=False):
+    """
+    Shared state for the complete Agentic AI workflow.
+
+    Flow:
+
+    Data Agent
+        ↓
+    Risk Agent
+        ↓
+    Decision Agent
+        ↓
+    Explanation Agent
+    """
+
+    # Original user request
+    user_query: str
+
+    # Location requested by user
+    location: str
+
+    # Raw data collected by Data Agent
+    raw_data: Dict[str, Any]
+
+    # Cleaned and validated data
+    validated_data: Dict[str, Any]
+
+    # Engineered features
+    features: Dict[str, Any]
+
+    # Risk analysis
+    risk_results: List[Dict[str, Any]]
+
+    # Decision intelligence
+    decisions: Dict[str, Any]
+
+    # Final explanation
+    explanation: str
+
+    # Final structured response
+    final_response: Dict[str, Any]
+
+    # Error information
+    error: Optional[str]
+
+
+
+--- backend/graph/workflow.py ---
+# graph/workflow.py
+
+from langgraph.graph import StateGraph, START, END
+
+from state import AgentState
+
+from agents.data_agent import data_agent
+from agents.risk_agent import risk_agent
+from agents.decision_agent import decision_agent
+from agents.explanation_agent import explanation_agent
+
+
+def build_workflow():
+    """
+    Build the complete Agentic AI workflow.
+    """
+
+    workflow = StateGraph(AgentState)
+
+    # --------------------------------------------------
+    # ADD AGENTS
+    # --------------------------------------------------
+
+    workflow.add_node(
+        "data_agent",
+        data_agent
+    )
+
+    workflow.add_node(
+        "risk_agent",
+        risk_agent
+    )
+
+    workflow.add_node(
+        "decision_agent",
+        decision_agent
+    )
+
+    workflow.add_node(
+        "explanation_agent",
+        explanation_agent
+    )
+
+    # --------------------------------------------------
+    # CONNECT AGENTS
+    # --------------------------------------------------
+
+    workflow.add_edge(
+        START,
+        "data_agent"
+
+... (truncated)
+
+
+
+--- backend/agents/data_agent.py ---
+# agents/data_agent.py
+
+from typing import Dict, Any
+from datetime import datetime
+
+
+def get_mock_weather() -> Dict[str, Any]:
+    """
+    Simulated weather data.
+
+    Later:
+    Replace this with Open-Meteo API.
+    """
+
+    return {
+        "temperature": 31.5,
+        "humidity": 72,
+        "rainfall_1h": 8.5,
+        "rainfall_6h": 24.0,
+        "rainfall_24h": 48.0,
+        "wind_speed": 12.5,
+        "wind_direction": "NW",
+    }
+
+
+def get_mock_air_quality() -> Dict[str, Any]:
+    """
+    Simulated air quality data.
+
+    Later:
+    Replace this with OpenAQ API.
+    """
+
+    return {
+        "aqi": 168,
+        "pm25": 92.0,
+        "pm10": 145.0,
+        "no2": 42.0,
+        "so2": 11.0,
+        "co": 1.8,
+        "o3": 38.0,
+    }
+
+
+def get_mock_traffic() -> Dict[str, Any]:
+    """
+    Simulated traffic information.
+
+    Later:
+    Replace this with a real traffic API.
+
+... (truncated)
+
+
+
+--- backend/agents/risk_agent.py ---
+# agents/risk_agent.py
+
+from typing import Dict, Any, List
+
+
+def calculate_risk_score(features: Dict[str, Any]) -> float:
+    """
+    Calculate overall risk score.
+
+    Current version:
+    Weighted intelligence/risk engine.
+
+    Later:
+    Replace or augment this with trained ML models such as:
+
+    - Logistic Regression
+    - Random Forest
+    - Gradient Boosting
+    - XGBoost
+    - LightGBM
+    - Ensemble Models
+    """
+
+    rainfall = features["rainfall_feature"]
+    aqi = features["aqi_feature"]
+    traffic = features["traffic_feature"]
+    exposure = features["exposure_feature"]
+    historical = features["historical_feature"]
+    trend = features["trend_feature"]
+
+    # Weighted risk model
+    score = (
+        rainfall * 20
+        + aqi * 20
+        + traffic * 15
+        + exposure * 15
+        + historical * 20
+        + trend * 10
+    )
+
+    return round(min(max(score, 0), 100), 2)
+
+
+def classify_risk(score: float) -> str:
+    """
+    Risk classification.
+
+    0 - 39   LOW
+    40 - 69  MODERATE
+    70 - 84  HIGH
+
+... (truncated)
+
+
+
+--- backend/agents/decision_agent.py ---
+# agents/decision_agent.py
+
+from typing import Dict, Any, List
+
+
+def get_recommended_actions(
+    risk_level: str,
+    risk_type: str
+) -> List[str]:
+    """
+    Generate recommended actions based on
+    risk level and risk type.
+    """
+
+    actions = []
+
+    if risk_type == "Flood":
+        actions.extend(
+            [
+                "Inspect drainage channels",
+                "Monitor low-lying roads",
+                "Prepare emergency response teams",
+                "Issue warnings for vulnerable areas",
+            ]
+        )
+
+    elif risk_type == "Air Pollution":
+        actions.extend(
+            [
+                "Issue air-quality health advisory",
+                "Monitor sensitive populations",
+                "Reduce unnecessary outdoor exposure",
+                "Increase pollution monitoring",
+            ]
+        )
+
+    elif risk_type == "Traffic":
+        actions.extend(
+            [
+                "Monitor congestion hotspots",
+                "Optimize traffic signal timing",
+                "Deploy traffic management teams",
+                "Provide alternate route recommendations",
+            ]
+        )
+
+    elif risk_type == "Population Exposure":
+        actions.extend(
+            [
+                "Prioritize high-population areas",
+
+... (truncated)
+
+
+
+--- backend/agents/explanation_agent.py ---
+# agents/explanation_agent.py
+
+from typing import Dict, Any
+
+
+def build_zone_explanation(decision: Dict[str, Any]) -> str:
+    """
+    Generate human-readable explanation for a zone.
+    """
+
+    zone = decision["zone"]
+    score = decision["risk_score"]
+    level = decision["risk_level"]
+    risk_type = decision["risk_type"]
+
+    factors = decision["top_contributing_factors"]
+
+    trend = decision["trend"]
+
+    horizon = decision["risk_horizon"]
+
+    actions = decision["recommended_actions"]
+
+    factor_text = ", ".join(
+        factor.replace("_", " ")
+        for factor in factors
+    )
+
+    action_text = "; ".join(actions)
+
+    explanation = (
+        f"{zone} currently has a {level.lower()} risk level "
+        f"with a risk score of {score}/100. "
+        f"The dominant risk is {risk_type.lower()}. "
+        f"The main contributing factors are {factor_text}. "
+        f"The recent risk trend is {trend.lower()}, "
+        f"with the expected risk horizon being {horizon.lower()}. "
+        f"Recommended actions include: {action_text}."
+    )
+
+    return explanation
+
+
+def explanation_agent(
+    state: Dict[str, Any]
+) -> Dict[str, Any]:
+    """
+    Main Explanation Intelligence Agent.
+
+    Converts structured decisions into
+
+... (truncated)
+
+
+
+--- frontend/package.json ---
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "axios": "^1.20.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^1.37.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-leaflet": "^5.0.0",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "oxlint": "^1.79.0",
+    "vite": "^8.2.2"
+  }
+}
+
+
+
+
+--- frontend/src/services/api.js ---
+import axios from 'axios';
+
+const API_BASE = 'http://localhost:8009/api';
+
+export const fetchIntelligence = async (query) => {
+  const res = await axios.post(`${API_BASE}/analyze`, { query, location: "Lahore" });
+  return res.data;
+};
+
+export const fetchWeather = async () => (await axios.get(`${API_BASE}/weather`)).data;
+export const fetchAirQuality = async () => (await axios.get(`${API_BASE}/air-quality`)).data;
+export const fetchHospitals = async () => (await axios.get(`${API_BASE}/hospitals`)).data;
+export const fetchSchools = async () => (await axios.get(`${API_BASE}/schools`)).data;
+export const fetchRoads = async () => (await axios.get(`${API_BASE}/roads`)).data;
+export const fetchPopulation = async () => (await axios.get(`${API_BASE}/population`)).data;
+export const fetchAlerts = async () => {
+  const res = await axios.get(`${API_BASE}/alerts`);
+  return res.data;
+};
+
+export const submitAqiReport = async (data) => {
+  const res = await axios.post(`${API_BASE}/report-aqi`, data);
+  return res.data;
+};
+
+
+

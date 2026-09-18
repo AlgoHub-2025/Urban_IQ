@@ -1,17 +1,50 @@
-import { MapContainer, TileLayer, CircleMarker, Popup, Polyline, Tooltip } from 'react-leaflet';
+import { MapContainer, TileLayer, CircleMarker, Popup, Tooltip, GeoJSON } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-// Standard OpenStreetMap (We will apply a CSS filter to make it a perfect dark mode)
 const DARK_MAP_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 
-export default function CityMap({ hospitals, schools, roads, showHospitals, showSchools, showRoads, showPop }) {
-  // Center of Lahore
+export default function CityMap({ 
+  hospitals, 
+  schools, 
+  roads, 
+  zones, 
+  reports = [],
+  showHospitals = true,
+  showSchools = true,
+  showRoads = true,
+  showZones = true,
+  showReports = true,
+  onZoneClick 
+}) {
   const position = [31.5204, 74.3587];
 
   const getRiskColor = (confidence) => {
-    if (confidence > 0.9) return '#10b981'; // Green
-    if (confidence > 0.7) return '#eab308'; // Yellow
-    return '#ef4444'; // Red
+    if (confidence > 0.9) return '#10b981'; 
+    if (confidence > 0.7) return '#eab308'; 
+    return '#ef4444'; 
+  };
+
+  const getZoneColor = (level) => {
+    if (level === 'CRITICAL') return '#f43f5e'; // rose-500
+    if (level === 'HIGH') return '#f97316'; // orange-500
+    if (level === 'MODERATE') return '#eab308'; // yellow-500
+    return '#10b981'; // emerald-500
+  };
+
+  const onEachFeature = (feature, layer) => {
+    layer.on({
+      click: () => {
+        if (onZoneClick) onZoneClick(feature.properties);
+      },
+      mouseover: (e) => {
+        const layer = e.target;
+        layer.setStyle({ weight: 3, fillOpacity: 0.5 });
+      },
+      mouseout: (e) => {
+        const layer = e.target;
+        layer.setStyle({ weight: 1, fillOpacity: 0.2 });
+      }
+    });
   };
 
   return (
@@ -23,11 +56,25 @@ export default function CityMap({ hospitals, schools, roads, showHospitals, show
           }
         `}
       </style>
-      <MapContainer center={position} zoom={12} className="h-full w-full bg-[#0a0f18]">
+      <MapContainer center={position} zoom={11} className="h-full w-full bg-[#0a0f18]">
         <TileLayer
           url={DARK_MAP_URL}
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; OpenStreetMap'
         />
+
+        {showZones && zones && (
+          <GeoJSON 
+            key={JSON.stringify(zones)} // Force re-render on data change
+            data={zones}
+            style={(feature) => ({
+              color: getZoneColor(feature.properties.level),
+              weight: 1,
+              fillColor: getZoneColor(feature.properties.level),
+              fillOpacity: 0.2
+            })}
+            onEachFeature={onEachFeature}
+          />
+        )}
 
         {showHospitals && (hospitals?.predictions || []).map((h, i) => {
           if (!h.lat || !h.lon) return null;
@@ -41,14 +88,6 @@ export default function CityMap({ hospitals, schools, roads, showHospitals, show
             <Tooltip direction="top" offset={[0, -10]} opacity={0.9}>
               <span className="font-bold">{h.name !== 'Unknown' ? h.name : 'Clinic'}</span>
             </Tooltip>
-            <Popup className="bg-slate-900 border-none">
-              <div className="p-2">
-                <h4 className="font-bold text-slate-800">{h.name !== 'Unknown' ? h.name : 'Unregistered Clinic'}</h4>
-                <p className="text-sm">Type: {h.predicted_type}</p>
-                <p className="text-sm">Confidence: {(h.confidence * 100).toFixed(1)}%</p>
-                <button className="mt-2 text-xs text-blue-600 font-bold">View Intelligence</button>
-              </div>
-            </Popup>
           </CircleMarker>
         )})}
 
@@ -64,10 +103,6 @@ export default function CityMap({ hospitals, schools, roads, showHospitals, show
             <Tooltip direction="top" offset={[0, -10]} opacity={0.9}>
               <span className="font-bold">{s.name !== 'Unknown' ? s.name : 'School'}</span>
             </Tooltip>
-            <Popup>
-              <h4 className="font-bold">{s.name !== 'Unknown' ? s.name : 'Unknown School'}</h4>
-              <p>Type: {s.predicted_type}</p>
-            </Popup>
           </CircleMarker>
         )})}
 
@@ -82,6 +117,26 @@ export default function CityMap({ hospitals, schools, roads, showHospitals, show
           />
         )})}
 
+        {showReports && reports.map((r, i) => {
+          if (!r.latitude || !r.longitude) return null;
+          return (
+            <CircleMarker
+              key={`rep-${i}`}
+              center={[r.latitude, r.longitude]}
+              radius={8}
+              pathOptions={{ color: '#06b6d4', fillColor: '#06b6d4', stroke: true, weight: 2, fillOpacity: 0.9 }}
+            >
+              <Popup className="bg-[#0b0f14] border border-white/10 text-white rounded-xl">
+                <div className="p-1">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-emerald-400 block mb-1">✓ Verified Report</span>
+                  <span className="font-bold text-sm block mb-1">{r.category}</span>
+                  <span className="text-xs text-slate-300 block">{r.description}</span>
+                  {r.image_url && <img src={r.image_url} alt="Report" className="w-full h-24 object-cover mt-2 rounded-lg opacity-80" />}
+                </div>
+              </Popup>
+            </CircleMarker>
+          );
+        })}
       </MapContainer>
     </div>
   );
